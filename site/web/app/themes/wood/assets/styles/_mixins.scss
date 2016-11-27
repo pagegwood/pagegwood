@@ -1,0 +1,21 @@
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+//
+// Simplify our Media Query Mixins using Custom Media Values above
+//
+
+
+@mixin mobile-up {
+	@media ($viewport--sm--min) {
+		@content;
+	}
+}
