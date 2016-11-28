@@ -9,13 +9,38 @@
   &:-ms-input-placeholder      {@content}
 }
 
-//
-// Simplify our Media Query Mixins using Custom Media Values above
-//
+@mixin viewport--sm-min {
+	@media (min-width: $viewport--sm--min) {
+		@content;
+	}
+}
 
+@mixin viewport--sm-max {
+	@media (max-width: $viewport--sm--max) {
+		@content;
+	}
+}
 
-@mixin mobile-up {
-	@media ($viewport--sm--min) {
+@mixin viewport--md-min {
+	@media (min-width: $viewport--md--min) {
+		@content;
+	}
+}
+
+@mixin viewport--md-max {
+	@media (max-width: $viewport--md--max) {
+		@content;
+	}
+}
+
+@mixin viewport--lg-min {
+	@media (min-width: $viewport--lg--min) {
+		@content;
+	}
+}
+
+@mixin viewport--lg-max {
+	@media (max-width: $viewport--lg--max) {
 		@content;
 	}
 }

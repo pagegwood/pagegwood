@@ -18,7 +18,7 @@
   margin-bottom: ($spacer / 2);
   height: auto;
 }
-@include mobile-up() {
+@include viewport--sm-min() {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
