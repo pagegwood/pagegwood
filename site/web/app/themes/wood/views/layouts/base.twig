@@ -7,13 +7,13 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
+		<header class="Header">
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
+				<div class="Container">
+					<a class="Branding Branding--header" href="{{site.url}}" title="{{site.name}}" rel="home">
+						<img src="{{ theme.link }}/assets/svg/page-g-wood.svg" alt="{{site.name}}">
+					</a>
+					<nav id="nav-main" class="Nav Nav--main" role="navigation">
 						{% include "partials/menu.twig" with {'menu': menu.get_items} %}
 					</nav><!-- #nav -->
 				</div>
@@ -22,16 +22,11 @@
 
 		<section id="content" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			<div class="Container">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
 			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
 		</section>
 
 		{% block footer %}

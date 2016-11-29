@@ -1,0 +1,39 @@
+.Nav{
+	ul{
+		font-size: 0;
+	}
+}
+
+.Nav--main{
+	@include viewport--sm-min{
+		display: inline-block;
+		float: right;
+		text-align: right;
+	}
+
+	li{
+		display: inline-block;
+		margin-right: 10px;
+
+		&:last-of-type{
+			margin-right: 0;
+		}
+	}
+
+	a{
+		font-size: 16px;
+		display: block;
+		color: $color--text;
+		font-family: $font--primary;
+		font-weight: $weight--semiBold;
+		text-transform: uppercase;
+		padding: 10px;
+		transition: color 0.2s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			color: $color--four;
+		}
+	}
+}

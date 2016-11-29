@@ -8,7 +8,7 @@ class MenuItem extends TimberMenuItem
 {
     public $PostClass = 'Wood\PostTypes\Post';
 
-    public $listItemClass = 'page-list__item';
+    public $listItemClass = 'menu-item';
 
     public function __construct($data)
     {

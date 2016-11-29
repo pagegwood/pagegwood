@@ -105,3 +105,12 @@ button {
   border: 0;
   padding: 0;
 }
+
+.Container{
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 960px;
+  @media all and (min-width: 1001px){
+    padding: 0;
+  }
+}

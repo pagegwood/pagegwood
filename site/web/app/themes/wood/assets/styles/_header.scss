@@ -1,0 +1,5 @@
+.Header{
+	@include viewport--sm-min{
+		padding: 40px 0;
+	}
+}
