@@ -9,6 +9,7 @@ web/app/uploads/*
 # WordPress
 web/wp
 web/.htaccess
+!/web/app/plugins/advanced-custom-fields-pro/
 
 # WP-CLI
 db-sync
