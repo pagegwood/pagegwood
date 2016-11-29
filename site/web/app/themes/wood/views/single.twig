@@ -1,4 +1,4 @@
-{% extends "base.twig" %}
+{% extends "layouts/base.twig" %}
 
 {% block content %}
 	<div class="content-wrapper">
@@ -20,7 +20,7 @@
 				</div>
 				<div class="responses">
 					{% for cmt in post.get_comments() %}
-						{% include "comment.twig" with {comment:cmt} %}
+						{% include "partials/comment.twig" with {comment:cmt} %}
 					{% endfor %}
 				</div>
 			</section>
