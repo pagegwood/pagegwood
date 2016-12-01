@@ -1,5 +1,16 @@
 .Header{
+	text-align: center;
 	@include viewport--sm-min{
+		text-align: left;
 		padding: 40px 0;
+		border-bottom: 1px solid $color--border;
 	}
 }
+
+.Header-container{
+	@include viewport--sm-min{
+		display: flex;
+		align-items: center;
+	}
+}
+
