@@ -1,0 +1,10 @@
+.Post-status{
+	transition: color 0.2s;
+	margin-left: 20px;
+}
+
+.Post-link:visited{
+	.Post-status{
+		color: #fff;
+	}
+}

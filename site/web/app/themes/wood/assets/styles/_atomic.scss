@@ -17,6 +17,14 @@
 }
 .clearfix:after { clear: both }
 
+.inline-block{
+	display: inline-block;
+}
+
+.block{
+	display: block;
+}
+
 // ==========================================================================
 // Color
 // ==========================================================================
@@ -427,17 +435,16 @@
 	text-align: center;
 }
 
+
 // ==========================================================================
-// List
+// Font Style
 // ==========================================================================
 
-.list{
-	font-size: 0;
+.text-uppercase{
+	text-transform: uppercase;
 }
 
-.list--horizontal{
-	> li{
-		display: inline-block;
-	}
+.text-italic{
+	font-style: italic;
 }
 

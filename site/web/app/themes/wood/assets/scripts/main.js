@@ -14,11 +14,19 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
+  var Wood = {
     // All pages
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        // emoji
+        function addEmoji() {
+          if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+            window.location.hash = "🌴";
+          }
+        };
+        addEmoji();
+        console.log('Heya!');
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -46,7 +54,7 @@
   var UTIL = {
     fire: function(func, funcname, args) {
       var fire;
-      var namespace = Sage;
+      var namespace = Wood;
       funcname = (funcname === undefined) ? 'init' : funcname;
       fire = func !== '';
       fire = fire && namespace[func];
