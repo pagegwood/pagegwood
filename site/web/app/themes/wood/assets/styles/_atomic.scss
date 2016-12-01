@@ -1,0 +1,120 @@
+// ==========================================================================
+// Color
+// ==========================================================================
+
+//blue
+.color-one{
+	color: $color--one;
+}
+
+//aqua
+.color-two{
+	color: $color--two;
+}
+
+//dark green
+.color-three{
+	color: $color--three;
+}
+
+//lighter green
+.color-four{
+	color: $color--four;
+}
+
+//lightest green
+.color-five{
+	color: $color--five;
+}
+
+//text
+.color-six{
+	color: $color--six;
+}
+
+//light gray
+.color-seven{
+	color: $color--seven;
+}
+
+
+// ==========================================================================
+// Fill
+// ==========================================================================
+
+// ==========================================================================
+// Font Family
+// ==========================================================================
+
+.font-primary{
+	font-family: $font--primary;
+}
+
+.font-secondary{
+	font-family: $font--secondary;
+}
+
+// ==========================================================================
+// Font Size
+// ==========================================================================
+
+.size-hero{
+	font-size: 64px;
+}
+
+.size-h1{
+	font-size: 48px;
+}
+
+.size-h2{
+	font-size: 36px;
+}
+
+.size-h3{
+	font-size: 32px;
+}
+
+.size-h4{
+	font-size: 24px;
+}
+
+.size-h5{
+	font-size: 16px;
+}
+
+.size-h6{
+	font-size: 14px;
+}
+
+.size-p{
+	font-size: 16px;
+}
+
+// ==========================================================================
+// Font Weight
+// ==========================================================================
+
+.weight-light{
+	font-weight: $weight--light;
+}
+
+.weight-normal{
+	font-weight: $weight--normal;
+}
+
+.weight-medium{
+	font-weight: $weight--medium;
+}
+
+.weight-bold{
+	font-weight: $weight--bold;
+}
+
+.weight-extraBold{
+	font-weight: $weight--extraBold;
+}
+
+.weight-black{
+	font-weight: $weight--black;
+}
+

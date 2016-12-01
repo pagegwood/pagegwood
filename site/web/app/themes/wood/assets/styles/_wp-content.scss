@@ -1,6 +1,50 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+
+.Entry{
+  @extend .size-p !optional;
+  color: $color--text;
+
+  p{
+    @extend .u-textStandard !optional;
+  }
+
+  p, ul, ol, h1, h2, h3, h4, h5, address, figure{
+    margin-bottom: 30px;
+  }
+
+  h1,
+  .size-h1{
+    @extend .size-h1 !optional;
+  }
+
+  h2,
+  .size-h2{
+    @extend .size-h2 !optional;
+  }
+
+  h3,
+  .size-h3{
+    @extend .size-h3 !optional;
+  }
+
+  h4,
+  .size-h4{
+    @extend .size-h4 !optional;
+  }
+
+  h5, .size-h5{
+    @extend .size-h5 !optional;
+  }
+
+  h6,
+  .size-h6{
+    @extend .size-h6 !optional;
+  }
+}
+
+
 // Media alignment
 .alignnone {
   margin-left: 0;

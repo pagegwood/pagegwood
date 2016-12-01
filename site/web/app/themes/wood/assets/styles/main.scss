@@ -1,4 +1,5 @@
 @import "variables";
+@import "../fonts/style.css";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -7,7 +8,7 @@
 @import "base";
 @import "variables";
 @import "mixins";
-@import "utilities";
+@import "atomic";
 @import "components";
 @import "navigation";
 @import "buttons";

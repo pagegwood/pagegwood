@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icomoon.eot?knthnw');
+  src:  url('icomoon.eot?knthnw#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?knthnw') format('truetype'),
+    url('icomoon.woff?knthnw') format('woff'),
+    url('icomoon.svg?knthnw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-thin-up:before {
+  content: "\e900";
+}
+.icon-chevron-thin-right:before {
+  content: "\e901";
+}
+.icon-chevron-thin-left:before {
+  content: "\e902";
+}
+.icon-chevron-thin-down:before {
+  content: "\e903";
+}
+.icon-search:before {
+  content: "\e904";
+}
+.icon-cross:before {
+  content: "\e905";
+}
+.icon-envelope-o:before {
+  content: "\e906";
+}
+.icon-linkedin:before {
+  content: "\e907";
+}
+.icon-tumblr:before {
+  content: "\e908";
+}
+.icon-bitbucket:before {
+  content: "\e909";
+}
+.icon-github:before {
+  content: "\e90a";
+}
+.icon-spotify:before {
+  content: "\e90b";
+}
+.icon-instagram:before {
+  content: "\e90c";
+}
+.icon-twitter:before {
+  content: "\e90d";
+}
+
