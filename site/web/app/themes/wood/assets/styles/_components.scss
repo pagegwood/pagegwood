@@ -10,3 +10,14 @@
 		width: 100%;
 	}
 }
+
+
+.List--icons{
+	> li{
+		margin: 0 5px;
+	}
+	a{
+		font-size: calc( 36px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
+		padding: 5px;
+	}
+}

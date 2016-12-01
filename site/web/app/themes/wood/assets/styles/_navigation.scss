@@ -21,7 +21,7 @@
 	}
 
 	a{
-		font-size: 16px;
+		font-size: calc( 12px + (15 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
 		display: block;
 		color: $color--text;
 		font-family: $font--primary;

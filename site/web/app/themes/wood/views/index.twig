@@ -2,6 +2,8 @@
 
 {% block content %}
 	{% for post in posts %}
-		{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+		<div class="marginB5">
+			{% include ['partials/tease-post.twig'] %}
+		</div>
 	{% endfor %}
 {% endblock %}

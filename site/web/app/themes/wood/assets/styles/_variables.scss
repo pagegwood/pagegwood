@@ -47,13 +47,14 @@ $color--five: 		#09B418; //lightest green
 $color--six: 			#333333; //text
 $color--seven: 		#F3F3F3; //light gray bg
 
-$color--text: $color--six;
+$color--border: 	#979797;
+$color--text: 		$color--six;
 
 
 // ==========================================================================
 // Sizing
 // ==========================================================================
 
-$spacer:		40px; ///gutter
+$spacer:		10px; ///gutter
 
 

@@ -1,4 +1,23 @@
 // ==========================================================================
+// Display
+// ==========================================================================
+
+.sr-only{
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute !important;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+// ==========================================================================
 // Color
 // ==========================================================================
 
@@ -37,6 +56,10 @@
 	color: $color--seven;
 }
 
+.color-white{
+	color: #fff;
+}
+
 
 // ==========================================================================
 // Fill
@@ -59,35 +82,39 @@
 // ==========================================================================
 
 .size-hero{
-	font-size: 64px;
+	font-size: calc( 40px + (64 - 40) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h1{
-	font-size: 48px;
+	font-size: calc( 36px + (48 - 36) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h2{
-	font-size: 36px;
+	font-size: calc( 30px + (32 - 30) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h3{
-	font-size: 32px;
+	font-size: calc( 26px + (28 - 26) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h4{
-	font-size: 24px;
+	font-size: calc( 20px + (24 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h5{
-	font-size: 16px;
+	font-size: calc( 14px + (16 - 14) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h6{
-	font-size: 14px;
+	font-size: calc( 12px + (14 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-p{
-	font-size: 16px;
+	font-size: calc( 14px + (20 - 14) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-reset{
+	font-size: 0;
 }
 
 // ==========================================================================
@@ -116,5 +143,301 @@
 
 .weight-black{
 	font-weight: $weight--black;
+}
+
+
+// ==========================================================================
+// Margin
+// ==========================================================================
+
+
+//
+// Margin Bottom
+// ==========================================================================
+
+.marginB1{
+	margin-bottom: $spacer * 1;
+}
+
+.marginB2{
+	margin-bottom: $spacer * 2;
+}
+
+.marginB3{
+	margin-bottom: $spacer * 3;
+}
+
+.marginB4{
+	margin-bottom: $spacer * 4;
+}
+
+.marginB5{
+	margin-bottom: $spacer * 5;
+}
+
+//
+// Margin Top
+// ==========================================================================
+
+
+.marginT1{
+	margin-top: $spacer * 1;
+}
+
+.marginT2{
+	margin-top: $spacer * 2;
+}
+
+.marginT3{
+	margin-top: $spacer * 3;
+}
+
+.marginT4{
+	margin-top: $spacer * 4;
+}
+
+.marginT5{
+	margin-top: $spacer * 5;
+}
+
+
+// ==========================================================================
+// Padding
+// ==========================================================================
+
+
+//
+// Horziontal Padding
+// ==========================================================================
+
+
+.paddingX1{
+	padding-left: $spacer * 1;
+	padding-right: $spacer *1;
+}
+
+.paddingX2{
+	padding-left: $spacer * 2;
+	padding-right: $spacer *2;
+}
+
+.paddingX3{
+	padding-left: $spacer * 3;
+	padding-right: $spacer * 3;
+}
+
+.paddingX4{
+	padding-left: $spacer * 4;
+	padding-right: $spacer * 4;
+}
+
+.paddingX5{
+	padding-left: $spacer * 5;
+	padding-right: $spacer * 5;
+}
+
+
+//
+// Vertical Padding
+// ==========================================================================
+
+.paddingY1{
+	padding-top: $spacer * 1;
+	padding-bottom: $spacer *1;
+}
+
+.paddingY2{
+	padding-top: $spacer * 2;
+	padding-bottom: $spacer *2;
+}
+
+.paddingY3{
+	padding-top: $spacer * 3;
+	padding-bottom: $spacer * 3;
+}
+
+.paddingY4{
+	padding-top: $spacer * 4;
+	padding-bottom: $spacer * 4;
+}
+
+.paddingY5{
+	padding-top: $spacer * 5;
+	padding-bottom: $spacer * 5;
+}
+
+
+//
+// Bottom Padding
+// ==========================================================================
+
+.paddingB1{
+	padding-bottom: $spacer *1;
+}
+
+.paddingB2{
+	padding-bottom: $spacer *2;
+}
+
+.paddingB3{
+	padding-bottom: $spacer * 3;
+}
+
+.paddingB4{
+	padding-bottom: $spacer * 4;
+}
+
+.paddingB5{
+	padding-bottom: $spacer * 5;
+}
+
+
+//
+// Top Padding
+// ==========================================================================
+
+.paddingT1{
+	padding-top: $spacer * 1;
+}
+
+.paddingT2{
+	padding-top: $spacer * 2;
+}
+
+.paddingT3{
+	padding-top: $spacer * 3;
+}
+
+.paddingT4{
+	padding-top: $spacer * 4;
+}
+
+.paddingT5{
+	padding-top: $spacer * 5;
+}
+
+
+// ==========================================================================
+// Borders
+// ==========================================================================
+
+.border-bottom{
+	border-bottom: 1px solid $color--border;
+}
+
+
+// ==========================================================================
+// Link
+// ==========================================================================
+
+.link{
+	transition: color 0.2s;
+	&:hover,
+	&:active,
+	&:focus{
+		cursor: pointer;
+	}
+}
+
+//blue
+.link-color-one{
+	color: $color--one;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--four;
+	}
+}
+
+//aqua
+.link-color-two{
+	color: $color--two;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+	}
+}
+
+//dark green
+.link-color-three{
+	color: $color--three;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+	}
+}
+
+//lighter green
+.link-color-four{
+	color: $color--four;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+	}
+}
+
+//lightest green
+.link-color-five{
+	color: $color--five;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+	}
+}
+
+//text
+.link-color-six{
+	color: $color--six;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+	}
+}
+
+//light gray
+.link-color-seven{
+	color: $color--seven;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--six;
+	}
+}
+
+//light gray
+.link-color-white{
+	color: #fff;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--text;
+	}
+}
+
+// ==========================================================================
+// Text Align
+// ==========================================================================
+
+.text-center{
+	text-align: center;
+}
+
+// ==========================================================================
+// List
+// ==========================================================================
+
+.list{
+	font-size: 0;
+}
+
+.list--horizontal{
+	> li{
+		display: inline-block;
+	}
 }
 
