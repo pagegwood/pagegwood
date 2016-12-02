@@ -15,17 +15,23 @@ class Planker {
   {
 	  if (array_key_exists('acf_fc_layout', $plank)) {
 
-	      $plankType = $plank['acf_fc_layout'];
+      $plankType = $plank['acf_fc_layout'];
 
-	      $plankType = camel_case($plankType);
+      $plankType = camel_case($plankType);
 
-	      $plankType = ucfirst($plankType);
+      $plankType = ucfirst($plankType);
 
-	      $classPrefix = 'Wood\\Planks\\';
+      $classPrefix = 'Wood\\PlanksYes\\';
 
-	      $plankClass = $classPrefix . $plankType;
+      $plankClass = $classPrefix . $plankType;
 
-	      return $plank = self::make($plankClass, $plank);
+      if(class_exists($plankClass)){
+      	return $plank = self::make($plankClass, $plank);
+      }
+
+      else{
+      	/// fail gracefully
+      }
 	  }
 	}
 }
