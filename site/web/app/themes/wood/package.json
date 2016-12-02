@@ -49,6 +49,7 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {
+    "instafeed.js": "^1.4.1",
     "suitcss": "^2.0.0"
   }
 }

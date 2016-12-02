@@ -3,22 +3,8 @@
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			{% for plank in post.get_field('wood_planks') %}
-
-				{% if plank.acf_fc_layout == 'plank_hero' %}
-
-			    {% include ['planks/hero.twig'] %}
-
-			  {% elseif plank.acf_fc_layout == 'plank_instagram' %}
-
-			    {% include ['planks/instagram.twig'] %}
-
-			  {% else %}
-
-			    Looks like we are missing a plank
-
-				{% endif %}
-
+			{% for plank in planks %}
+				{% include plank.view %}
 			{% endfor %}
 		</article>
 	</div><!-- /content-wrapper -->
