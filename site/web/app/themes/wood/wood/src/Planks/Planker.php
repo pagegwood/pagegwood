@@ -21,7 +21,7 @@ class Planker {
 
       $plankType = ucfirst($plankType);
 
-      $classPrefix = 'Wood\\PlanksYes\\';
+      $classPrefix = 'Wood\\Planks\\';
 
       $plankClass = $classPrefix . $plankType;
 
