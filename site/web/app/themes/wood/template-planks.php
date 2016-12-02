@@ -21,13 +21,8 @@ $planks = get_field("wood_planks");
 if(is_array($planks)){
 	foreach ($planks as &$plank) {
 
-		if (array_key_exists('acf_fc_layout', $plank)) {
-        $plankType = $plank['acf_fc_layout'];
-    }
+    $plank = Planker::createPlank($plank);
 
-		if ($plankType == "plank_posts"){
-  		$plank = Planker::make('Wood\Planks\PlankPosts', $plank);
-  	}
 	}
 	$context['planks'] = Collection::make($planks);
 }
