@@ -4434,6 +4434,10 @@ var acf;
 			if( !l10n ) return;
 			
 			
+			// bail ealry if no datepicker library
+			if( typeof $.datepicker === 'undefined' ) return;
+			
+			
 			// rtl
 			l10n.isRTL = rtl;
 			
@@ -4460,6 +4464,10 @@ var acf;
 		*/
 		
 		init: function( $input, args ){
+			
+			// bail ealry if no datepicker library
+			if( typeof $.datepicker === 'undefined' ) return;
+			
 			
 			// defaults
 			args = args || {};
@@ -4529,13 +4537,41 @@ var acf;
 			// get options
 			this.o = acf.get_data( this.$el );
 			
-			
-			// save format
-			this.o.save_format = this.o.save_format || 'yymmdd';
-			
 		},
 		
 		initialize: function(){
+			
+			// save_format - compatibility with ACF < 5.0.0
+			if( this.o.save_format ) {
+				
+				return this.initialize2();
+				
+			}
+			
+			
+			// create options
+			var args = { 
+				dateFormat:			this.o.date_format,
+				altField:			this.$hidden,
+				altFormat:			'yymmdd',
+				changeYear:			true,
+				yearRange:			"-100:+100",
+				changeMonth:		true,
+				showButtonPanel:	true,
+				firstDay:			this.o.first_day
+			};
+			
+			
+			// filter for 3rd party customization
+			args = acf.apply_filters('date_picker_args', args, this.$field);
+			
+			
+			// add date picker
+			acf.datepicker.init( this.$input, args );
+			
+		},
+		
+		initialize2: function(){
 			
 			// get and set value from alt field
 			this.$input.val( this.$hidden.val() );
@@ -4622,6 +4658,10 @@ var acf;
 			if( !l10n ) return;
 			
 			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
+			
+			
 			// rtl
 			l10n.isRTL = rtl;
 			
@@ -4648,6 +4688,10 @@ var acf;
 		*/
 		
 		init: function( $input, args ){
+			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
+			
 			
 			// defaults
 			args = args || {};
@@ -8843,11 +8887,16 @@ var acf;
 			} else {
 				
 				// change array to single object
-				value = acf.maybe_get(value, 0, '');
+				value = acf.maybe_get(value, 0, false);
 				
+				
+				// if no allow_null, this single select must contain a selection
+				if( !args.allow_null && value ) {
+					
+					$input.val( value.id );
+					
+				}
 			}
-			
-			
 			
 			
 			// remove the blank option as we have a clear all button!
@@ -9886,6 +9935,10 @@ var acf;
 		},
 		
 		initialize: function(){
+			
+			// bail ealry if no timepicker library
+			if( typeof $.timepicker === 'undefined' ) return;
+			
 			
 			// create options
 			var args = {

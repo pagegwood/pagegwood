@@ -867,8 +867,32 @@
 			
 			
 			// update new_field label / name
-			$label.val( $label.val() + ' (' + acf._e('copy') + ')' );
-			$name.val( $name.val() + '_' + acf._e('copy') );
+			var label = $label.val(),
+				name = $name.val(),
+				end = name.split('_').pop(),
+				copy = acf._e('copy');
+			
+			
+			// look at last word
+			if( end.indexOf(copy) === 0 ) {
+				
+				var i = end.replace(copy, '') * 1;
+					i = i ? i+1 : 2;
+				
+				// replace
+				label = label.replace( end, copy + i );
+				name = name.replace( end, copy + i );
+				
+			} else {
+				
+				label += ' (' + copy + ')';
+				name += '_' + copy;
+				
+			}
+			
+			
+			$label.val( label );
+			$name.val( name );
 			
 			
 			// save field
@@ -1142,7 +1166,7 @@
 				$show = false;
 			
 			
-			if( $field_list.children('.acf-field-object').length == 1 ) {
+			if( !$field_list.children('.acf-field-object').length ) {
 			
 				$show = $field_list.children('.no-fields-message');
 				end_height = $show.outerHeight();
@@ -1201,8 +1225,8 @@
 				
 			
 			// update class
-			$el.removeClass('acf-field-object-' + old_type.replace('_', '-'));
-			$el.addClass('acf-field-object-' + new_type.replace('_', '-'));
+			$el.removeClass( 'acf-field-object-' + acf.str_replace('_', '-', old_type) );
+			$el.addClass( 'acf-field-object-' + acf.str_replace('_', '-', new_type) );
 			
 			
 			// update atts
