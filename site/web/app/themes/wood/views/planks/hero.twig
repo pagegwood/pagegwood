@@ -1,5 +1,10 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	Hello hero!
+<div class="Hero Hero--parallax">
+<div class="Hero-media" style="background-image: url('http://lorempixel.com/1200/800/nature/');" parallax></div>
+<div class="Hero-content">
+<h1>{{ plank.heading }}</h1>
+</div>
+</div>
 {% endblock %}

@@ -1,15 +1,17 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	{{ plank.heading }}
+	<div class="Container">
+		{{ plank.heading }}
 
-	{% for post in plank.posts %}
-		{% if not loop.last %}
-		<div class="marginB5">
-		{% endif %}
-			{% include ['partials/tease-post.twig'] %}
-		{% if not loop.last %}
-		</div>
-		{% endif %}
-	{% endfor %}
+		{% for post in plank.posts %}
+			{% if not loop.last %}
+			<div class="marginB5">
+			{% endif %}
+				{% include ['partials/tease-post.twig'] %}
+			{% if not loop.last %}
+			</div>
+			{% endif %}
+		{% endfor %}
+	</div>
 {% endblock %}
