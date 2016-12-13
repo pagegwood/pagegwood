@@ -27,10 +27,6 @@
         };
         addEmoji();
         console.log('Heya!');
-
-        document.addEventListener('DOMContentLoaded', function() {
-          initializeParallax(document.querySelector('.Hero--parallax'));
-        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

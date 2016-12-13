@@ -2,8 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js",
-        "scripts/parallax.js"
+        "scripts/parallax.js",
+        "scripts/main.js"
       ],
       "main": true
     },

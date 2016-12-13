@@ -1,10 +1,20 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-<div class="Hero Hero--parallax">
-<div class="Hero-media" style="background-image: url('http://lorempixel.com/1200/800/nature/');" parallax></div>
-<div class="Hero-content">
-<h1>{{ plank.heading }}</h1>
-</div>
-</div>
+
+	{% if plank.desktop_image %}
+
+	<div class="Hero Hero--parallax">
+    <div class="Parallax js-ParallaxContainer">
+    	<div class="Parallax-spacer">
+	      <div class="Parallax-image" style="background-image: url('{{ plank.desktop_image.src }}');" parallax></div>
+
+				<div class="Hero-content">
+					<h1 class="heading-hero font-primary color-white">{{ plank.heading }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endif %}
 {% endblock %}
