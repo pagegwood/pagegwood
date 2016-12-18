@@ -10,6 +10,7 @@ class PlankHero extends PlankBase
 
 	public $view = 'planks/hero.twig';
 
+  public $style = 'planks/hero_style.twig';
 
   public function desktop_image()
   {

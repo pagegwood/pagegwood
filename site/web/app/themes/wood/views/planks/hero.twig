@@ -3,18 +3,11 @@
 {% block content %}
 
 	{% if plank.desktop_image %}
-
-	<div class="Hero Hero--parallax">
-    <div class="Parallax js-ParallaxContainer">
-    	<div class="Parallax-spacer">
-	      <div class="Parallax-image" style="background-image: url('{{ plank.desktop_image.src }}');" parallax></div>
-
-				<div class="Hero-content">
-					<h1 class="heading-hero font-primary color-white">{{ plank.heading }}</h1>
-				</div>
-			</div>
+	<div class="Hero">
+    <div class="Hero-media"></div>
+		<div class="Hero-content">
+			<h1 class="size-hero font-primary color-white">{{ plank.heading }}</h1>
 		</div>
 	</div>
-
 	{% endif %}
 {% endblock %}
