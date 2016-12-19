@@ -2,6 +2,11 @@
 	ul{
 		font-size: 0;
 	}
+	a{
+		font-family: $font--primary;
+		text-transform: uppercase;
+		display: block;
+	}
 }
 
 .Nav--main{
@@ -21,11 +26,8 @@
 
 	a{
 		font-size: calc( 12px + (15 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
-		display: block;
-		color: $color--text;
-		font-family: $font--primary;
 		font-weight: $weight--semiBold;
-		text-transform: uppercase;
+		color: $color--text;
 		padding: 10px;
 		transition: color 0.2s;
 
@@ -33,6 +35,41 @@
 		&:active,
 		&:focus{
 			color: $color--four;
+		}
+	}
+}
+
+.Nav--hero{
+	margin-left: -10px;
+	margin-bottom: -10px;
+	@include viewport--sm-min{
+		margin-left: 0;
+	}
+	li{
+		display: block;
+		margin-bottom: 20px;
+		@include viewport--sm-min{
+			display: inline-block;
+			margin-right: 40px;
+		}
+
+		&:last-of-type{
+			margin: 0;
+		}
+	}
+
+	a{
+		font-size: calc( 20px + (24 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
+		font-weight: $weight--normal;
+		letter-spacing: 2px;
+		color: $color--white;
+		padding: 10px;
+		transition: color 0.2s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			color: $color--six;
 		}
 	}
 }

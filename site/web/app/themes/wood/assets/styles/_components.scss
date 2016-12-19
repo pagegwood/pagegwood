@@ -43,11 +43,23 @@
 // Hero
 // ==========================================================================
 
+
+
 .Hero{
   font-size: 0;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    content: '';
+    background: rgba(9,190,178, 0.8);
+  }
 }
 
 .Hero-media{
@@ -66,7 +78,6 @@
 .Hero-content{
   position: relative;
   z-index: 5;
-  padding: 40px 15px;
   width: 100%;
 }
 

@@ -1,12 +1,25 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-
 	{% if plank.desktop_image %}
 	<div class="Hero">
     <div class="Hero-media"></div>
-		<div class="Hero-content">
-			<h1 class="size-hero font-primary color-white">{{ plank.heading }}</h1>
+		<div class="Hero-content paddingY2 paddingY4--sm">
+			<div class="Container">
+				{% if plank.has_logo %}
+				<div class="Hero-logo marginB5 marginB10--sm">
+					<a class="Branding Branding--hero" href="{{site.url}}" title="{{site.name}}" rel="home">
+						<img src="{{ theme.link }}/assets/svg/page-g-wood-light.svg" alt="{{site.name}}">
+					</a>
+				</div>
+				{% endif %}
+				<h1 class="Hero-caption paddingY2 paddingY5--sm size-hero font-primary weight-medium color-white">{{ plank.heading }}</h1>
+				{% if plank.has_menu %}
+					<nav id="nav-main" class="Nav Nav--hero marginT3" role="navigation">
+						{% include "partials/menu.twig" with {'menu': menu.get_items} %}
+					</nav><!-- #nav -->
+				{% endif %}
+			</div>
 		</div>
 	</div>
 	{% endif %}

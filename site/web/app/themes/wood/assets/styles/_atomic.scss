@@ -90,7 +90,7 @@
 // ==========================================================================
 
 .size-hero{
-	font-size: calc( 40px + (64 - 40) * ( (100vw - 400px) / ( 800 - 400) ));
+	font-size: calc( 38px + (48 - 38) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h1{
@@ -181,6 +181,32 @@
 
 .marginB5{
 	margin-bottom: $spacer * 5;
+}
+
+.marginB6{
+	margin-bottom: $spacer * 6;
+}
+
+.marginB7{
+	margin-bottom: $spacer * 7;
+}
+
+.marginB8{
+	margin-bottom: $spacer * 8;
+}
+
+.marginB9{
+	margin-bottom: $spacer * 9;
+}
+
+.marginB10{
+	margin-bottom: $spacer * 10;
+}
+
+.marginB10--sm{
+	@include viewport--sm-min{
+		margin-bottom: $spacer * 10;
+	}
 }
 
 //
@@ -274,6 +300,21 @@
 	padding-bottom: $spacer * 5;
 }
 
+//style for building out breakpoint based padding
+.paddingY4--sm{
+	@include viewport--sm-min{
+		padding-top: $spacer * 4;
+		padding-bottom: $spacer * 4;
+	}
+}
+
+//style for building out breakpoint based padding
+.paddingY5--sm{
+	@include viewport--sm-min{
+		padding-top: $spacer * 5;
+		padding-bottom: $spacer * 5;
+	}
+}
 
 //
 // Bottom Padding
