@@ -1,9 +1,14 @@
 {% extends "layouts/base.twig" %}
 
+
 {% block header %}
-
-
+	{% if post.disable_header %}
+	{% else %}
+		{% include 'partials/page-header.twig' %}
+	{% endif %}
 {% endblock %}
+
+
 
 {% block styles %}
 
