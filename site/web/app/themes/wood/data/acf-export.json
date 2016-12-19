@@ -1,5 +1,61 @@
 [
     {
+        "key": "group_58572c973f7d2",
+        "title": "Plank Background Color",
+        "fields": [
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "one": "Blue",
+                    "two": "Aqua",
+                    "three": "Green",
+                    "four": "Lighter Green",
+                    "five": "Lightest Green",
+                    "six": "Text",
+                    "seven": "Light Gray",
+                    "white": "White"
+                },
+                "default_value": [
+                    "white"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_58572ca1df079",
+                "label": "Plank Background Color",
+                "name": "plank_background_color",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
         "key": "group_584ea5b298d7b",
         "title": "Plank Call to Action Button",
         "fields": [
@@ -211,7 +267,9 @@
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": "",
+        "hide_on_screen": [
+            "the_content"
+        ],
         "active": 1,
         "description": ""
     },
@@ -765,6 +823,27 @@
                                 "label": "Button URL",
                                 "name": "plank_button_url",
                                 "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            },
+                            {
+                                "clone": [
+                                    "group_58572c973f7d2"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_58572d30d612e",
+                                "label": "Background Color",
+                                "name": "plank_background_color",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,

@@ -73,6 +73,45 @@
 // Fill
 // ==========================================================================
 
+//blue
+.background-one{
+	background: $color--one;
+}
+
+//aqua
+.background-two{
+	background: $color--two;
+}
+
+//dark green
+.background-three{
+	color: $color--three;
+}
+
+//lighter green
+.background-four{
+	background: $color--four;
+}
+
+//lightest green
+.background-five{
+	background: $color--five;
+}
+
+//text
+.background-six{
+	background: $color--six;
+}
+
+//light gray
+.background-seven{
+	background: $color--seven;
+}
+
+.background-white{
+	background: #fff;
+}
+
 // ==========================================================================
 // Font Family
 // ==========================================================================
