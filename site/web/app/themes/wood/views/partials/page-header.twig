@@ -2,7 +2,7 @@
 	{% block header %}
 		<div class="Header-container Container">
 			<a class="Branding Branding--header" href="{{site.url}}" title="{{site.name}}" rel="home">
-				<img src="{{ theme.link }}/assets/svg/page-g-wood.svg" alt="{{site.name}}">
+				<img src="{{ theme.link }}/dist/images/page-g-wood.svg" alt="{{site.name}}">
 			</a>
 			<nav id="nav-main" class="Nav Nav--main" role="navigation">
 				{% include "partials/menu.twig" with {'menu': menu.get_items} %}

@@ -1,9 +1,12 @@
 {
-  "name": "Wood",
-  "homepage": "https://pagegwood.com",
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
   "authors": [
-    "Page Wood <page@pagegwood.com>"
+    "Ben Word <ben@benword.com>"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4"
+  }
 }
