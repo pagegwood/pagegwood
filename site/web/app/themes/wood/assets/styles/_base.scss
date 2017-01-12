@@ -14,7 +14,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: $font--primary;
@@ -82,6 +88,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 button {
   border: 0;
   margin: 0;
