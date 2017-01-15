@@ -7,7 +7,6 @@ export default class Instagram {
       userId: '15745822',
       accessToken: '15745822.1677ed0.78bb241cc4824b94a1d85b04ce3ae68a',
       limit: 8,
-      resolution: 'low_resolution',
     });
     feed.run();
   }

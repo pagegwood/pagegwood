@@ -1,7 +1,8 @@
 /* eslint-env browser */
-/* globals SAGE_DIST_PATH */
+/* globals WEBPACK_PUBLIC_PATH */
 
-/** Dynamically set absolute public path from current protocol and host */
-if (SAGE_DIST_PATH) {
-  __webpack_public_path__ = SAGE_DIST_PATH; // eslint-disable-line no-undef, camelcase
+// Dynamically set absolute public path from current protocol and host
+if (WEBPACK_PUBLIC_PATH) {
+  // eslint-disable-next-line no-undef, camelcase
+  __webpack_public_path__ = `${location.protocol}//${location.host}${WEBPACK_PUBLIC_PATH}`;
 }

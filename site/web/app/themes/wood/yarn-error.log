@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/7.2.0/bin/node /usr/local/bin/yarn install
+  /usr/local/Cellar/node/7.2.0/bin/node /usr/local/bin/yarn add instafeed.js
 
 PATH: 
   /usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/node/7.2.0/bin
@@ -39,47 +39,49 @@ npm manifest:
       "node": ">= 4.5"
     },
     "devDependencies": {
-      "autoprefixer": "^6.6.1",
+      "autoprefixer": "^6.5.2",
       "body-parser": "^1.15.2",
-      "browser-sync": "^2.18.6",
-      "browsersync-webpack-plugin": "^0.2.0",
-      "buble": "^0.15.2",
-      "buble-loader": "^0.4.0",
-      "clean-webpack-plugin": "^0.1.15",
-      "css-loader": "^0.26.1",
-      "cssnano": "^3.10.0",
-      "eslint": "^3.13.1",
+      "browser-sync": "^2.17.5",
+      "buble": "^0.14.2",
+      "buble-loader": "^0.3.2",
+      "clean-webpack-plugin": "^0.1.13",
+      "css-loader": "^0.25.0",
+      "cssnano": "^3.8.0",
+      "eslint": "^3.9.1",
+      "eslint-config-airbnb": "^12.0.0",
       "eslint-loader": "^1.6.1",
       "eslint-plugin-import": "^2.0.1",
+      "eslint-plugin-jsx-a11y": "^2.2.3",
+      "eslint-plugin-react": "^6.6.0",
       "extract-text-webpack-plugin": "^2.0.0-beta.4",
       "file-loader": "^0.9.0",
       "glob": "^7.1.1",
       "imagemin-mozjpeg": "^6.0.0",
-      "imagemin-webpack-plugin": "^1.4.4",
-      "imports-loader": "^0.7.0",
+      "imagemin-webpack-plugin": "^1.2.1",
+      "imports-loader": "^0.6.5",
       "loader-utils": "^0.2.16",
-      "lodash": "^4.17.4",
+      "lodash": "^4.16.6",
       "minimist": "^1.2.0",
       "monkey-hot-loader": "github:rmarscher/monkey-hot-loader#webpack2-import",
-      "node-sass": "^4.2.0",
+      "node-sass": "^3.11.2",
       "optimize-css-assets-webpack-plugin": "^1.3.0",
-      "postcss": "^5.2.9",
-      "postcss-loader": "^1.2.1",
+      "postcss": "^5.2.5",
+      "postcss-loader": "^1.1.0",
       "qs": "^6.3.0",
-      "resolve-url-loader": "^1.6.1",
+      "resolve-url-loader": "^1.6.0",
       "rimraf": "^2.5.4",
-      "sass-loader": "^4.1.1",
+      "sass-loader": "^4.0.2",
       "style-loader": "^0.13.1",
       "url-loader": "^0.5.7",
-      "webpack": "^2.2.0-rc.3",
+      "webpack": "^2.1.0-beta.26",
       "webpack-assets-manifest": "^0.6.1",
-      "webpack-dev-middleware": "^1.9.0",
-      "webpack-hot-middleware": "^2.15.0"
+      "webpack-dev-middleware": "^1.8.4",
+      "webpack-hot-middleware": "^2.13.1"
     },
     "dependencies": {
       "instafeed.js": "^1.4.1",
-      "jquery": "1.12.4 - 3",
-      "suitcss": "^2.0.0"
+      "suitcss": "^2.0.0",
+      "jquery": "1.12.4 - 3"
     }
   }
 
@@ -3876,12 +3878,6 @@ Lockfile:
       postcss "^5.0.11"
       postcss-value-parser "^3.1.2"
   
-  postcss-custom-media@^5.0.1:
-    version "5.0.1"
-    resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-5.0.1.tgz#138d25a184bf2eb54de12d55a6c01c30a9d8bd81"
-    dependencies:
-      postcss "^5.0.0"
-  
   postcss-discard-comments@^2.0.4:
     version "2.0.4"
     resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-2.0.4.tgz#befe89fafd5b3dace5ccce51b76b81514be00e3d"
@@ -4117,7 +4113,7 @@ Lockfile:
       postcss "^5.0.4"
       uniqs "^2.0.0"
   
-  postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.5, postcss@^5.2.6:
+  postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.5, postcss@^5.2.6:
     version "5.2.6"
     resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.6.tgz#a252cd67cd52585035f17e9ad12b35137a7bdd9e"
     dependencies:
@@ -4282,11 +4278,10 @@ Lockfile:
       isarray "0.0.1"
       string_decoder "~0.10.x"
   
-  readable-stream@^2.0.0, readable-stream@^2.0.4, readable-stream@^2.1.0, readable-stream@^2.1.5:
-    version "2.2.2"
-    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.2.tgz#a9e6fec3c7dda85f8bb1b3ba7028604556fc825e"
+  readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.5, readable-stream@~2.0.0, readable-stream@~2.0.5:
+    version "2.0.6"
+    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
     dependencies:
-      buffer-shims "^1.0.0"
       core-util-is "~1.0.0"
       inherits "~2.0.1"
       isarray "~1.0.0"
@@ -4294,10 +4289,11 @@ Lockfile:
       string_decoder "~0.10.x"
       util-deprecate "~1.0.1"
   
-  "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@~2.0.0, readable-stream@~2.0.5:
-    version "2.0.6"
-    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
+  "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.1.0, readable-stream@^2.1.5:
+    version "2.2.2"
+    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.2.tgz#a9e6fec3c7dda85f8bb1b3ba7028604556fc825e"
     dependencies:
+      buffer-shims "^1.0.0"
       core-util-is "~1.0.0"
       inherits "~2.0.1"
       isarray "~1.0.0"
@@ -4421,7 +4417,31 @@ Lockfile:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
   
-  request@2, request@2.78.0:
+  request@2, request@^2.61.0:
+    version "2.65.0"
+    resolved "https://registry.yarnpkg.com/request/-/request-2.65.0.tgz#cc1a3bc72b96254734fc34296da322f9486ddeba"
+    dependencies:
+      aws-sign2 "~0.6.0"
+      bl "~1.0.0"
+      caseless "~0.11.0"
+      combined-stream "~1.0.5"
+      extend "~3.0.0"
+      forever-agent "~0.6.1"
+      form-data "~1.0.0-rc3"
+      har-validator "~2.0.2"
+      hawk "~3.1.0"
+      http-signature "~0.11.0"
+      isstream "~0.1.2"
+      json-stringify-safe "~5.0.1"
+      mime-types "~2.1.7"
+      node-uuid "~1.4.3"
+      oauth-sign "~0.8.0"
+      qs "~5.2.0"
+      stringstream "~0.0.4"
+      tough-cookie "~2.2.0"
+      tunnel-agent "~0.4.1"
+  
+  request@2.78.0:
     version "2.78.0"
     resolved "https://registry.yarnpkg.com/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
     dependencies:
@@ -4444,30 +4464,6 @@ Lockfile:
       qs "~6.3.0"
       stringstream "~0.0.4"
       tough-cookie "~2.3.0"
-      tunnel-agent "~0.4.1"
-  
-  request@^2.61.0:
-    version "2.65.0"
-    resolved "https://registry.yarnpkg.com/request/-/request-2.65.0.tgz#cc1a3bc72b96254734fc34296da322f9486ddeba"
-    dependencies:
-      aws-sign2 "~0.6.0"
-      bl "~1.0.0"
-      caseless "~0.11.0"
-      combined-stream "~1.0.5"
-      extend "~3.0.0"
-      forever-agent "~0.6.1"
-      form-data "~1.0.0-rc3"
-      har-validator "~2.0.2"
-      hawk "~3.1.0"
-      http-signature "~0.11.0"
-      isstream "~0.1.2"
-      json-stringify-safe "~5.0.1"
-      mime-types "~2.1.7"
-      node-uuid "~1.4.3"
-      oauth-sign "~0.8.0"
-      qs "~5.2.0"
-      stringstream "~0.0.4"
-      tough-cookie "~2.2.0"
       tunnel-agent "~0.4.1"
   
   request@^2.79.0:
@@ -5738,4 +5734,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Applications/MAMP/htdocs/pagegwood.com/site/web/app/themes/wood/node_modules/body-parser/node_modules/debug'
+  Error: EACCES: permission denied, mkdir '/Applications/MAMP/htdocs/pagegwood.com/site/web/app/themes/wood/node_modules/decompress-unzip/node_modules/readable-stream'
