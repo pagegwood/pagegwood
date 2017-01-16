@@ -1,0 +1,29 @@
+{% extends "planks/plank-wrapper.twig" %}
+
+{% block content %}
+	<div class="paddingY2 paddingY5--md">
+		<div class="Container">
+			{% if plank.caption %}
+			<div class="Grid">
+				<div class="Grid-cell u-md-size4of5">
+					<span class="size-h3 block font-secondary weight-light color-text marginB3 marginB5--md">{{ plank.caption }}</span>
+					{% endif %}
+				</div>
+			</div>
+
+			{% if plank.heading %}
+			<h3 class="size-h4 font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB3 marginB5--md">{{ plank.heading }}</h3>
+			{% endif %}
+
+			{% for post in plank.posts %}
+
+					{% include ['partials/tease-project.twig'] %}
+
+			{% endfor %}
+
+			{% if plank.button_caption and plank.button_url %}
+				<a class="Button Button--two marginT3 marginT5--md" href="{{ plank.button_url }}" title="{{ plank.button_caption }}">{{ plank.button_caption }}</a>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
