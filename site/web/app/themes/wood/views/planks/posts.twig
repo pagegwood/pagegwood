@@ -1,16 +1,33 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	<div class="Container">
-		{{ plank.heading }}
-		{% for post in plank.posts %}
-			{% if not loop.last %}
-			<div class="marginB5">
-			{% endif %}
-				{% include ['partials/tease-post.twig'] %}
-			{% if not loop.last %}
+	<div class="paddingY2 paddingY5--md">
+		<div class="Container">
+			{% if plank.caption %}
+			<div class="Grid">
+				<div class="Grid-cell u-md-size4of5">
+					<span class="size-h3 block font-secondary weight-light color-text marginB3 marginB5--md">{{ plank.caption }}</span>
+					{% endif %}
+				</div>
 			</div>
+
+			{% if plank.heading %}
+			<h3 class="size-h4 font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB3 marginB5--md">{{ plank.heading }}</h3>
 			{% endif %}
-		{% endfor %}
+
+			{% for post in plank.posts %}
+				{% if not loop.last %}
+				<div class="marginB5">
+				{% endif %}
+					{% include ['partials/tease-post.twig'] %}
+				{% if not loop.last %}
+				</div>
+				{% endif %}
+			{% endfor %}
+
+			{% if plank.button_caption and plank.button_url %}
+				<a class="Button Button--three marginT3 marginT5--md" href="{{ plank.button_url }}" title="{{ plank.button_caption }}">{{ plank.button_caption }}</a>
+			{% endif %}
+		</div>
 	</div>
 {% endblock %}
