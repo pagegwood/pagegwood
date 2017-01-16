@@ -81,3 +81,27 @@
   width: 100%;
 }
 
+// ==========================================================================
+// Instagram
+// ==========================================================================
+
+
+.Instafeed{
+  margin: 0 -10px;
+  @include viewport--sm-min{
+    margin: 0 -5px;
+  }
+  a{
+    display: inline-block;
+    width: 25%;
+    padding: 5px;
+    @include viewport--sm-min{
+      padding: 10px;
+    }
+  }
+}
+
+
+
+
+

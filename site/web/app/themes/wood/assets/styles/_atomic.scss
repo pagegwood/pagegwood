@@ -1,3 +1,7 @@
+//mixins
+
+
+
 // ==========================================================================
 // Display
 // ==========================================================================
@@ -24,6 +28,13 @@
 .block{
 	display: block;
 }
+
+.reverseColumns--mdMax{
+	@include viewport--md-max{
+		flex-direction: column-reverse;
+	}
+}
+
 
 // ==========================================================================
 // Color
@@ -202,76 +213,58 @@
 // Margin Bottom
 // ==========================================================================
 
-.marginB1{
-	margin-bottom: $spacer * 1;
-}
-
-.marginB2{
-	margin-bottom: $spacer * 2;
-}
-
-.marginB3{
-	margin-bottom: $spacer * 3;
-}
-
-.marginB4{
-	margin-bottom: $spacer * 4;
-}
-
-.marginB5{
-	margin-bottom: $spacer * 5;
-}
-
-.marginB6{
-	margin-bottom: $spacer * 6;
-}
-
-.marginB7{
-	margin-bottom: $spacer * 7;
-}
-
-.marginB8{
-	margin-bottom: $spacer * 8;
-}
-
-.marginB9{
-	margin-bottom: $spacer * 9;
-}
-
-.marginB10{
-	margin-bottom: $spacer * 10;
-}
-
-.marginB10--sm{
-	@include viewport--sm-min{
-		margin-bottom: $spacer * 10;
+@mixin marginB($i) {
+	.marginB#{$i}{
+	  margin-bottom: $spacer * $i;
+	}
+	.marginB#{$i}--sm{
+		@include viewport--sm-min{
+		  margin-bottom: $spacer * $i;
+		}
+	}
+	.marginB#{$i}--md{
+		@include viewport--md-min{
+		  margin-bottom: $spacer * $i;
+		}
 	}
 }
+
+@mixin marginB-classes($total) {
+  @for $i from 0 through $total {
+    @include marginB($i);
+  }
+}
+
+@include marginB-classes(10);
 
 //
 // Margin Top
 // ==========================================================================
 
-
-.marginT1{
-	margin-top: $spacer * 1;
+@mixin marginT($i) {
+	.marginT#{$i}{
+	  margin-top: $spacer * $i;
+	}
+	.marginT#{$i}--sm{
+		@include viewport--sm-min{
+		  margin-top: $spacer * $i;
+		}
+	}
+	.marginT#{$i}--md{
+		@include viewport--md-min{
+		  margin-top: $spacer * $i;
+		}
+	}
 }
 
-.marginT2{
-	margin-top: $spacer * 2;
+@mixin marginT-classes($total) {
+  @for $i from 0 through $total {
+    @include marginT($i);
+  }
 }
 
-.marginT3{
-	margin-top: $spacer * 3;
-}
+@include marginT-classes(10);
 
-.marginT4{
-	margin-top: $spacer * 4;
-}
-
-.marginT5{
-	margin-top: $spacer * 5;
-}
 
 
 // ==========================================================================
@@ -284,125 +277,123 @@
 // ==========================================================================
 
 
-.paddingX1{
-	padding-left: $spacer * 1;
-	padding-right: $spacer *1;
+@mixin paddingX($i) {
+	.paddingX#{$i}{
+	  padding-left: $spacer * $i;
+		padding-right: $spacer * $i;
+	}
+	.paddingX#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-left: $spacer * $i;
+			padding-right: $spacer * $i;
+		}
+	}
+	.paddingX#{$i}--md{
+		@include viewport--md-min{
+		  padding-left: $spacer * $i;
+			padding-right: $spacer * $i;
+		}
+	}
 }
 
-.paddingX2{
-	padding-left: $spacer * 2;
-	padding-right: $spacer *2;
+@mixin paddingX-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingX($i);
+  }
 }
 
-.paddingX3{
-	padding-left: $spacer * 3;
-	padding-right: $spacer * 3;
-}
-
-.paddingX4{
-	padding-left: $spacer * 4;
-	padding-right: $spacer * 4;
-}
-
-.paddingX5{
-	padding-left: $spacer * 5;
-	padding-right: $spacer * 5;
-}
-
+@include paddingX-classes(5);
 
 //
 // Vertical Padding
 // ==========================================================================
 
-.paddingY1{
-	padding-top: $spacer * 1;
-	padding-bottom: $spacer *1;
-}
-
-.paddingY2{
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer *2;
-}
-
-.paddingY3{
-	padding-top: $spacer * 3;
-	padding-bottom: $spacer * 3;
-}
-
-.paddingY4{
-	padding-top: $spacer * 4;
-	padding-bottom: $spacer * 4;
-}
-
-.paddingY5{
-	padding-top: $spacer * 5;
-	padding-bottom: $spacer * 5;
-}
-
-//style for building out breakpoint based padding
-.paddingY4--sm{
-	@include viewport--sm-min{
-		padding-top: $spacer * 4;
-		padding-bottom: $spacer * 4;
+@mixin paddingY($i) {
+	.paddingY#{$i}{
+	  padding-top: $spacer * $i;
+		padding-bottom: $spacer * $i;
+	}
+	.paddingY#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i;
+			padding-bottom: $spacer * $i;
+		}
+	}
+	.paddingY#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i;
+			padding-bottom: $spacer * $i;
+		}
 	}
 }
 
-//style for building out breakpoint based padding
-.paddingY5--sm{
-	@include viewport--sm-min{
-		padding-top: $spacer * 5;
-		padding-bottom: $spacer * 5;
-	}
+@mixin paddingY-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingY($i);
+  }
 }
+
+@include paddingY-classes(5);
 
 //
 // Bottom Padding
 // ==========================================================================
 
-.paddingB1{
-	padding-bottom: $spacer *1;
+@mixin paddingB($i) {
+	.paddingB#{$i}{
+	  padding-bottom: $spacer * $i;
+	}
+	.paddingB#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-bottom: $spacer * $i;
+		}
+	}
+	.paddingB#{$i}--md{
+		@include viewport--md-min{
+		  padding-bottom: $spacer * $i;
+		}
+	}
 }
 
-.paddingB2{
-	padding-bottom: $spacer *2;
+@mixin paddingB-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingB($i);
+  }
 }
 
-.paddingB3{
-	padding-bottom: $spacer * 3;
-}
+@include paddingB-classes(5);
 
-.paddingB4{
-	padding-bottom: $spacer * 4;
-}
-
-.paddingB5{
-	padding-bottom: $spacer * 5;
-}
 
 
 //
 // Top Padding
 // ==========================================================================
 
-.paddingT1{
-	padding-top: $spacer * 1;
+
+@mixin paddingT($i) {
+	.paddingT#{$i}{
+	  padding-top: $spacer * $i;
+	}
+	.paddingT#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i;
+		}
+	}
+	.paddingT#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i;
+		}
+	}
 }
 
-.paddingT2{
-	padding-top: $spacer * 2;
+@mixin paddingT-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingT($i);
+  }
 }
 
-.paddingT3{
-	padding-top: $spacer * 3;
-}
+@include paddingT-classes(5);
 
-.paddingT4{
-	padding-top: $spacer * 4;
-}
-
-.paddingT5{
-	padding-top: $spacer * 5;
-}
 
 
 // ==========================================================================
@@ -424,6 +415,12 @@
 	&:active,
 	&:focus{
 		cursor: pointer;
+	}
+
+	i{
+		font-size: 120%;
+		position: relative;
+		top: 3px;
 	}
 }
 
@@ -515,6 +512,17 @@
 	text-align: center;
 }
 
+.text-center--sm{
+	@include viewport--sm-min{
+		text-align: center;
+	}
+}
+
+.text-center--md{
+	@include viewport--md-min{
+		text-align: center;
+	}
+}
 
 // ==========================================================================
 // Font Style

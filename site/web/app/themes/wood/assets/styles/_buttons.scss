@@ -1,0 +1,22 @@
+.Button{
+	padding: 10px 20px;
+	border: 2px solid;
+	font-weight: $weight--bold;
+	font-size: 14px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.2s;
+}
+
+.Button--three{
+	color: $color--white;
+	border-color: $color--three;
+	background: $color--three;
+	&:hover,
+	&:active,
+	&:focus{
+		background: $color--white;
+		color: $color--three;
+	}
+}

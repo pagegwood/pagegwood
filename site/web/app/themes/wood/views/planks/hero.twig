@@ -13,7 +13,9 @@
 					</a>
 				</div>
 				{% endif %}
+				{% if plank.heading %}
 				<h1 class="Hero-caption paddingY2 paddingY5--sm size-hero font-primary weight-medium color-white">{{ plank.heading }}</h1>
+				{% endif %}
 				{% if plank.has_menu %}
 					<nav id="nav-main" class="Nav Nav--hero marginT3" role="navigation">
 						{% include "partials/menu.twig" with {'menu': menu.get_items} %}

@@ -95,6 +95,11 @@ button {
   cursor: pointer;
   overflow: visible;
 }
+
+*{
+  box-sizing: border-box;
+}
+
 ::-moz-focus-inner {
   border: 0;
   padding: 0;
