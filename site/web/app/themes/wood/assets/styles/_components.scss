@@ -102,6 +102,84 @@
 }
 
 
+.split-bg--md{
+  @include viewport--md-min{
+    position: relative;
+    z-index: 1;
+
+    > div {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:after,
+    &:before{
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      content: '';
+      position: absolute;
+    }
+
+    &:before{
+      left: 0;
+      background: $color--two;
+    }
+
+    &:after{
+      right: 0;
+      background: $color--white;
+    }
+  }
+}
 
 
+.Grid--hasSplit{
+  @include viewport--md-min{
+    > .Grid-cell{
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+
+      &:first-child{
+        &:after{
+          right: -1px;
+          width: 1px;
+          background: $color--border;
+        }
+
+      }
+
+      &:last-child{
+        &:after{
+          left: 0px;
+          width: 1px;
+          background: $color--border;
+        }
+      }
+    }
+  }
+}
+
+
+.Grid--gutterMedium{
+  margin: 0 -30px;
+
+  > .Grid-cell{
+    padding: 0 30px;
+  }
+}
+
+.Grid--gutterLarge{
+  margin: 0 -45px;
+
+  > .Grid-cell{
+    padding: 0 45px;
+  }
+}
 
