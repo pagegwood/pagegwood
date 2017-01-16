@@ -1,7 +1,1020 @@
 [
     {
+        "key": "group_587d224a2aa13",
+        "title": "Plank : Columns",
+        "fields": [
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_5840bc6615941",
+                "label": "Content",
+                "name": "plank_content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "small": "Small",
+                    "default": "Default",
+                    "full": "Full"
+                },
+                "default_value": [
+                    "default"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_5840bc6615942",
+                "label": "Container Size",
+                "name": "plank_container_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "sub_fields": [
+                    {
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "default_value": "",
+                        "delay": 0,
+                        "key": "field_5840bd0e15944",
+                        "label": "Content",
+                        "name": "plank_column_content",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "one": "Blue",
+                            "two": "Aqua",
+                            "three": "Dark Green",
+                            "four": "Lighter Green",
+                            "five": "Lightest Green",
+                            "six": "Text",
+                            "seven: Light Gray": "seven: Light Gray",
+                            "default": "White"
+                        },
+                        "default_value": [
+                            "default"
+                        ],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
+                        "key": "field_5840bd3f15945",
+                        "label": "Background Color",
+                        "name": "plank_column_background_color",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "1of4": "1\/4",
+                            "1of3": "1\/3",
+                            "1of2": "1\/2",
+                            "1of1": "1\/1",
+                            "2of3": "2\/3",
+                            "3of4": "3\/4"
+                        },
+                        "default_value": [
+                            "1of4"
+                        ],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
+                        "key": "field_5840bdd215946",
+                        "label": "Size",
+                        "name": "plank_column_size",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "collapsed": "",
+                "key": "field_5840bcf315943",
+                "label": "Columns",
+                "name": "plank_columns",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d20f5383dd",
+        "title": "Plank : Content",
+        "fields": [
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_5840bc2e1593f",
+                "label": "Content",
+                "name": "plank_content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "small": "Small",
+                    "default": "Default",
+                    "full": "Full"
+                },
+                "default_value": [
+                    "default"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_5840bbd41593e",
+                "label": "Container Size",
+                "name": "plank_container_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1ebab290f",
+        "title": "Plank : CTA",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b99357512",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9a457513",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9ec57516",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_587d11fd5a111",
+                "label": "Background Color",
+                "name": "plank_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1eae4b842",
+        "title": "Plank : Hero",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_583ce9ef75ebe",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_584ea4dc66e0b"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_584ea60ce6a2e",
+                "label": "Images",
+                "name": "images",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "field_584ea566b4666"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_584ea63de6a2f",
+                "label": "Fixed Background Image",
+                "name": "fixed_background_image",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_58572195113cd",
+                "label": "Has Logo",
+                "name": "plank_has_logo",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_585721b3113ce",
+                "label": "Has Menu",
+                "name": "plank_has_menu",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1e99cf0d9",
+        "title": "Plank : Instagram",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_583cea2775ec0",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9b657514",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840ba0e57517",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_58572d30d612e",
+                "label": "Background Color",
+                "name": "plank_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d20f6a975b",
+        "title": "Plank : Interior Hero",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bb6d15936",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bb7915939",
+                "label": "Subheading",
+                "name": "plank_subheading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1ec33abcc",
+        "title": "Plank : Posts",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b8a95750a",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": 3,
+                "key": "field_5840b96457510",
+                "label": "Caption",
+                "name": "plank_caption",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840b8bc5750b",
+                "label": "Limit by Tag",
+                "name": "plank_limit_by_tag",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "post_tag",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840b9345750f",
+                "label": "Tag",
+                "name": "plank_tag",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840b8ca5750c",
+                "label": "Limit by Category",
+                "name": "plank_limit_by_category",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "category",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840b8fb5750e",
+                "label": "Category",
+                "name": "plank_category",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "step": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b8e55750d",
+                "label": "Max Total",
+                "name": "plank_max_total",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9e157515",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840ba1957518",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1e06c45cf",
+        "title": "Plank : Projects",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad91592a",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_587d1e094803c",
+                "label": "Background Color",
+                "name": "wood_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "new_lines": "wpautop",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": 3,
+                "key": "field_5840bad91592b",
+                "label": "Caption",
+                "name": "plank_caption",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840bad91592c",
+                "label": "Limit by Tag",
+                "name": "plank_limit_by_tag",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "post_tag",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840bad91592d",
+                "label": "Tag",
+                "name": "plank_tag",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "step": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915930",
+                "label": "Max Total",
+                "name": "plank_max_total",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915931",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915932",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
         "key": "group_58572c973f7d2",
-        "title": "Plank Background Color",
+        "title": "Plank Field : Background Color",
         "fields": [
             {
                 "multiple": 0,
@@ -57,7 +1070,7 @@
     },
     {
         "key": "group_584ea5b298d7b",
-        "title": "Plank Call to Action Button",
+        "title": "Plank Field Group : Call to Action Button",
         "fields": [
             {
                 "default_value": "",
@@ -117,50 +1130,8 @@
         "description": ""
     },
     {
-        "key": "group_584ea55355984",
-        "title": "Plank Fixed Background",
-        "fields": [
-            {
-                "default_value": 0,
-                "message": "",
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": "",
-                "key": "field_584ea566b4666",
-                "label": "Fixed Background",
-                "name": "plank_fixed_background",
-                "type": "true_false",
-                "instructions": "Enable to add parallax images",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "post"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": 0,
-        "description": ""
-    },
-    {
         "key": "group_584ea4dc66e0b",
-        "title": "Plank Flexible Images",
+        "title": "Plank Field Group : Flexible Images",
         "fields": [
             {
                 "return_format": "id",
@@ -286,147 +1257,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "tabs": "all",
-                                "toolbar": "full",
-                                "media_upload": 1,
-                                "default_value": "",
-                                "delay": 0,
-                                "key": "field_5840bc6615941",
-                                "label": "Content",
-                                "name": "plank_content",
-                                "type": "wysiwyg",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "choices": {
-                                    "small": "Small",
-                                    "default": "Default",
-                                    "full": "Full"
-                                },
-                                "default_value": [
-                                    "default"
+                                "clone": [
+                                    "group_587d224a2aa13"
                                 ],
-                                "ui": 0,
-                                "ajax": 0,
-                                "placeholder": "",
-                                "return_format": "value",
-                                "key": "field_5840bc6615942",
-                                "label": "Container Size",
-                                "name": "plank_container_size",
-                                "type": "select",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "sub_fields": [
-                                    {
-                                        "tabs": "all",
-                                        "toolbar": "full",
-                                        "media_upload": 1,
-                                        "default_value": "",
-                                        "delay": 0,
-                                        "key": "field_5840bd0e15944",
-                                        "label": "Content",
-                                        "name": "plank_column_content",
-                                        "type": "wysiwyg",
-                                        "instructions": "",
-                                        "required": 0,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        }
-                                    },
-                                    {
-                                        "multiple": 0,
-                                        "allow_null": 0,
-                                        "choices": {
-                                            "one": "Blue",
-                                            "two": "Aqua",
-                                            "three": "Dark Green",
-                                            "four": "Lighter Green",
-                                            "five": "Lightest Green",
-                                            "six": "Text",
-                                            "seven: Light Gray": "seven: Light Gray",
-                                            "default": "White"
-                                        },
-                                        "default_value": [
-                                            "default"
-                                        ],
-                                        "ui": 0,
-                                        "ajax": 0,
-                                        "placeholder": "",
-                                        "return_format": "value",
-                                        "key": "field_5840bd3f15945",
-                                        "label": "Background Color",
-                                        "name": "plank_column_background_color",
-                                        "type": "select",
-                                        "instructions": "",
-                                        "required": 0,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        }
-                                    },
-                                    {
-                                        "multiple": 0,
-                                        "allow_null": 0,
-                                        "choices": {
-                                            "1of4": "1\/4",
-                                            "1of3": "1\/3",
-                                            "1of2": "1\/2",
-                                            "1of1": "1\/1",
-                                            "2of3": "2\/3",
-                                            "3of4": "3\/4"
-                                        },
-                                        "default_value": [
-                                            "1of4"
-                                        ],
-                                        "ui": 0,
-                                        "ajax": 0,
-                                        "placeholder": "",
-                                        "return_format": "value",
-                                        "key": "field_5840bdd215946",
-                                        "label": "Size",
-                                        "name": "plank_column_size",
-                                        "type": "select",
-                                        "instructions": "",
-                                        "required": 0,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        }
-                                    }
-                                ],
-                                "min": 0,
-                                "max": 0,
-                                "layout": "table",
-                                "button_label": "",
-                                "collapsed": "",
-                                "key": "field_5840bcf315943",
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d2274c07ae",
                                 "label": "Columns",
                                 "name": "plank_columns",
-                                "type": "repeater",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -447,43 +1288,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "tabs": "all",
-                                "toolbar": "full",
-                                "media_upload": 1,
-                                "default_value": "",
-                                "delay": 0,
-                                "key": "field_5840bc2e1593f",
+                                "clone": [
+                                    "group_587d20f5383dd"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d22a23e6f6",
                                 "label": "Content",
                                 "name": "plank_content",
-                                "type": "wysiwyg",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "choices": {
-                                    "small": "Small",
-                                    "default": "Default",
-                                    "full": "Full"
-                                },
-                                "default_value": [
-                                    "default"
-                                ],
-                                "ui": 0,
-                                "ajax": 0,
-                                "placeholder": "",
-                                "return_format": "value",
-                                "key": "field_5840bbd41593e",
-                                "label": "Container Size",
-                                "name": "plank_container_size",
-                                "type": "select",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -504,73 +1319,16 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b99357512",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b9a457513",
-                                "label": "Button URL",
-                                "name": "plank_button_url",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b9ec57516",
-                                "label": "Button Caption",
-                                "name": "plank_button_caption",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
                                 "clone": [
-                                    "group_58572c973f7d2"
+                                    "group_587d1ebab290f"
                                 ],
                                 "prefix_label": 0,
                                 "prefix_name": 0,
                                 "display": "seamless",
                                 "layout": "block",
-                                "key": "field_587d11fd5a111",
-                                "label": "Background Color",
-                                "name": "plank_background_color",
+                                "key": "field_587d1f7252ad2",
+                                "label": "Call to Action",
+                                "name": "plank_call_to_action",
                                 "type": "clone",
                                 "instructions": "",
                                 "required": 0,
@@ -592,95 +1350,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_583ce9ef75ebe",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
                                 "clone": [
-                                    "group_584ea4dc66e0b"
+                                    "group_587d1eae4b842"
                                 ],
                                 "prefix_label": 0,
                                 "prefix_name": 0,
                                 "display": "seamless",
                                 "layout": "block",
-                                "key": "field_584ea60ce6a2e",
-                                "label": "Images",
-                                "name": "images",
+                                "key": "field_587d1f3130614",
+                                "label": "Hero",
+                                "name": "wood_plank_hero",
                                 "type": "clone",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "clone": [
-                                    "field_584ea566b4666"
-                                ],
-                                "prefix_label": 0,
-                                "prefix_name": 0,
-                                "display": "seamless",
-                                "layout": "block",
-                                "key": "field_584ea63de6a2f",
-                                "label": "Fixed Background Image",
-                                "name": "fixed_background_image",
-                                "type": "clone",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_58572195113cd",
-                                "label": "Has Logo",
-                                "name": "plank_has_logo",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_585721b3113ce",
-                                "label": "Has Menu",
-                                "name": "plank_has_menu",
-                                "type": "true_false",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -701,82 +1381,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bb6d15936",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bb7915939",
-                                "label": "Subheading",
-                                "name": "plank_subheading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "return_format": "id",
-                                "preview_size": "thumbnail",
-                                "library": "all",
-                                "min_width": "",
-                                "min_height": "",
-                                "min_size": "",
-                                "max_width": "",
-                                "max_height": "",
-                                "max_size": "",
-                                "mime_types": "",
-                                "key": "field_5840bb6d15937",
-                                "label": "Desktop Image",
-                                "name": "plank_desktop_image_id",
-                                "type": "image",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "return_format": "id",
-                                "preview_size": "thumbnail",
-                                "library": "all",
-                                "min_width": "",
-                                "min_height": "",
-                                "min_size": "",
-                                "max_width": "",
-                                "max_height": "",
-                                "max_size": "",
-                                "mime_types": "",
-                                "key": "field_5840bb6d15938",
-                                "label": "Mobile Image",
-                                "name": "plank_mobile_image_id",
-                                "type": "image",
+                                "clone": [
+                                    "group_587d20f6a975b"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d22cbb8d63",
+                                "label": "Interior Hero",
+                                "name": "plank_interior_hero",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -797,73 +1412,16 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_583cea2775ec0",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b9b657514",
-                                "label": "Button Caption",
-                                "name": "plank_button_caption",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840ba0e57517",
-                                "label": "Button URL",
-                                "name": "plank_button_url",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
                                 "clone": [
-                                    "group_58572c973f7d2"
+                                    "group_587d1e99cf0d9"
                                 ],
                                 "prefix_label": 0,
                                 "prefix_name": 0,
                                 "display": "seamless",
                                 "layout": "block",
-                                "key": "field_58572d30d612e",
-                                "label": "Background Color",
-                                "name": "plank_background_color",
+                                "key": "field_587d1faded358",
+                                "label": "Instagram",
+                                "name": "plank_instagram",
                                 "type": "clone",
                                 "instructions": "",
                                 "required": 0,
@@ -885,191 +1443,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b8a95750a",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "new_lines": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "rows": 3,
-                                "key": "field_5840b96457510",
-                                "label": "Caption",
-                                "name": "plank_caption",
-                                "type": "textarea",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_5840b8bc5750b",
-                                "label": "Limit by Tag",
-                                "name": "plank_limit_by_tag",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "taxonomy": "post_tag",
-                                "field_type": "select",
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "return_format": "id",
-                                "add_term": 0,
-                                "load_terms": 0,
-                                "save_terms": 0,
-                                "key": "field_5840b9345750f",
-                                "label": "Tag",
-                                "name": "plank_tag",
-                                "type": "taxonomy",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": [
-                                    [
-                                        {
-                                            "field": "field_5840b8bc5750b",
-                                            "operator": "==",
-                                            "value": "1"
-                                        }
-                                    ]
+                                "clone": [
+                                    "group_587d1ec33abcc"
                                 ],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_5840b8ca5750c",
-                                "label": "Limit by Category",
-                                "name": "plank_limit_by_category",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "taxonomy": "category",
-                                "field_type": "select",
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "return_format": "id",
-                                "add_term": 0,
-                                "load_terms": 0,
-                                "save_terms": 0,
-                                "key": "field_5840b8fb5750e",
-                                "label": "Category",
-                                "name": "plank_category",
-                                "type": "taxonomy",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": [
-                                    [
-                                        {
-                                            "field": "field_5840b8ca5750c",
-                                            "operator": "==",
-                                            "value": "1"
-                                        }
-                                    ]
-                                ],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "min": "",
-                                "max": "",
-                                "step": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b8e55750d",
-                                "label": "Max Total",
-                                "name": "plank_max_total",
-                                "type": "number",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840b9e157515",
-                                "label": "Button URL",
-                                "name": "plank_button_url",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840ba1957518",
-                                "label": "Button Caption",
-                                "name": "plank_button_caption",
-                                "type": "text",
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d20ad95412",
+                                "label": "Posts",
+                                "name": "plank_posts",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1090,191 +1474,17 @@
                         "display": "block",
                         "sub_fields": [
                             {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bad91592a",
-                                "label": "Heading",
-                                "name": "plank_heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "new_lines": "wpautop",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "rows": 3,
-                                "key": "field_5840bad91592b",
-                                "label": "Caption",
-                                "name": "plank_caption",
-                                "type": "textarea",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_5840bad91592c",
-                                "label": "Limit by Tag",
-                                "name": "plank_limit_by_tag",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "taxonomy": "post_tag",
-                                "field_type": "select",
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "return_format": "id",
-                                "add_term": 0,
-                                "load_terms": 0,
-                                "save_terms": 0,
-                                "key": "field_5840bad91592d",
-                                "label": "Tag",
-                                "name": "plank_tag",
-                                "type": "taxonomy",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": [
-                                    [
-                                        {
-                                            "field": "field_5840bad91592c",
-                                            "operator": "==",
-                                            "value": "1"
-                                        }
-                                    ]
+                                "clone": [
+                                    "group_587d1e06c45cf"
                                 ],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": 0,
-                                "message": "",
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "key": "field_5840bad91592e",
-                                "label": "Limit by Category",
-                                "name": "plank_limit_by_category",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "taxonomy": "category",
-                                "field_type": "select",
-                                "multiple": 0,
-                                "allow_null": 0,
-                                "return_format": "id",
-                                "add_term": 0,
-                                "load_terms": 0,
-                                "save_terms": 0,
-                                "key": "field_5840bad91592f",
-                                "label": "Category",
-                                "name": "plank_category",
-                                "type": "taxonomy",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": [
-                                    [
-                                        {
-                                            "field": "field_5840bad91592e",
-                                            "operator": "==",
-                                            "value": "1"
-                                        }
-                                    ]
-                                ],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "min": "",
-                                "max": "",
-                                "step": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bad915930",
-                                "label": "Max Total",
-                                "name": "plank_max_total",
-                                "type": "number",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bad915931",
-                                "label": "Button URL",
-                                "name": "plank_button_url",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                }
-                            },
-                            {
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "key": "field_5840bad915932",
-                                "label": "Button Caption",
-                                "name": "plank_button_caption",
-                                "type": "text",
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d202162a13",
+                                "label": "Projects",
+                                "name": "plank_projects",
+                                "type": "clone",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
