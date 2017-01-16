@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const qs = require('qs');
 const autoprefixer = require('autoprefixer');
+const customMedia = require("postcss-custom-media");
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -157,6 +158,7 @@ let webpackConfig = {
         output: { path: config.paths.dist },
         context: config.paths.assets,
         postcss: [
+          customMedia(),
           autoprefixer({ browsers: ['last 2 versions', 'android 4', 'opera 12'] }),
         ],
       },
