@@ -559,6 +559,27 @@
                                     "class": "",
                                     "id": ""
                                 }
+                            },
+                            {
+                                "clone": [
+                                    "group_58572c973f7d2"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d11fd5a111",
+                                "label": "Background Color",
+                                "name": "plank_background_color",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
                             }
                         ],
                         "min": "",
@@ -1307,6 +1328,186 @@
         "hide_on_screen": [
             "the_content"
         ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_587d18ad8d3b2",
+        "title": "Project Details",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_587d18d2cc83c",
+                "label": "Project Launch Date",
+                "name": "wood_project_launch_date",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_587d18e4cc83d",
+                "label": "Project URL",
+                "name": "wood_project_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_project"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_587d17a37aa72",
+        "title": "Project Images",
+        "fields": [
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d17b105aab",
+                "label": "Preview Image",
+                "name": "wood_preview_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d17d605aac",
+                "label": "Logo Image",
+                "name": "wood_logo_image_id",
+                "type": "image",
+                "instructions": "The project logo is presently displayed above the preview image.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d180905aad",
+                "label": "Featured Image - Desktop",
+                "name": "wood_featured_image_desktop_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d184205aae",
+                "label": "Featured Image - Mobile",
+                "name": "wood_featured_image_mobile_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_project"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
         "active": 1,
         "description": ""
     }
