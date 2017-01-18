@@ -1,7 +1,7 @@
-<article class="Tease Tease--{{post.post_type}}" id="tease-{{post.ID}}">
+<article class="Tease Tease--project" id="tease-{{post.ID}}">
 	<a href="{{post.link}}" title="{{ post.title }}" class="Post-link link link-color-six">
-		<h2 class="size-h2 weight-normal font-primary marginB1">
-			{{ post.title }}
-		</h2>
+		<div class="Tease-preview" style="background:url({{ post.previewImage().src }});">
+		</div>
+		<img src="{{ post.logoImage().src }}">
 	</a>
 </article>

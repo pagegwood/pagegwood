@@ -7,19 +7,23 @@
 			<div class="Grid">
 				<div class="Grid-cell u-md-size4of5">
 					<span class="size-h3 block font-secondary weight-light color-text marginB3 marginB5--md">{{ plank.caption }}</span>
-					{% endif %}
 				</div>
 			</div>
+			{% endif %}
 
 			{% if plank.heading %}
 			<h3 class="size-h4 font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB3 marginB5--md">{{ plank.heading }}</h3>
 			{% endif %}
 
+			<div class="Grid Grid--withGutter Grid--equalHeight">
 			{% for post in plank.posts %}
-
+				{% if post.logoImage() and post.previewImage() %}
+				<div class="Grid-cell u-sm-size1of2 u-md-size1of4">
 					{% include ['partials/tease-project.twig'] %}
-
+				</div>
+			{% endif %}
 			{% endfor %}
+			</div>
 
 			{% if plank.button_caption and plank.button_url %}
 				<a class="Button Button--two marginT3 marginT5--md" href="{{ plank.button_url }}" title="{{ plank.button_caption }}">{{ plank.button_caption }}</a>

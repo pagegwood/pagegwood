@@ -183,3 +183,56 @@
   }
 }
 
+
+.Tease--project{
+  a{
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    &:hover,
+    &:active,
+    &:focus{
+      img{
+        transform: scale(1.1);
+      }
+
+      &:after{
+        background: rgba(0,0,0, 0.9);
+      }
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0, 0.8);
+      z-index: 4;
+      transition: all 0.2s;
+    }
+
+    img{
+      position: relative;
+      z-index: 5;
+      padding: 40px;
+      transition: all 0.2s;
+    }
+  }
+
+  .Tease-preview{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-size: cover !important;
+    background-position: center center !important;
+    filter: blur(2px);
+  }
+}
+
