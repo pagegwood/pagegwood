@@ -185,16 +185,23 @@
 
 
 .Tease--project{
+  margin-bottom: 15px;
+  @include viewport--md-min{
+    margin-bottom: 0;
+  }
+
   a{
     display: block;
     height: 100%;
     position: relative;
     z-index: 1;
+    padding: 40px 20px;
+    overflow: hidden;
 
     &:hover,
     &:active,
     &:focus{
-      img{
+      .Tease-logo{
         transform: scale(1.1);
       }
 
@@ -214,13 +221,6 @@
       z-index: 4;
       transition: all 0.2s;
     }
-
-    img{
-      position: relative;
-      z-index: 5;
-      padding: 40px;
-      transition: all 0.2s;
-    }
   }
 
   .Tease-preview{
@@ -233,6 +233,18 @@
     background-size: cover !important;
     background-position: center center !important;
     filter: blur(2px);
+  }
+
+  .Tease-logo{
+    background-size: contain !important;
+    background-position: center center !important;
+    max-width: 180px;
+    height: 100px;
+    position: relative;
+    background-repeat: no-repeat !important;
+    z-index: 5;
+    transition: all 0.2s;
+    margin: 0 auto;
   }
 }
 
