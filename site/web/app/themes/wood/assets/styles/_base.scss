@@ -112,4 +112,11 @@ button {
   @media all and (min-width: 1001px){
     padding: 0;
   }
+
+  &--small{
+     max-width: 700px;
+     @media all and (min-width: 741px){
+      padding: 0;
+    }
+  }
 }
