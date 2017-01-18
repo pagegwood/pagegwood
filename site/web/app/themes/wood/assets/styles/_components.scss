@@ -248,3 +248,39 @@
   }
 }
 
+// ==========================================================================
+// Pagination
+// ==========================================================================
+
+
+.Pagination{
+
+}
+
+ul.Pagination-pages{
+  margin: 0 auto;
+  font-size: 0;
+  li{
+    display: inline-block;
+
+    a,
+    span{
+      font-size: 20px;
+      padding: 5px;
+      margin: 0 5px;
+      transition: all 0.2s;
+
+      &.current,
+      &:hover,
+      &:active,
+      &:focus{
+        color: $color--two;
+      }
+    }
+  }
+}
+
+.Pagination-button + .Pagination-button{
+  margin-left: 20px;
+}
+

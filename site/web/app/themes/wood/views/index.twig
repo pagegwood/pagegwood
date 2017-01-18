@@ -1,15 +1,38 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-	<div class="Posts paddingY5">
-	{% for post in posts %}
-		{% if not loop.last %}
-		<div class="marginB5">
-		{% endif %}
-			{% include ['partials/tease-post.twig'] %}
-		{% if not loop.last %}
+	<div class="Posts paddingY3 paddingY5--sm">
+		<div class="Container">
+			{% for post in posts %}
+				{% if not loop.last %}
+				<div class="marginB5">
+				{% endif %}
+					{% include ['partials/tease-post.twig'] %}
+				{% if not loop.last %}
+				</div>
+				{% endif %}
+			{% endfor %}
+			{% if pagination.prev or pagination.next %}
+			<div class="Pagination paddingT5 size-reset text-center">
+		    <ul class="Pagination-pages">
+	        {% for page in pagination.pages %}
+            <li>
+              {% if page.link %}
+                  <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+              {% else %}
+                  <span class="{{page.class}}">{{page.title}}</span>
+              {% endif %}
+            </li>
+	        {% endfor %}
+		    </ul>
+		    {% if pagination.prev %}
+	        <a href="{{pagination.prev.link}}" class="Pagination-button Pagination-button--next Button Button--two marginT2">Newer</a>
+		    {% endif %}
+		    {% if pagination.next %}
+		      <a href="{{pagination.next.link}}" class="Pagination-button Pagination-button--prev Button Button--two marginT2">Older</a>
+		    {% endif %}
+			</div>
+			{% endif %}
 		</div>
-		{% endif %}
-	{% endfor %}
 	</div>
 {% endblock %}
