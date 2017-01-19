@@ -16,16 +16,15 @@
 // List
 // ==========================================================================
 
-.list{
+.List{
 	font-size: 0;
 }
 
-.list--horizontal{
+.List--horizontal{
 	> li{
 		display: inline-block;
 	}
 }
-
 
 .List--icons{
 	> li{
