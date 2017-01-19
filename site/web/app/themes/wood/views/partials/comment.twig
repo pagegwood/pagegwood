@@ -1,4 +1,7 @@
 <div class="blog-comment {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
+	<img src="{{ comment.avatar }}" class="image-circle" alt="{{comment.author.name}}">
 	<h5 class="comment-author">{{comment.author.name}} says</h5>
-	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
+	{{ comment.date }} {{ comment.time }}
+	<div class="comment-content Content">{{comment.comment_content|wpautop}}</div>
+	{{ comment.reply_link }}
 </div>

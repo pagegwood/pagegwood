@@ -21,21 +21,26 @@
 					{% endfor %}
 					</ul>
 					{% endif %}
-
 				</section>
-				{% if post.comment_status != 'closed' %}
-					<section class="comments">
-						<div class="respond">
-							<h3 class="h2">Comments</h3>
-							{{ fn('comment_form') }}
-						</div>
-						<div class="responses">
+			</div>
+			{% if post.comment_status != 'closed' %}
+				<section class="Comments">
+					<div class="Container Container--small">
+						<h3 class="size-h3 font-primary weight-light color-text">{{ post.comment_count }} Comment{{ (post.comment_count != 0 and post.comment_count > 1) ? 's' : '' }}</h3>
+						<div class="Responses">
 							{% for cmt in post.get_comments() %}
 								{% include "partials/comment.twig" with {comment:cmt} %}
 							{% endfor %}
 						</div>
-					</section>
-				{% endif %}
-			</div>
+					</div>
+					<hr>
+					<div class="Container Container--small">
+						<h3 class="size-h3 font-primary weight-light color-text">Leave a Comment</h3>
+						<div class="Respond">
+							{{ fn('comment_form') }}
+						</div>
+					</div>
+				</section>
+			{% endif %}
 		</article>
 {% endblock %}
