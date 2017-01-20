@@ -23,6 +23,20 @@
 	}
 }
 
+// ==========================================================================
+// Comment
+// ==========================================================================
+
+
+.comment-form{
+	label{
+		display: block;
+		font-family: $font--primary;
+		font-weight: $weight--semiBold;
+		text-transform: uppercase;
+		@extend .size-h6 !optional;
+	}
+}
 
 // ==========================================================================
 // ContentArea class: Add this wherever user is working with the WYSIWYG

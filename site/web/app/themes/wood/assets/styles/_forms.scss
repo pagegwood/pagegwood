@@ -1,0 +1,56 @@
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+textarea,
+select{
+  font-size: 16px;
+  font-family: $font--secondary;
+  background-color: #fff;
+  border: 1px solid $color--six;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  height: 49px;
+  &:focus {
+    box-shadow: inset 0 1px 1px rgba($color--two, .075);
+    transition: box-shadow 0.10s ease-in;
+    border-color: $color--two;
+  }
+
+  @include placeholder {
+    color: $color--placeholder;
+  }
+}
+
+textarea{
+  height: auto;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border: none;
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+
+// ==========================================================================
+// Comment form specifics
+// ==========================================================================
+
+.comment-form{
+  p{
+    margin-bottom: 30px;
+
+    &:last-of-type{
+      margin: 0;
+    }
+  }
+  label{
+    margin-bottom: 10px;
+  }
+}
