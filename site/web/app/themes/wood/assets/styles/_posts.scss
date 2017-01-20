@@ -24,19 +24,29 @@
 }
 
 // ==========================================================================
-// Comment
+// Comment Display
 // ==========================================================================
 
+.Comment-icon,
+.Comment-meta {
+	display: inline-block;
+	vertical-align: middle;
+}
 
-.comment-form{
-	label{
-		display: block;
-		font-family: $font--primary;
-		font-weight: $weight--semiBold;
-		text-transform: uppercase;
-		@extend .size-h6 !optional;
+.Comment-icon{
+	padding-right: 20px;
+	img{
+		max-width: 60px;
 	}
 }
+
+.Comment{
+	margin-bottom: 30px;
+	@include viewport--sm-min{
+		margin-bottom: 50px;
+	}
+}
+
 
 // ==========================================================================
 // ContentArea class: Add this wherever user is working with the WYSIWYG
