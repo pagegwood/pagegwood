@@ -238,16 +238,16 @@
 
 @mixin marginB($i) {
 	.marginB#{$i}{
-	  margin-bottom: $spacer * $i;
+	  margin-bottom: $spacer * $i !important;
 	}
 	.marginB#{$i}--sm{
 		@include viewport--sm-min{
-		  margin-bottom: $spacer * $i;
+		  margin-bottom: $spacer * $i !important;
 		}
 	}
 	.marginB#{$i}--md{
 		@include viewport--md-min{
-		  margin-bottom: $spacer * $i;
+		  margin-bottom: $spacer * $i !important;
 		}
 	}
 }
@@ -266,16 +266,16 @@
 
 @mixin marginT($i) {
 	.marginT#{$i}{
-	  margin-top: $spacer * $i;
+	  margin-top: $spacer * $i !important;
 	}
 	.marginT#{$i}--sm{
 		@include viewport--sm-min{
-		  margin-top: $spacer * $i;
+		  margin-top: $spacer * $i !important;
 		}
 	}
 	.marginT#{$i}--md{
 		@include viewport--md-min{
-		  margin-top: $spacer * $i;
+		  margin-top: $spacer * $i !important;
 		}
 	}
 }
@@ -302,19 +302,19 @@
 
 @mixin paddingX($i) {
 	.paddingX#{$i}{
-	  padding-left: $spacer * $i;
-		padding-right: $spacer * $i;
+	  padding-left: $spacer * $i !important;
+		padding-right: $spacer * $i !important;
 	}
 	.paddingX#{$i}--sm{
 		@include viewport--sm-min{
-		  padding-left: $spacer * $i;
-			padding-right: $spacer * $i;
+		  padding-left: $spacer * $i !important;
+			padding-right: $spacer * $i !important;
 		}
 	}
 	.paddingX#{$i}--md{
 		@include viewport--md-min{
-		  padding-left: $spacer * $i;
-			padding-right: $spacer * $i;
+		  padding-left: $spacer * $i !important;
+			padding-right: $spacer * $i !important;
 		}
 	}
 }
@@ -333,19 +333,19 @@
 
 @mixin paddingY($i) {
 	.paddingY#{$i}{
-	  padding-top: $spacer * $i;
-		padding-bottom: $spacer * $i;
+	  padding-top: $spacer * $i !important;
+		padding-bottom: $spacer * $i !important;
 	}
 	.paddingY#{$i}--sm{
 		@include viewport--sm-min{
-		  padding-top: $spacer * $i;
-			padding-bottom: $spacer * $i;
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
 		}
 	}
 	.paddingY#{$i}--md{
 		@include viewport--md-min{
-		  padding-top: $spacer * $i;
-			padding-bottom: $spacer * $i;
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
 		}
 	}
 }
@@ -364,16 +364,16 @@
 
 @mixin paddingB($i) {
 	.paddingB#{$i}{
-	  padding-bottom: $spacer * $i;
+	  padding-bottom: $spacer * $i !important;
 	}
 	.paddingB#{$i}--sm{
 		@include viewport--sm-min{
-		  padding-bottom: $spacer * $i;
+		  padding-bottom: $spacer * $i !important;
 		}
 	}
 	.paddingB#{$i}--md{
 		@include viewport--md-min{
-		  padding-bottom: $spacer * $i;
+		  padding-bottom: $spacer * $i !important;
 		}
 	}
 }
@@ -395,16 +395,16 @@
 
 @mixin paddingT($i) {
 	.paddingT#{$i}{
-	  padding-top: $spacer * $i;
+	  padding-top: $spacer * $i !important;
 	}
 	.paddingT#{$i}--sm{
 		@include viewport--sm-min{
-		  padding-top: $spacer * $i;
+		  padding-top: $spacer * $i !important;
 		}
 	}
 	.paddingT#{$i}--md{
 		@include viewport--md-min{
-		  padding-top: $spacer * $i;
+		  padding-top: $spacer * $i !important;
 		}
 	}
 }
@@ -444,8 +444,15 @@
 		font-size: 120%;
 		position: relative;
 		top: 3px;
+		transition: all 0.2s;
 	}
 }
+
+/**
+ * TODO
+ *
+ * => Make this a mixin
+ */
 
 //blue
 .link-color-one{
@@ -454,6 +461,12 @@
 	&:active,
 	&:focus{
 		color: $color--four;
+		i{
+			color: $color--four;
+		}
+	}
+	i{
+		color: $color--one;
 	}
 }
 
@@ -464,6 +477,12 @@
 	&:active,
 	&:focus{
 		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--two;
 	}
 }
 
@@ -473,6 +492,12 @@
 	&:hover,
 	&:active,
 	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
 		color: $color--three;
 	}
 }
@@ -484,6 +509,12 @@
 	&:active,
 	&:focus{
 		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--four;
 	}
 }
 
@@ -494,6 +525,12 @@
 	&:active,
 	&:focus{
 		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--five;
 	}
 }
 
@@ -504,6 +541,12 @@
 	&:active,
 	&:focus{
 		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--six;
 	}
 }
 
@@ -514,6 +557,12 @@
 	&:active,
 	&:focus{
 		color: $color--six;
+		i{
+			color: $color--six;
+		}
+	}
+	i{
+		color: $color--seven;
 	}
 }
 
@@ -524,6 +573,12 @@
 	&:active,
 	&:focus{
 		color: $color--text;
+		i{
+			color: $color--text;
+		}
+	}
+	i{
+		color: #fff;
 	}
 }
 

@@ -27,6 +27,7 @@
 }
 
 .List--icons{
+  margin: 0 -10px;
 	> li{
 		margin: 0 5px;
 	}
@@ -251,10 +252,6 @@
 // Pagination
 // ==========================================================================
 
-
-.Pagination{
-
-}
 
 ul.Pagination-pages{
   margin: 0 auto;

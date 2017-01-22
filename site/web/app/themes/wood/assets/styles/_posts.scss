@@ -40,11 +40,28 @@
 	}
 }
 
+.Comment-meta{
+	max-width: 75%;
+}
+
 .Comment{
-	margin-bottom: 30px;
+	padding: 15px;
+	margin: 0 -15px;
 	@include viewport--sm-min{
-		margin-bottom: 50px;
+		padding: 30px;
+		margin: 0 -30px;
 	}
+	&:nth-child(even){
+		background: $color--seven;
+	}
+	.Comment{
+		margin-left: 20px;
+	}
+}
+
+.comment-reply-link{
+	@extend .link !optional;
+	@extend .link-color-two;
 }
 
 
@@ -81,6 +98,17 @@
 
 	a{
 		color: $color--two;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		font-family: $font--primary;
+		font-weight: $weight--semiBold;
+		line-height: 1.3;
 	}
 
 	h1,
