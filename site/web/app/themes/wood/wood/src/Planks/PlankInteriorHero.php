@@ -5,12 +5,12 @@ namespace Wood\Planks;
 use Wood\Planks\PlankBase;
 use TimberImage;
 
-class PlankHero extends PlankBase
+class PlankInteriorHero extends PlankBase
 {
 
-	public $view = 'planks/hero.twig';
+	public $view = 'planks/interior-hero.twig';
 
-  public $style = 'planks/hero_style.twig';
+  public $style = 'planks/interior-hero_style.twig';
 
   public function desktop_image()
   {

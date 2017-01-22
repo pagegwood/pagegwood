@@ -5,6 +5,9 @@
 		padding: 40px 0;
 		border-bottom: 1px solid $color--border;
 	}
+	&--noBorder{
+		border-bottom: none;
+	}
 }
 
 .Header-container{

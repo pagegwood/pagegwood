@@ -82,6 +82,39 @@
 }
 
 // ==========================================================================
+// Interior Hero
+// ==========================================================================
+
+.Hero--interior{
+  .Hero-media{
+    background-position: center center !important;
+  }
+}
+
+.Hero-subcaption{
+  position: relative;
+
+  &:before{
+    left: -150px;
+  }
+  &:after{
+    right: -150px;
+  }
+
+  &:after,
+  &:before{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: #fff;
+    width: 100px;
+    top: 50%;
+    bottom: 50%;
+  }
+}
+
+
+// ==========================================================================
 // Instagram
 // ==========================================================================
 

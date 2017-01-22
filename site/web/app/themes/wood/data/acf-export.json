@@ -608,6 +608,27 @@
                     "class": "",
                     "id": ""
                 }
+            },
+            {
+                "clone": [
+                    "group_584ea4dc66e0b"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_588520c95a1c9",
+                "label": "Images",
+                "name": "plank_images",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
             }
         ],
         "location": [
@@ -894,6 +915,28 @@
                 }
             },
             {
+                "post_type": [
+                    "wood_project"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 1,
+                "return_format": "object",
+                "ui": 1,
+                "key": "field_587d247c613b9",
+                "label": "Projects",
+                "name": "plank_projects_array",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
                 "default_value": 0,
                 "message": "",
                 "ui": 0,
@@ -913,7 +956,7 @@
                 }
             },
             {
-                "taxonomy": "post_tag",
+                "taxonomy": "wood_project_tag",
                 "field_type": "select",
                 "multiple": 0,
                 "allow_null": 0,
@@ -927,7 +970,15 @@
                 "type": "taxonomy",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5840bad91592c",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -1215,6 +1266,25 @@
                 "name": "disable_header",
                 "type": "true_false",
                 "instructions": "You may want to disable the standard page header if using a hero, for example.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5885254f414b9",
+                "label": "Remove Border from Header",
+                "name": "remove_header_border",
+                "type": "true_false",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

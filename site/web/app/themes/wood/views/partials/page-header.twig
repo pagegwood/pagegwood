@@ -1,4 +1,4 @@
-<header class="Header">
+<header class="Header{{ (post.remove_header_border and post.remove_header_border == true) ? ' Header--noBorder' : '' }}">
 	{% block header %}
 		<div class="Header-container Container">
 			<a class="Branding Branding--header" href="{{site.url}}" title="{{site.name}}" rel="home">
