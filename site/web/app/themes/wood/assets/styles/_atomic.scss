@@ -32,6 +32,12 @@
 	}
 }
 
+.reverseColumns--smMax{
+	@include viewport--sm-max{
+		flex-direction: column-reverse;
+	}
+}
+
 .overflow-hidden{
 	overflow: hidden;
 }

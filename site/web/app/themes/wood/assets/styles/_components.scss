@@ -209,10 +209,12 @@
 }
 
 .Grid--gutterLarge{
-  margin: 0 -45px;
+  @include viewport--md-min{
+    margin: 0 -45px;
 
-  > .Grid-cell{
-    padding: 0 45px;
+    > .Grid-cell{
+      padding: 0 45px;
+    }
   }
 }
 
