@@ -13,5 +13,4 @@ $context['post'] = $post;
 $context['title'] = $post->title;
 $context['content'] = $post->content;
 
-
 Timber::render(['project.twig'], $context);

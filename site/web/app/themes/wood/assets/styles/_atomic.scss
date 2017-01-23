@@ -231,6 +231,25 @@
 	letter-spacing: 2px;
 }
 
+// ==========================================================================
+// Line Height
+// ==========================================================================
+
+
+@mixin lineHeight($i) {
+	$period: '.';
+	.lineheight-#{$i}{
+	  line-height: #{1}#{$period}#{$i};
+	}
+}
+
+@mixin line-height-classes($total) {
+  @for $i from 0 through $total {
+    @include lineHeight($i);
+  }
+}
+
+@include line-height-classes(9);
 
 
 // ==========================================================================
@@ -362,7 +381,7 @@
   }
 }
 
-@include paddingY-classes(6);
+@include paddingY-classes(9);
 
 //
 // Bottom Padding

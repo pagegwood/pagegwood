@@ -18,10 +18,24 @@ class Project extends Post
     }
   }
 
-  public function hasPreviewImage()
+  public function desktopFeaturedImage()
   {
-    return !is_null($this->preview_image);
+    $id = get_field('wood_featured_image_desktop_id', $this->ID);
+
+    if (is_int($id)) {
+        return new TimberImage($id);
+    }
   }
+
+  public function mobileFeaturedImage()
+  {
+    $id = get_field('wood_featured_image_mobile_id', $this->ID);
+
+    if (is_int($id)) {
+        return new TimberImage($id);
+    }
+  }
+
 
   public function logoImage()
   {
@@ -32,8 +46,22 @@ class Project extends Post
     }
   }
 
-  public function hasLogoImage()
+
+  public function projectUrl()
   {
-    return !is_null($this->logo_image);
+    $text = get_field('wood_project_url', $this->ID);
+
+    if (!empty($text)) {
+        return $text;
+    }
+  }
+
+  public function projectLaunchDate()
+  {
+    $text = get_field('wood_project_launch_date', $this->ID);
+
+    if (!empty($text)) {
+      return $text;
+    }
   }
 }

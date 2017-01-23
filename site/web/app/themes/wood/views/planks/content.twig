@@ -1,5 +1,11 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	Content
+	<div class="paddingY3 paddingY5--sm">
+    <div class="Container Container--{{ plank.container_size }}">
+			<div class="Content">
+				{{ plank.content }}
+			</div>
+    </div>
+	</div>
 {% endblock %}
