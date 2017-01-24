@@ -63,6 +63,7 @@
     "webpack-hot-middleware": "^2.13.1"
   },
   "dependencies": {
+    "headroom.js": "^0.9.3",
     "instafeed.js": "^1.4.1",
     "jquery": "1.12.4 - 3",
     "postcss-custom-media": "^5.0.1",

@@ -1,4 +1,5 @@
-<header class="Header{{ (post.remove_header_border and post.remove_header_border == true) ? ' Header--noBorder' : '' }}">
+<header class="Header{{ (post.remove_header_border and post.remove_header_border == true) ? ' Header--noBorder' : '' }} js-StickyHeader Header--sticky">
+	<div class="Header-wrap">
 	{% block header %}
 		<div class="Header-container Container">
 			<a class="Branding Branding--header" href="{{site.url}}" title="{{site.name}}" rel="home">
@@ -9,4 +10,5 @@
 			</nav><!-- #nav -->
 		</div>
 	{% endblock %}
+	</div>
 </header>
