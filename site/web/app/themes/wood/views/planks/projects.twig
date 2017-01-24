@@ -17,7 +17,7 @@
 
 			<div class="Grid Grid--withGutter">
 			{% for post in plank.posts %}
-				{% if post.logoImage() and post.previewImage() %}
+				{% if post.logo_image and post.preview_image %}
 				<div class="Grid-cell u-size1of2 u-md-size1of4">
 					{% include ['partials/tease-project.twig'] %}
 				</div>

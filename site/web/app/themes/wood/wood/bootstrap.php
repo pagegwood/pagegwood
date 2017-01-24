@@ -22,10 +22,10 @@ new Site;
  */
 // Register support of certain theme features
 ThemeSupport::register();
-// Register any custom post types
-CustomPostTypes::register();
 // Register any custom taxonomies
 CustomTaxonomies::register();
+// Register any custom post types
+CustomPostTypes::register();
 // Register WordPress menus
 Menus::register();
 /**

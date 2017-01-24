@@ -35,7 +35,7 @@ class CustomTaxonomies
 		    'show_ui' => true,
 		    'update_count_callback' => '_update_post_term_count',
 		    'query_var' => true,
-		    'rewrite' => array( 'slug' => 'tag' ),
+		    'rewrite'      => array('slug' => 'projects/tag', 'with_front' => false)
 		  ));
     }
 }

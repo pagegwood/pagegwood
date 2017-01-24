@@ -82,6 +82,10 @@
 		margin-bottom: 30px;
 	}
 
+	*:last-child {
+	  margin-bottom: 0;
+	}
+
   ul, ol{
     li{
       margin-bottom: 30px;

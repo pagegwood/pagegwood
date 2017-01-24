@@ -30,7 +30,7 @@ class CustomPostTypes
                     'thumbnail'
                 ],
                 'rewrite' => [
-                    'slug' => 'project',
+                    'slug' => 'projects',
                 ],
                 'show_in_nav_menus' => true,
             ]
