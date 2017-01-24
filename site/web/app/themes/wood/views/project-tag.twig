@@ -1,0 +1,38 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<div class="Posts paddingY3 paddingY5--sm">
+		<div class="Container">
+			<div class="Grid Grid--withGutter">
+			{% for post in posts %}
+				{% if post.logo_image and post.preview_image %}
+				<div class="Grid-cell u-size1of2 u-md-size1of4">
+					{% include ['partials/tease-project.twig'] %}
+				</div>
+			{% endif %}
+			{% endfor %}
+			</div>
+			{% if pagination.prev or pagination.next %}
+			<div class="Pagination paddingT5 size-reset text-center">
+		    <ul class="Pagination-pages">
+	        {% for page in pagination.pages %}
+            <li>
+              {% if page.link %}
+                  <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+              {% else %}
+                  <span class="{{page.class}}">{{page.title}}</span>
+              {% endif %}
+            </li>
+	        {% endfor %}
+		    </ul>
+		    {% if pagination.prev %}
+	        <a href="{{pagination.prev.link}}" class="Pagination-button Pagination-button--next Button Button--two marginT2">Newer</a>
+		    {% endif %}
+		    {% if pagination.next %}
+		      <a href="{{pagination.next.link}}" class="Pagination-button Pagination-button--prev Button Button--two marginT2">Older</a>
+		    {% endif %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
