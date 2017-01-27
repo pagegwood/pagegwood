@@ -4,6 +4,8 @@
 
 .Branding--header{
 	width: 215px;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 
 	img{
 		height: auto;

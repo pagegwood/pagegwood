@@ -21,32 +21,34 @@ $header-height-fixed--desktop: 80px;
 
 .Header-wrap{
 	background: $color--white;
+	box-shadow: 0 0 7px rgba(0,0,0,0.1);
 	@include viewport--sm-min{
 		text-align: left;
 		padding: 40px 0;
-		border-bottom: 1px solid $color--border;
-	}
-	&--noBorder{
-		border-bottom: none;
 	}
 }
 
 .Header--sticky{
 	height: $header-height-desktop;
 	.Header-wrap{
-		transition: all 0.2s;
 		will-change: transform;
-		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: auto;
 		z-index: $header-zindex;
+		position: fixed;
+		opacity: 1;
+		backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+		transition: all 0.3s;
 	}
 
 	&.headroom--unpinned{
 		.Header-wrap{
 			transform: translateY(-100%);
+			height: $header-height-fixed--desktop;
+			padding: 10px 0;
 		}
 	}
 
@@ -59,7 +61,6 @@ $header-height-fixed--desktop: 80px;
 	}
 
 	&.headroom--pinned{
-
 		.Header-wrap{
 			transform: translateY(0);
 		}
