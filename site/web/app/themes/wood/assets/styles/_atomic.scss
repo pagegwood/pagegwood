@@ -151,35 +151,43 @@
 // ==========================================================================
 
 .size-hero{
+	font-size: 38px;
 	font-size: calc( 38px + (48 - 38) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h1{
+	font-size: 36px;
 	font-size: calc( 36px + (48 - 36) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h2{
+	font-size: 32px;
 	font-size: calc( 30px + (32 - 30) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h3{
+	font-size: 26px;
 	font-size: calc( 26px + (28 - 26) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h4{
+	font-size: 20px;
 	font-size: calc( 20px + (24 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h5{
+	font-size: 16px;
 	font-size: calc( 14px + (16 - 14) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h6{
+	font-size: 14px;
 	font-size: calc( 12px + (14 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-p{
-	font-size: calc( 14px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
+	font-size: 16px;
+	font-size: calc( 16px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-reset{

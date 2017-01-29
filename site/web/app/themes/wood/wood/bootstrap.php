@@ -4,6 +4,7 @@ use Wood\Core\Site;
 use Wood\Config\ThemeSupport;
 use Wood\Config\CustomPostTypes;
 use Wood\Config\CustomTaxonomies;
+use Wood\Config\TinyMce;
 use Wood\Config\Menus;
 use Wood\Functions\Assets;
 
@@ -26,6 +27,8 @@ ThemeSupport::register();
 CustomTaxonomies::register();
 // Register any custom post types
 CustomPostTypes::register();
+// Customize TinyMce
+TinyMce::register();
 // Register WordPress menus
 Menus::register();
 /**
