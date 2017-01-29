@@ -22,6 +22,12 @@
 		&:last-of-type{
 			margin-right: 0;
 		}
+
+		&.current-menu-item{
+			a{
+				color: $color--four;
+			}
+		}
 	}
 
 	a{
@@ -33,7 +39,8 @@
 
 		&:hover,
 		&:active,
-		&:focus{
+		&:focus
+		{
 			color: $color--four;
 		}
 	}

@@ -265,11 +265,17 @@
 	.marginB#{$i}{
 	  margin-bottom: $spacer * $i !important;
 	}
+}
+
+@mixin marginB--sm($i) {
 	.marginB#{$i}--sm{
 		@include viewport--sm-min{
 		  margin-bottom: $spacer * $i !important;
 		}
 	}
+}
+
+@mixin marginB--md($i) {
 	.marginB#{$i}--md{
 		@include viewport--md-min{
 		  margin-bottom: $spacer * $i !important;
@@ -280,6 +286,12 @@
 @mixin marginB-classes($total) {
   @for $i from 0 through $total {
     @include marginB($i);
+  }
+  @for $i from 0 through $total {
+    @include marginB--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include marginB--md($i);
   }
 }
 
@@ -293,11 +305,17 @@
 	.marginT#{$i}{
 	  margin-top: $spacer * $i !important;
 	}
+}
+
+@mixin marginT--sm($i) {
 	.marginT#{$i}--sm{
 		@include viewport--sm-min{
 		  margin-top: $spacer * $i !important;
 		}
 	}
+}
+
+@mixin marginT--md($i) {
 	.marginT#{$i}--md{
 		@include viewport--md-min{
 		  margin-top: $spacer * $i !important;
@@ -308,6 +326,12 @@
 @mixin marginT-classes($total) {
   @for $i from 0 through $total {
     @include marginT($i);
+  }
+  @for $i from 0 through $total {
+    @include marginT--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include marginT--md($i);
   }
 }
 
@@ -330,12 +354,19 @@
 	  padding-left: $spacer * $i !important;
 		padding-right: $spacer * $i !important;
 	}
+}
+
+@mixin paddingX--sm($i) {
+
 	.paddingX#{$i}--sm{
 		@include viewport--sm-min{
 		  padding-left: $spacer * $i !important;
 			padding-right: $spacer * $i !important;
 		}
 	}
+}
+
+@mixin paddingX--md($i) {
 	.paddingX#{$i}--md{
 		@include viewport--md-min{
 		  padding-left: $spacer * $i !important;
@@ -347,6 +378,12 @@
 @mixin paddingX-classes($total) {
   @for $i from 0 through $total {
     @include paddingX($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingX--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingX--md($i);
   }
 }
 
@@ -375,9 +412,33 @@
 	}
 }
 
+@mixin paddingY--sm($i) {
+	.paddingY#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingY--md($i) {
+	.paddingY#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
 @mixin paddingY-classes($total) {
   @for $i from 0 through $total {
     @include paddingY($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingY--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingY--md($i);
   }
 }
 
@@ -391,11 +452,17 @@
 	.paddingB#{$i}{
 	  padding-bottom: $spacer * $i !important;
 	}
+}
+
+@mixin paddingB--sm($i) {
 	.paddingB#{$i}--sm{
 		@include viewport--sm-min{
 		  padding-bottom: $spacer * $i !important;
 		}
 	}
+}
+
+@mixin paddingB--md($i) {
 	.paddingB#{$i}--md{
 		@include viewport--md-min{
 		  padding-bottom: $spacer * $i !important;
@@ -406,6 +473,12 @@
 @mixin paddingB-classes($total) {
   @for $i from 0 through $total {
     @include paddingB($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingB--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingB--md($i);
   }
 }
 
@@ -422,11 +495,17 @@
 	.paddingT#{$i}{
 	  padding-top: $spacer * $i !important;
 	}
+}
+
+@mixin paddingT--sm($i) {
 	.paddingT#{$i}--sm{
 		@include viewport--sm-min{
 		  padding-top: $spacer * $i !important;
 		}
 	}
+}
+
+@mixin paddingT--md($i) {
 	.paddingT#{$i}--md{
 		@include viewport--md-min{
 		  padding-top: $spacer * $i !important;
@@ -437,6 +516,12 @@
 @mixin paddingT-classes($total) {
   @for $i from 0 through $total {
     @include paddingT($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingT--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingT--md($i);
   }
 }
 
