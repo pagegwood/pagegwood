@@ -546,29 +546,34 @@
 			var label = $el.find('.field-label:first').val(),
 				name = $el.find('.field-name:first').val(),
 				type = $el.find('.field-type:first option:selected').text(),
-				required = $el.find('.field-required:first').prop('checked');
+				required = $el.find('.field-required:first').prop('checked'),
+				$handle = $el.children('.handle');
 			
 			
 			// update label
-			$el.find('> .handle .li-field-label strong a').text( label );
+			$handle.find('.li-field-label strong a').text( label );
 			
 			
 			// update required
-			$el.find('> .handle .li-field-label .acf-required').remove();
+			$handle.find('.li-field-label .acf-required').remove();
 			
 			if( required ) {
 				
-				$el.find('> .handle .li-field-label strong').append('<span class="acf-required">*</span>');
+				$handle.find('.li-field-label strong').append('<span class="acf-required">*</span>');
 				
 			}
 			
 			
 			// update name
-			$el.find('> .handle .li-field-name').text( name );
+			$handle.find('.li-field-name').text( name );
 			
 			
 			// update type
-			$el.find('> .handle .li-field-type').text( type );
+			$handle.find('.li-field-type').text( type );
+			
+			
+			// action for 3rd party customization
+			acf.do_action('render_field_handle', $el, $handle);
 			
 		},
 		
@@ -1303,7 +1308,7 @@
 				parent		: acf.o.post_id,
 				field_group	: acf.o.post_id,
 				prefix		: $select.attr('name').replace('[type]', ''),
-				type		: new_type,
+				type		: new_type
 			};
 			
 			
@@ -1435,6 +1440,10 @@
 				}, 1);
 				
 			}
+			
+			
+			// action for 3rd party customization
+			acf.do_action('change_field_name', $el);
 			
 		}
 		
@@ -2306,7 +2315,7 @@
 			'change_field_type'			: '_change_field_type',
 			'change_field_label'		: '_change_field_label',
 			'change_field_name'			: '_change_field_name',
-			'render_field_settings'		: '_render_field_settings',
+			'render_field_settings'		: '_render_field_settings'
 		},
 		
 		_save_field: function( $el ){
@@ -2396,7 +2405,7 @@
 	acf.field_group.append = acf.model.extend({
 		
 		actions: {
-			'render_field_settings' : '_render_field_settings',
+			'render_field_settings' : '_render_field_settings'
 		},
 		
 		render: function( $el ){
@@ -2482,7 +2491,7 @@
 		type: 'select',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2527,7 +2536,7 @@
 		type: 'radio',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2572,7 +2581,7 @@
 		type: 'true_false',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2618,7 +2627,7 @@
 		type: 'date_picker',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2711,7 +2720,7 @@
 		type: 'tab',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		render: function( $el ){
@@ -2835,7 +2844,7 @@
 				
 			}
 			
-		},
+		}
 		
 	});
 	
