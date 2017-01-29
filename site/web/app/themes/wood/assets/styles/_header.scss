@@ -31,6 +31,18 @@ $header-height-fixed--desktop: 80px;
 	}
 }
 
+.Header--noBorder{
+	.Header-wrap{
+		box-shadow: none;
+	}
+
+	&.headroom--not-top{
+		.Header-wrap{
+			box-shadow: 0 0 7px rgba(0,0,0,0.1);
+		}
+	}
+}
+
 .Header--sticky{
 	height: $header-height-mobile;
 

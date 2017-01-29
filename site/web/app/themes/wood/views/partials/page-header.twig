@@ -1,4 +1,4 @@
-<header class="Header js-StickyHeader Header--sticky">
+<header class="Header{{ (post.remove_header_border and post.remove_header_border == true) ? ' Header--noBorder' : '' }} js-StickyHeader Header--sticky">
 	<div class="Header-wrap">
 	{% block header %}
 		<div class="Header-container Container">
