@@ -1,5 +1,55 @@
 [
     {
+        "key": "group_588e2edb16797",
+        "title": "Gallery Images",
+        "fields": [
+            {
+                "library": "all",
+                "min": "",
+                "max": "",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "insert": "append",
+                "key": "field_588e2edcb84be",
+                "label": "Gallery",
+                "name": "wood_gallery",
+                "type": "gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_gallery"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_587d224a2aa13",
         "title": "Plank : Columns",
         "fields": [
@@ -468,6 +518,51 @@
                 "label": "Gutter Size",
                 "name": "plank_gutter_size",
                 "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_588e303f078be",
+        "title": "Plank : Gallery",
+        "fields": [
+            {
+                "post_type": [
+                    "wood_gallery"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "id",
+                "ui": 1,
+                "key": "field_588e30430514f",
+                "label": "Gallery",
+                "name": "plank_gallery_id",
+                "type": "post_object",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1582,6 +1677,37 @@
                                 "key": "field_58852a40121fc",
                                 "label": "Floating Content",
                                 "name": "plank_floating_content",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "588e309a7f776",
+                        "name": "plank_gallery",
+                        "label": "Gallery",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_588e303f078be"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_588e309a7f777",
+                                "label": "Gallery",
+                                "name": "plank_gallery",
                                 "type": "clone",
                                 "instructions": "",
                                 "required": 0,

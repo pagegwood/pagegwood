@@ -17,7 +17,9 @@
 
 	li{
 		display: inline-block;
-		margin-right: 10px;
+		@include viewport--sm-min{
+			margin-right: 10px;
+		}
 
 		&:last-of-type{
 			margin-right: 0;
@@ -34,8 +36,12 @@
 		font-size: calc( 12px + (15 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
 		font-weight: $weight--semiBold;
 		color: $color--text;
-		padding: 10px;
+		padding: 10px 8px;
 		transition: color 0.2s;
+
+		@include viewport--sm-min{
+			padding: 10px;
+		}
 
 		&:hover,
 		&:active,

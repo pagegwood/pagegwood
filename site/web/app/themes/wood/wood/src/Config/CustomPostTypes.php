@@ -3,6 +3,7 @@
 namespace Wood\Config;
 
 use Wood\PostTypes\Project;
+use Wood\PostTypes\Gallery;
 
 class CustomPostTypes
 {
@@ -31,6 +32,24 @@ class CustomPostTypes
                 ],
                 'rewrite' => [
                     'slug' => 'projects',
+                ],
+                'show_in_nav_menus' => true,
+            ]
+        );
+        register_post_type(
+            Gallery::postType(),
+            [
+                'labels' => [
+                    'name' => __('Galleries'),
+                    'singular_name' => __('Gallery')
+                ],
+                'public' => true,
+                'has_archive' => false,
+                'supports' => [
+                    'title',
+                    'author',
+                    'editor',
+                    'thumbnail'
                 ],
                 'show_in_nav_menus' => true,
             ]

@@ -318,4 +318,50 @@ ul.Pagination-pages{
 }
 
 
+// ==========================================================================
+// Gallery
+// ==========================================================================
 
+
+.Gallery{
+ font-size: 0;
+}
+
+.Gallery-item{
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3333%;
+  @include viewport--lg-min {
+    width: 14.25%;
+  }
+  a{
+    display: block;
+    vertical-align: top;
+  }
+}
+
+.featherlight .featherlight-image{
+  max-height: 80vh;
+}
+
+.featherlight-next,
+.featherlight-previous{
+  top: 0;
+  transition: all 0.2s;
+  span{
+    display: block;
+  }
+}
+
+.featherlight-previous{
+  left: 0;
+}
+
+.featherlight-next{
+  right: 0;
+}
+
+.featherlight .featherlight-content{
+  border: none;
+  padding: 0;
+}
