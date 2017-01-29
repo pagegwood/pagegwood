@@ -37,6 +37,15 @@ select {
   padding-right: 30px;
 }
 
+label{
+  display: block;
+  font-family: $font--primary;
+  font-weight: $weight--semiBold;
+  text-transform: uppercase;
+  @extend .size-h6 !optional;
+  margin-bottom: 10px;
+}
+
 
 // ==========================================================================
 // Comment form specifics
@@ -50,12 +59,32 @@ select {
       margin: 0;
     }
   }
-  label{
-    display: block;
-    font-family: $font--primary;
-    font-weight: $weight--semiBold;
-    text-transform: uppercase;
-    @extend .size-h6 !optional;
-    margin-bottom: 10px;
-  }
 }
+
+// ==========================================================================
+// Comment form 7
+// ==========================================================================
+
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ok{
+  font-family: $font--primary;
+  padding: 20px;
+  color: #fff;
+  margin: 0;
+  border: none;
+}
+
+div.wpcf7-validation-errors{
+  background: $color--error;
+}
+
+div.wpcf7-mail-sent-ok{
+  background: $color--success;
+}
+
+span.wpcf7-not-valid-tip{
+  color: $color--error;
+}
+
+
+
