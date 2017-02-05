@@ -12,7 +12,7 @@
 
 {% block styles %}
 
-{% for plank in planks %}
+{% for plank in page.planks %}
 	{% if plank.style %}
 		{% include plank.style %}
 	{% endif %}
@@ -23,7 +23,7 @@
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			{% for plank in planks %}
+			{% for plank in page.planks %}
 				{% include plank.view %}
 			{% endfor %}
 		</article>
