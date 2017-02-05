@@ -14,16 +14,32 @@
  */
 
 use Wood\PostTypes\Project;
-use Wood\PostTypes\Page;
+use Wood\PostTypes\PlankPage;
 
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts(false, 'Wood\PostTypes\Project');
+
+$context['hero_heading'] = single_term_title("", false);
+
 $context['pagination'] = Timber::get_pagination();
 
-$args = array(
-	'name' => 'work'
-);
+//ID of work page
+// TODO: this is fragile. Fix.
+$work_id = 1213;
 
-$page = Page::query($args);
+$page = new PlankPage($work_id);
+
+if (!empty($page) && !empty($page->planks)){
+	$planks = $page->planks;
+	$first_plank = $page->planks[0];
+
+	if($first_plank->css_class == 'interior_hero'){
+		$hero = $first_plank;
+		$context['hero'] = $hero;
+	}
+	else{
+		$hero = null;
+	}
+}
 
 Timber::render(['project-tag.twig'], $context);

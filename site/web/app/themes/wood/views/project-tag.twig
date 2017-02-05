@@ -1,7 +1,56 @@
 {% extends "layouts/base.twig" %}
 
+
+{% block styles %}
+
+{% if hero.mobile_image %}
+@media all and (max-width: 768px){
+	.Hero-media {
+	  background: url({{ hero.mobile_image.src }});
+	}
+}
+{% endif %}
+
+{% if hero.desktop_image %}
+{% if hero.mobile_image %}
+@media all and (min-width: 769px){
+{% endif %}
+ 	.Hero-media {
+    background: url({{ hero.desktop_image.src }});
+  }
+{% if hero.desktop_image %}
+}
+{% endif %}
+{% endif %}
+
+
+
+{% endblock %}
+
+
+
 {% block content %}
-	<div class="Posts paddingY3 paddingY5--sm">
+
+{% if hero.desktop_image %}
+	<div class="Hero Hero--interior">
+    <div class="Hero-media"></div>
+		<div class="Hero-content paddingY3 paddingY6--sm">
+			<div class="Container text-center">
+
+				<span class="Hero-caption block size-h1 font-primary weight-medium color-white">
+					Tagged: {{ hero_heading }}
+				</span>
+
+				<div class="overflow-hidden">
+					<h1 class="Hero-subcaption size-h4 inline-block letterspacing-2 font-primary weight-semiBold color-white text-uppercase marginT2 marginT5--sm">Work</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+
+	<div class="Posts paddingY4 paddingY6--sm">
 		<div class="Container">
 			<div class="Grid Grid--withGutter">
 			{% for post in posts %}
