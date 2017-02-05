@@ -150,6 +150,20 @@
 // Font Size
 // ==========================================================================
 
+.size-h3,
+.size-h4,
+.size-h5,
+.size-h6{
+	line-height: 1.5;
+}
+
+.size-hero,
+.size-h1,
+.size-h2{
+	line-height: 1.2;
+}
+
+
 .size-hero{
 	font-size: 38px;
 	font-size: calc( 38px + (48 - 38) * ( (100vw - 400px) / ( 800 - 400) ));

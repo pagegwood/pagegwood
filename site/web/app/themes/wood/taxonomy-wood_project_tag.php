@@ -14,9 +14,16 @@
  */
 
 use Wood\PostTypes\Project;
+use Wood\PostTypes\Page;
 
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts(false, 'Wood\PostTypes\Project');
 $context['pagination'] = Timber::get_pagination();
+
+$args = array(
+	'name' => 'work'
+);
+
+$page = Page::query($args);
 
 Timber::render(['project-tag.twig'], $context);

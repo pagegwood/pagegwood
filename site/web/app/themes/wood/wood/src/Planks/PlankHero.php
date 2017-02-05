@@ -14,7 +14,7 @@ class PlankHero extends PlankBase
 
   public function desktop_image()
   {
-    if (!is_null($this->desktop_image_id)){
+    if (!empty($this->desktop_image_id)){
 
       return $this->desktop_image = new TimberImage($this->desktop_image_id);
     }
@@ -27,7 +27,7 @@ class PlankHero extends PlankBase
 
   public function mobile_image()
   {
-    if (!is_null($this->mobile_image_id)){
+    if (!empty($this->mobile_image_id)){
 
       return $this->mobile_image = new TimberImage($this->mobile_image_id);
     }

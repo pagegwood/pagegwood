@@ -1,7 +1,7 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	<div class="paddingY2 paddingY5--md overflow-hidden">
+	<div class="paddingY2 overflow-hidden">
 		<div class="Container">
 			<div class="Grid Grid--alignMiddle Grid--withGutter Grid--gutterLarge">
 				<div class="Grid-cell u-md-size1of2">
@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div class="Grid-cell u-md-size1of2">
-					<div class="paddingY2 paddingY5--sm text-center">
+					<div class="paddingY2 paddingY5--sm text-center--md">
 						{% if plank.button_caption and plank.button_url %}
 							<a class="Button Button--two Button--giant" href="{{ plank.button_url }}" title="{{ plank.button_caption }}">{{ plank.button_caption }}</a>
 						{% endif %}

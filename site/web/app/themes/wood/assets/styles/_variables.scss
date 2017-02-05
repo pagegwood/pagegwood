@@ -53,7 +53,7 @@ $color--three: 		#00A76D; //dark green
 $color--four: 		#09BE4C; ///lighter green
 $color--five: 		#09B418; //lightest green
 $color--six: 			#333333; //text
-$color--seven: 		#fdfdfd; //light gray bg
+$color--seven: 		darken(#fdfdfd, 1%); //light gray bg
 
 
 $color--white: 		#fff;

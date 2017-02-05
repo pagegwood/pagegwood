@@ -1,7 +1,7 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	<div class="paddingY2 paddingY5--md">
+	<div class="paddingY4 paddingY6--md">
 		<div class="Container">
 			{% if plank.caption %}
 			<div class="Grid">
@@ -12,7 +12,7 @@
 			{% endif %}
 
 			{% if plank.heading %}
-			<h3 class="size-h4 font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB3 marginB5--md">{{ plank.heading }}</h3>
+			<h3 class="size-h4 font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB3">{{ plank.heading }}</h3>
 			{% endif %}
 
 			<div class="Grid Grid--withGutter">

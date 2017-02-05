@@ -6,7 +6,7 @@ $header-height-fixed--mobile: 89px;
 
 $header-height-desktop: 124px;
 
-$header-height-fixed--desktop: 80px;
+$header-height-fixed--desktop: 65px;
 
 .Header{
 	text-align: center;
@@ -61,11 +61,14 @@ $header-height-fixed--desktop: 80px;
 		backface-visibility: hidden;
 		-webkit-transform: translateZ(0);
 		transition: all 0.3s;
+		@include viewport--md-min{
+			height: $header-height-desktop;
+		}
 	}
 
 	&.headroom--unpinned{
 		.Header-wrap{
-			transform: translateY(-100%);
+			transform: translateY(-110%);
 			height: $header-height-fixed--desktop;
 			padding: 10px 0;
 		}
@@ -75,6 +78,7 @@ $header-height-fixed--desktop: 80px;
 		.Header-wrap{
 			@include viewport--md-min{
 				padding: 10px 0;
+				height: $header-height-fixed--desktop;
 			}
 		}
 	}

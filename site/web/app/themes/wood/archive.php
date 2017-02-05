@@ -14,9 +14,15 @@
  * @since   Timber 0.2
  */
 
-$templates = array( 'archive.twig', 'index.twig' );
+use Wood\PostTypes\PostsPage;
+
+$templates = array( 'index.twig' );
 
 $context = Timber::get_context();
+
+$page = new PostsPage(get_option( 'page_for_posts' ));
+
+$context['page'] = $page;
 
 $context['title'] = 'Archive';
 if ( is_day() ) {
@@ -34,6 +40,8 @@ if ( is_day() ) {
 	$context['title'] = post_type_archive_title( '', false );
 	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
 }
+
+$context['archive'] = true;
 
 $context['posts'] = Timber::get_posts();
 

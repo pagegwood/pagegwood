@@ -18,17 +18,16 @@
 // List
 // ==========================================================================
 
-.List{
-	font-size: 0;
-}
 
 .List--horizontal{
 	> li{
 		display: inline-block;
+    font-size: 0;
 	}
 }
 
 .List--icons{
+  font-size: 0;
   margin: 0 -10px;
 	> li{
 		margin: 0 5px;
@@ -37,6 +36,19 @@
 		font-size: calc( 36px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
 		padding: 5px;
 	}
+}
+
+.List--dashed{
+  list-style: none;
+  padding-left: 0;
+  > li{
+    margin-left: 25px;
+    &:before {
+      content: "-";
+      margin-left: -30px;
+      position: absolute;
+    }
+  }
 }
 
 
@@ -60,7 +72,8 @@
     left: 0;
     z-index: 2;
     content: '';
-    background: rgba(9,190,178, 0.8);
+    @include gradient();
+    opacity: 0.6;
   }
 }
 

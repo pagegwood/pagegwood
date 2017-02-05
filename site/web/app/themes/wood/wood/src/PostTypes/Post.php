@@ -9,6 +9,7 @@ class Post extends TimberPost
 {
     protected static $postType = 'post';
 
+
     /**
      * Get all posts of this type
      *

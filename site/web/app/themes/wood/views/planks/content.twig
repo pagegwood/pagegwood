@@ -1,7 +1,7 @@
 {% extends "planks/plank-wrapper.twig" %}
 
 {% block content %}
-	<div class="paddingY3 paddingY5--sm">
+	<div class="{{ plank.remove_bottom_padding == true ? 'paddingT4 paddingT6--sm' : 'paddingY4 paddingY6--sm' }}">
     <div class="Container Container--{{ plank.container_size }}">
 			<div class="Content">
 				{{ plank.content }}
