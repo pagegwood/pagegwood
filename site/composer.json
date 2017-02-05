@@ -43,7 +43,7 @@
     "illuminate/support": "^5.3",
     "wpackagist-plugin/contact-form-7": "4.6.1",
     "wpackagist-plugin/google-analytics-for-wordpress": "5.5.4",
-    "wpackagist-plugin/wordpress-seo": "4.1"
+    "wpackagist-plugin/wordpress-seo": "4.2.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
