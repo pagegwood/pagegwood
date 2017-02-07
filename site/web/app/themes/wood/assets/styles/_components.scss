@@ -73,12 +73,12 @@
     z-index: 2;
     content: '';
     @include gradient();
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }
 
 .Hero-media{
-  background-position: center top !important;
+  background-position: center center !important;
   background-size: cover !important;
   position: absolute;
   background-repeat: no-repeat !important;
@@ -100,11 +100,6 @@
 // Interior Hero
 // ==========================================================================
 
-.Hero--interior{
-  .Hero-media{
-    background-position: center center !important;
-  }
-}
 
 .Hero-subcaption{
   position: relative;
@@ -344,8 +339,11 @@ ul.Pagination-pages{
   display: inline-block;
   vertical-align: top;
   width: 33.3333%;
+  @include viewport--md-min {
+    width: 25%;
+  }
   @include viewport--lg-min {
-    width: 14.25%;
+    width: 12.5%;
   }
   a{
     display: block;

@@ -5,17 +5,18 @@
 wordpress_sites:
   example.com:
     site_hosts:
-      - canonical: example.com
+      - canonical: pagegwood.com
         redirects:
-          - www.example.com
+          - www.pagegwood.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    repo: git@github.com/pagegwood/pagegwood.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false
     ssl:
-      enabled: false
+      enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
+      duration: 30s

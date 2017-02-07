@@ -27,7 +27,7 @@
 
 		&.current-menu-item{
 			a{
-				color: $color--four;
+				color: $color--two;
 			}
 		}
 	}
@@ -47,23 +47,20 @@
 		&:active,
 		&:focus
 		{
-			color: $color--four;
+			color: $color--two;
 		}
 	}
 }
 
 .Nav--hero{
-	margin-left: -10px;
-	margin-bottom: -10px;
-	@include viewport--sm-min{
-		margin-left: 0;
-	}
+
 	li{
 		display: block;
-		margin-bottom: 20px;
-		@include viewport--sm-min{
+		margin-bottom: 10px;
+		@include viewport--md-min{
 			display: inline-block;
 			margin-right: 40px;
+			margin-bottom: 20px;
 		}
 
 		&:last-of-type{
@@ -72,12 +69,17 @@
 	}
 
 	a{
-		font-size: calc( 20px + (24 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
-		font-weight: $weight--normal;
-		letter-spacing: 2px;
+		font-size: calc( 20px + (22 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
+		font-weight: $weight--medium;
+		letter-spacing: 2.5px;
 		color: $color--white;
 		padding: 10px;
 		transition: color 0.2s;
+		background: rgba(0, 0, 0, 0.25);
+
+		@include viewport--md-min{
+			background: transparent;
+		}
 
 		&:hover,
 		&:active,
