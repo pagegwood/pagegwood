@@ -10,6 +10,7 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 !/web/app/plugins/advanced-custom-fields-pro/
+!/web/app/plugins/wp-rocket/
 
 # WP-CLI
 db-sync
