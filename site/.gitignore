@@ -11,6 +11,7 @@ web/wp
 web/.htaccess
 !/web/app/plugins/advanced-custom-fields-pro/
 !/web/app/plugins/wp-rocket/
+web/app/cache
 
 # WP-CLI
 db-sync
