@@ -41,11 +41,13 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "timber/timber": "^1.1",
     "illuminate/support": "^5.3",
+    "wpackagist-plugin/akismet" : "3.2",
     "wpackagist-plugin/contact-form-7": "4.6.1",
     "wpackagist-plugin/google-analytics-for-wordpress": "5.5.4",
     "wpackagist-plugin/hotjar-connecticator" : "1.1.1",
     "wpackagist-plugin/wordpress-seo": "4.2.1",
     "wpackagist-plugin/wp-smushit": "2.5.3",
+    "wpackagist-plugin/quick-pagepost-redirect-plugin": "5.1.8",
     "wp-sync-db/wp-sync-db": "dev-master",
     "wp-sync-db/wp-sync-db-media-files": "dev-master"
   },
