@@ -2377,7 +2377,7 @@ label,
 }
 
 .List--icons a {
-  font-size: calc( 36px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
+  font-size: calc( 30px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
   padding: 5px;
 }
 
@@ -2725,6 +2725,12 @@ ul.Pagination-pages li span:focus {
   padding: 0;
 }
 
+@media (max-width: 479px) {
+  .Plank--cta .Button {
+    width: 100%;
+  }
+}
+
 .Nav ul {
   font-size: 0;
 }
@@ -2836,10 +2842,11 @@ ul.Pagination-pages li span:focus {
   transition: all 0.2s;
   background: transparent;
   cursor: pointer;
+  text-align: center;
 }
 
 .Button--giant {
-  padding: 30px 60px;
+  padding: 30px 55px;
   font-size: 24px;
   border-width: 4px;
 }

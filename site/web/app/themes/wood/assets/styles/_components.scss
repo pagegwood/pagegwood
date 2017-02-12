@@ -33,7 +33,7 @@
 		margin: 0 5px;
 	}
 	a{
-		font-size: calc( 36px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
+		font-size: calc( 30px + (20 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
 		padding: 5px;
 	}
 }
@@ -376,3 +376,16 @@ ul.Pagination-pages{
   border: none;
   padding: 0;
 }
+
+// ==========================================================================
+// CTA Section
+// ==========================================================================
+
+.Plank--cta{
+  .Button{
+    @include viewport--sm-max{
+      width: 100%;
+    }
+  }
+}
+

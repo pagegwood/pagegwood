@@ -9,10 +9,11 @@
 	transition: all 0.2s;
 	background: transparent;
 	cursor: pointer;
+	text-align: center;
 }
 
 .Button--giant{
-	padding: 30px 60px;
+	padding: 30px 55px;
 	font-size: 24px;
 	border-width: 4px;
 	@include viewport--sm-min{
