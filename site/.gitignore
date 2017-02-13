@@ -9,8 +9,9 @@ web/app/uploads/*
 # WordPress
 web/wp
 web/.htaccess
-!/web/app/plugins/advanced-custom-fields-pro/
-!/web/app/plugins/wp-rocket/
+!web/app/plugins/advanced-custom-fields-pro/
+!web/app/plugins/wp-rocket/
+!web/app/wp-rocket-config/
 web/app/cache
 
 # WP-CLI
