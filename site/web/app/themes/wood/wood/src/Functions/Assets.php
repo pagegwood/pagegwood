@@ -19,7 +19,7 @@ class Assets
             wp_deregister_script('jquery');
 
             // Load CDN jQuery in the footer
-            wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
+            wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, null, true);
 
             wp_enqueue_style('wood/css', self::asset_path('styles/main.css'), false, null);
 
@@ -29,6 +29,15 @@ class Assets
 
             wp_enqueue_script('jquery');
         });
+
+        add_action( 'wp_enqueue_scripts', function(){
+          if(! is_page('contact'))
+           {
+              wp_dequeue_script('contact-form-7'); // Dequeue JS Script file.
+              wp_dequeue_style('contact-form-7');  // Dequeue CSS file.
+           }
+        });
+
     }
 
     public static function asset_path($filename) {
