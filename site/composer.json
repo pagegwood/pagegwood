@@ -43,7 +43,6 @@
     "illuminate/support": "^5.3",
     "wpackagist-plugin/akismet" : "3.2",
     "wpackagist-plugin/contact-form-7": "4.6.1",
-    "wpackagist-plugin/check-email": "0.5.2",
     "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.10.7",
     "wpackagist-plugin/host-analyticsjs-local": "1.42",
     "wpackagist-plugin/hotjar-connecticator" : "1.1.1",

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6321ba52d7f384eeea04efa450f75ad9",
-    "content-hash": "176a1c9a013b1281ba4073e9c1dca51b",
+    "hash": "656f20695c569c5738bad9d325db4f9c",
+    "content-hash": "90368af59930315f1e1a71795161251c",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -916,26 +916,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/akismet/"
-        },
-        {
-            "name": "wpackagist-plugin/check-email",
-            "version": "0.5.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/check-email/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/check-email.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/check-email/"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
