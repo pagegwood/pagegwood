@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b51fa957a304134e616c882ea4f16e1e",
-    "content-hash": "5ac056d0eafd5a8cc40e4f6e5d56b365",
+    "hash": "663f53c59f3f7b4939acdf0879755834",
+    "content-hash": "5d9aa9061fdc2bbed57d7829009dea25",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -938,16 +938,16 @@
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
         },
         {
-            "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.5.4",
+            "name": "wpackagist-plugin/host-analyticsjs-local",
+            "version": "1.42",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.5.4"
+                "url": "https://plugins.svn.wordpress.org/host-analyticsjs-local/",
+                "reference": "tags/1.42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/host-analyticsjs-local.1.42.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -955,7 +955,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
+            "homepage": "https://wordpress.org/plugins/host-analyticsjs-local/"
         },
         {
             "name": "wpackagist-plugin/hotjar-connecticator",
