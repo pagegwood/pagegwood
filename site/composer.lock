@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5121fe59482c67db20b82a2e931a22c3",
-    "content-hash": "d375a68d0637e0df315f458922ecd94a",
+    "hash": "6321ba52d7f384eeea04efa450f75ad9",
+    "content-hash": "176a1c9a013b1281ba4073e9c1dca51b",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1016,6 +1016,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/quick-pagepost-redirect-plugin/"
+        },
+        {
+            "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
+            "version": "1.10.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/sendgrid-email-delivery-simplified/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/sendgrid-email-delivery-simplified.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
