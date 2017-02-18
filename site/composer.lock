@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "663f53c59f3f7b4939acdf0879755834",
-    "content-hash": "5d9aa9061fdc2bbed57d7829009dea25",
+    "hash": "5121fe59482c67db20b82a2e931a22c3",
+    "content-hash": "d375a68d0637e0df315f458922ecd94a",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -918,6 +918,26 @@
             "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
+            "name": "wpackagist-plugin/check-email",
+            "version": "0.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/check-email/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/check-email.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/check-email/"
+        },
+        {
             "name": "wpackagist-plugin/contact-form-7",
             "version": "4.6.1",
             "source": {
@@ -999,15 +1019,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "4.2.1",
+            "version": "4.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/4.2.1"
+                "reference": "tags/4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.3.zip",
                 "reference": null,
                 "shasum": null
             },
