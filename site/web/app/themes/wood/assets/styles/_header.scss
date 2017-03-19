@@ -13,6 +13,7 @@ $header-height-fixed--desktop: 65px;
 }
 
 .Header-container{
+	width: 100%;
 	@include viewport--md-min{
 		display: flex;
 		align-items: center;
@@ -23,28 +24,15 @@ $header-height-fixed--desktop: 65px;
 .Header-wrap{
 	background: $color--white;
 	box-shadow: 0 0 7px rgba(0,0,0,0.1);
-	padding-top: 15px;
-	padding-bottom: 5px;
+	display: flex;
+	align-items: center;
 	@include viewport--md-min{
 		text-align: left;
-		padding: 40px 0;
-	}
-}
-
-.Header--noBorder{
-	.Header-wrap{
-		box-shadow: none;
-	}
-
-	&.headroom--not-top{
-		.Header-wrap{
-			box-shadow: 0 0 7px rgba(0,0,0,0.1);
-		}
 	}
 }
 
 .Header--sticky{
-	height: $header-height-mobile;
+	height: $header-height-desktop;
 
 	@include viewport--md-min{
 		height: $header-height-desktop;
@@ -70,14 +58,12 @@ $header-height-fixed--desktop: 65px;
 		.Header-wrap{
 			transform: translateY(-110%);
 			height: $header-height-fixed--desktop;
-			padding: 10px 0;
 		}
 	}
 
 	&.headroom--not-top{
 		.Header-wrap{
 			@include viewport--md-min{
-				padding: 10px 0;
 				height: $header-height-fixed--desktop;
 			}
 		}
