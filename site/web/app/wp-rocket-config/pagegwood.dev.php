@@ -11,6 +11,8 @@ $rocket_cache_query_strings = array (
 );
 $rocket_cache_reject_ua = 'facebookexternalhit';
 $rocket_cache_ssl = '1';
+$rocket_minify_css_legacy = '1';
+$rocket_minify_js_legacy = '1';
 $rocket_cache_mandatory_cookies = '';
 $rocket_cache_dynamic_cookies = array (
 );
