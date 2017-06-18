@@ -2,37 +2,35 @@
 
 namespace Wood\Functions;
 
-class JsonManifest
+class JsonManifest implements ManifestInterface
 {
-  private $manifest;
+    /** @var array */
+    public $manifest;
 
-  public function __construct($manifest_path) {
-    if (file_exists($manifest_path)) {
-      $this->manifest = json_decode(file_get_contents($manifest_path), true);
-    } else {
-      $this->manifest = [];
-    }
-  }
+    /** @var string */
+    public $dist;
 
-  public function get() {
-    return $this->manifest;
-  }
+    /**
+     * JsonManifest constructor
+     *
+     * @param string $manifestPath Local filesystem path to JSON-encoded manifest
+     * @param string $distUri Remote URI to assets root
+     */
+    public function __construct($manifestPath, $distUri)
+    {
+        $this->manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : [];
+        $this->dist = $distUri;
+    }
 
-  public function getPath($key = '', $default = null) {
-    $collection = $this->manifest;
-    if (is_null($key)) {
-      return $collection;
+    /** @inheritdoc */
+    public function get($asset)
+    {
+        return isset($this->manifest[$asset]) ? $this->manifest[$asset] : $asset;
     }
-    if (isset($collection[$key])) {
-      return $collection[$key];
+
+    /** @inheritdoc */
+    public function getUri($asset)
+    {
+        return "{$this->dist}/{$this->get($asset)}";
     }
-    foreach (explode('.', $key) as $segment) {
-      if (!isset($collection[$segment])) {
-        return $default;
-      } else {
-        $collection = $collection[$segment];
-      }
-    }
-    return $collection;
-  }
 }

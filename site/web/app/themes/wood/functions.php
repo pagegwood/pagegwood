@@ -3,8 +3,8 @@
 $timber = new \Timber\Timber();
 
 Timber::$dirname = [
-    'views',
-    'views/templates',
+    'resources/views',
+    'resources/views/templates',
 ];
 
 require_once('data/acf-export.php');

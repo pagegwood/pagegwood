@@ -9,6 +9,10 @@ use Wood\Config\Menus;
 use Wood\Functions\Assets;
 
 require_once('autoload.php');
+
+define('ASSETS_MANIFEST', get_stylesheet_directory() . "/dist/assets.json");
+define('ASSETS_URI', get_stylesheet_directory_uri() . "/dist");
+
 /**
  * ------------------
  * Core
@@ -31,10 +35,3 @@ CustomPostTypes::register();
 TinyMce::register();
 // Register WordPress menus
 Menus::register();
-/**
- * ------------------
- * Functions
- * ------------------
- */
-// Enqueue assets
-Assets::load();
