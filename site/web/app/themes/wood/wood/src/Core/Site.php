@@ -10,13 +10,17 @@ use Wood\Functions\JsonManifest;
 
 class Site extends TimberSite
 {
+    static $json_manifest;
+
     public function __construct()
     {
         add_filter('get_twig', [$this, 'addToTwig']);
         add_filter('timber_context', [$this, 'addToContext']);
         add_filter('get_twig', [$this, 'addToTwig']);
 
+        self::$json_manifest = new JsonManifest(ASSETS_MANIFEST, ASSETS_URI);
         self::loadAssets();
+
         parent::__construct();
     }
 
@@ -80,8 +84,6 @@ class Site extends TimberSite
 
     public static function asset_path($asset) {
 
-      $JsonManifest = new JsonManifest(ASSETS_MANIFEST, ASSETS_URI);
-
-      return $JsonManifest->getUri($asset);
+      return self::$json_manifest->getUri($asset);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Wood\Config;
 
-use Wood\Functions\Assets;
+use Wood\Core\Site;
 
 class TinyMce
 {
@@ -292,7 +292,7 @@ class TinyMce
 
         add_filter( 'tiny_mce_before_init', function ($mce_init) {
             // make sure we don't override other custom <code>content_css</code> files
-            $content_css = Assets::asset_path('styles/editor.css');
+            $content_css = Site::asset_path('styles/editor.css');
             if ( isset( $mce_init[ 'content_css' ] ) ) {
               $content_css_new =  $mce_init[ 'content_css' ].','.$content_css;
             }
