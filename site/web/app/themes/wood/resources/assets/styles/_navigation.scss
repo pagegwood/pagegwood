@@ -11,9 +11,12 @@
 }
 
 .Nav--main{
+	margin-left: -10px;
+	margin-right: -10px;
 	@include viewport--sm-min{
 		display: inline-block;
 		margin-left: auto;
+		margin-right: auto;
 	}
 
 	li{

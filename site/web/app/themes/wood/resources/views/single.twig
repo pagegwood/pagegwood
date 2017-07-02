@@ -20,7 +20,7 @@
 			<div class="Container text-center">
 				<span class="Hero-caption block size-h1 font-primary weight-medium color-white">{{post.title}}</span>
 					<div class="overflow-hidden">
-						<h1 class="Hero-subcaption size-h4 inline-block letterspacing-2 font-primary weight-semiBold color-white text-uppercase marginT2 marginT5--sm"><span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}</h1>
+						<h1 class="Hero-subcaption size-h4 inline-block letterspacing-2 font-primary weight-semiBold color-white text-uppercase marginT2 marginT5--sm"><span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span class="display-none inline-block--sm">&bull;</span> <span class="block inline-block--sm">{{ post.post_date|date}}</span></h1>
 					</div>
 			</div>
 		</div>

@@ -22,6 +22,10 @@
 	display: inline-block;
 }
 
+.display-none{
+	display: none;
+}
+
 .block{
 	display: block;
 }
@@ -35,6 +39,12 @@
 .reverseColumns--smMax{
 	@include viewport--sm-max{
 		flex-direction: column-reverse;
+	}
+}
+
+.inline-block--sm{
+	@include viewport--sm-min{
+		display: inline-block;
 	}
 }
 
@@ -170,13 +180,13 @@
 }
 
 .size-h1{
-	font-size: 36px;
-	font-size: calc( 36px + (48 - 36) * ( (100vw - 400px) / ( 800 - 400) ));
+	font-size: 31px;
+	font-size: calc( 31px + (48 - 36) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h2{
 	font-size: 32px;
-	font-size: calc( 30px + (32 - 30) * ( (100vw - 400px) / ( 800 - 400) ));
+	font-size: calc( 28px + (32 - 30) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
 .size-h3{
