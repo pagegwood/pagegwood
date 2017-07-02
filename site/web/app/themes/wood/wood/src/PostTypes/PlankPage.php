@@ -11,15 +11,8 @@ class PlankPage extends Page
 	protected static $postType = 'page';
 
 
-  public function __construct($id = null)
-  {
-    //Make sure timber post does not grab post ID from loop
-    parent::__construct($id);
+  public function planks(){
 
-    $this->planks = $this->getPlanks();
-  }
-
-  public function getPlanks(){
     $planks = get_field('wood_planks', $this->ID);
 
     if(is_array($planks)){
@@ -28,7 +21,7 @@ class PlankPage extends Page
         $plank = Planker::createPlank($plank);
 
       }
-      return $context['planks'] = Collection::make($planks);
+      return Collection::make($planks);
     }
   }
 }
