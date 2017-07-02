@@ -277,12 +277,8 @@
 		border: 1px solid rgba(51, 51, 51, 0.1);
 		line-height: 1.2;
 		margin-bottom: 1.6em;
-		max-width: 100%;
 		overflow: auto;
 		padding: 0.8em;
-		white-space: pre;
-		white-space: pre-wrap;
-		word-wrap: break-word;
 	}
 
 	abbr[title] {
@@ -437,3 +433,28 @@
   font-family: $font--secondary;
 }
 
+// ==========================================================================
+// Allow content to overhang text area
+// ==========================================================================
+
+
+pre {
+	margin-left: -15px;
+	margin-right: -15px;
+	@media (min-width: 950px) {
+		margin-left: -100px;
+		margin-right: -100px;
+	}
+}
+
+.ExpandedImage{
+	margin-left: -15px;
+	margin-right: -15px;
+	@media (min-width: 950px) {
+		margin-left: -100px;
+		margin-right: -100px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+}

@@ -77,6 +77,12 @@
   }
 }
 
+.Hero--interior{
+  &:after{
+    opacity: 0.9;
+  }
+}
+
 .Hero-media{
   background-position: center center !important;
   background-size: cover !important;

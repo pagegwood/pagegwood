@@ -13,12 +13,18 @@ class ThemeSupport
         add_filter( 'comment_form_defaults', [get_called_class(), 'customizeCommentForm']);
         add_filter( 'comment_form_fields', [get_called_class(), 'customizeCommentFormFields']);
         add_filter( 'comment_form_field_comment', [get_called_class(), 'customizeCommentField']);
+        add_shortcode('wood_expanded_image', [get_called_class(), 'expandedImageShortcode']);
     }
 
     public static function addSvg($mimes)
     {
     	$mimes['svg'] = 'image/svg+xml';
 		return $mimes;
+    }
+
+    public static function expandedImageShortcode($atts, $content = null)
+    {
+        return '<div class="ExpandedImage">' . $content . '</div>';
     }
 
     public static function customizeCommentForm($defaults)

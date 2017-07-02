@@ -1,8 +1,8 @@
 $header-zindex: 999999;
 
-$header-height-mobile: 89px;
+$header-height-mobile: 77px;
 
-$header-height-fixed--mobile: 89px;
+$header-height-fixed--mobile: 77px;
 
 $header-height-desktop: 124px;
 
@@ -26,13 +26,15 @@ $header-height-fixed--desktop: 65px;
 	box-shadow: 0 0 7px rgba(0,0,0,0.1);
 	display: flex;
 	align-items: center;
+	padding-top: 10px;
 	@include viewport--md-min{
 		text-align: left;
+		padding: 0;
 	}
 }
 
 .Header--sticky{
-	height: $header-height-desktop;
+	height: $header-height-mobile;
 
 	@include viewport--md-min{
 		height: $header-height-desktop;
@@ -49,6 +51,7 @@ $header-height-fixed--desktop: 65px;
 		backface-visibility: hidden;
 		-webkit-transform: translateZ(0);
 		transition: all 0.3s;
+		height: $header-height-mobile;
 		@include viewport--md-min{
 			height: $header-height-desktop;
 		}

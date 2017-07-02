@@ -1,15 +1,35 @@
 {% extends "layouts/base.twig" %}
 
+{% block styles %}
+
+{% if post.thumbnail %}
+	.Hero-media {
+	  background: url({{ post.thumbnail.src }});
+	}
+{% endif %}
+
+
+
+{% endblock %}
+
 {% block content %}
-		<article class="Post Post--{{post.post_type}} paddingY3 paddingY5--sm" id="post-{{post.ID}}">
+
+	<div class="Hero Hero--interior">
+    <div class="Hero-media"></div>
+		<div class="Hero-content paddingY3 paddingY6--sm">
+			<div class="Container text-center">
+				<span class="Hero-caption block size-h1 font-primary weight-medium color-white">{{post.title}}</span>
+					<div class="overflow-hidden">
+						<h1 class="Hero-subcaption size-h4 inline-block letterspacing-2 font-primary weight-semiBold color-white text-uppercase marginT2 marginT5--sm"><span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}</h1>
+					</div>
+			</div>
+		</div>
+	</div>
+
+		<article class="Post Post--{{post.post_type}} overflow-hidden paddingY3 paddingY5--sm" id="post-{{post.ID}}">
 			<div class="Container Container--small">
 				<section class="Post-content">
-					<h1 class="size-h1 font-primary color-text weight-medium marginB1">{{post.title}}</h1>
-					<p class="blog-author font-secondary">
-						<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}
-					</p>
-
-					<div class="Content paddingY3 paddingY5--sm">
+					<div class="Content paddingB5">
 						{{post.content}}
 					</div>
 					{% if post.tags %}
@@ -22,62 +42,65 @@
 					</ul>
 					{% endif %}
 				</section>
-				<section class="Post-footer">
-					<span class="size-h5 block font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB1">Share this Post</span>
-					<ul class="Share List List--horizontal List--icons">
-            <li class="Share-item">
-              <a class="Share-link link link-color-two u-displayBlock" href="https://twitter.com/share?url={{ post.link|url_encode(true) }}&amp;text={{ 'Check this out: ' ~ post.post_title|url_encode(true) }}&amp;via=PageGWood" target="_blank">
-                <i class="icon icon-twitter"> </i>
-              </a>
-            </li>
-            <li class="Share-item">
-              <a class="Share-link link link-color-two u-displayBlock" href="https://www.facebook.com/dialog/share?app_id=215932312147266&amp;redirect_uri={{ post.link|url_encode(true) }}&amp;href={{ post.link|url_encode(true) }}" target="_blank">
-                <i class="icon icon-facebook"> </i>
-              </a>
-            </li>
-            <li class="Share-item">
-              <a class="Share-link link link-color-two u-displayBlock" href="mailto:?subject={{ post.post_title|url_encode(true) }}&amp;body={{ 'You should check out ' ~ post.post_title ~ ' by Page Wood at ' |url_encode(true) }}{{ post.link|url_encode(true) }}">
-                <i class="icon icon-envelope-o"> </i>
-              </a>
-            </li>
-            <li class="Share-item">
-              <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ post.link|url_encode(true) }}&amp;href={{ post.link|url_encode(true) }}&amp;title={{ post.post_title|url_encode(true) }}&amp;summary={{ post.exceprt|url_encode(true) }}&amp;source={{ 'Page G Wood, Web Developer & UX Designer'|url_encode(true) }}">
-                <i class="icon-linkedin"> </i>
-              </a>
-            </li>
-            <li class="Share-item">
-              <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://plus.google.com/share?url={{ post.link|url_encode(true) }}">
-                <i class="icon-google-plus"> </i>
-              </a>
-            </li>
-          </ul>
-				</section>
+			</div>
+			<div class="background-seven paddingY3">
+				<div class="Container Container--small">
+					<section class="Post-footer">
+						<span class="size-h5 block font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB1">Share this Post</span>
+						<ul class="Share List List--horizontal List--icons">
+	            <li class="Share-item">
+	              <a class="Share-link link link-color-two u-displayBlock" href="https://twitter.com/share?url={{ post.link|url_encode(true) }}&amp;text={{ 'Check this out: ' ~ post.post_title|url_encode(true) }}&amp;via=PageGWood" target="_blank">
+	                <i class="icon icon-twitter"> </i>
+	              </a>
+	            </li>
+	            <li class="Share-item">
+	              <a class="Share-link link link-color-two u-displayBlock" href="https://www.facebook.com/dialog/share?app_id=215932312147266&amp;redirect_uri={{ post.link|url_encode(true) }}&amp;href={{ post.link|url_encode(true) }}" target="_blank">
+	                <i class="icon icon-facebook"> </i>
+	              </a>
+	            </li>
+	            <li class="Share-item">
+	              <a class="Share-link link link-color-two u-displayBlock" href="mailto:?subject={{ post.post_title|url_encode(true) }}&amp;body={{ 'You should check out ' ~ post.post_title ~ ' by Page Wood at ' |url_encode(true) }}{{ post.link|url_encode(true) }}">
+	                <i class="icon icon-envelope-o"> </i>
+	              </a>
+	            </li>
+	            <li class="Share-item">
+	              <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ post.link|url_encode(true) }}&amp;href={{ post.link|url_encode(true) }}&amp;title={{ post.post_title|url_encode(true) }}&amp;summary={{ post.exceprt|url_encode(true) }}&amp;source={{ 'Page G Wood, Web Developer & UX Designer'|url_encode(true) }}">
+	                <i class="icon-linkedin"> </i>
+	              </a>
+	            </li>
+	            <li class="Share-item">
+	              <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://plus.google.com/share?url={{ post.link|url_encode(true) }}">
+	                <i class="icon-google-plus"> </i>
+	              </a>
+	            </li>
+	          </ul>
+					</section>
+				</div>
 			</div>
 			{% if post.comment_status != 'closed' %}
-				<section class="Comments">
-					{% if post.comment_count > 0 %}
-						<div class="paddingY3 paddingY5--sm">
-						<hr>
-					</div>
-					<div class="Container Container--small">
-						<h3 class="size-h3 font-primary weight-light color-text marginB3 marginB5--sm">{{ post.comment_count }} Comment{{ (post.comment_count != 0 and post.comment_count > 1) ? 's' : '' }}</h3>
-						<div class="Responses">
-							{% for cmt in post.get_comments() %}
-								{% include "partials/comment.twig" with {comment:cmt} %}
-							{% endfor %}
+				<div class="paddingT3 paddingT5--sm">
+					<section class="Comments">
+						{% if post.comment_count > 0 %}
+							<div class="paddingY3 paddingY5--sm">
+							<hr>
 						</div>
-					</div>
-					{% endif %}
-					<div class="paddingY3 paddingY5--sm">
-						<hr>
-					</div>
-					<div class="Container Container--small">
-						<h3 class="size-h3 font-primary weight-light color-text paddingB2">Leave a Comment</h3>
-						<div class="Respond">
-							{{ fn('comment_form') }}
+						<div class="Container Container--small">
+							<h3 class="size-h3 font-primary weight-light color-text marginB3 marginB5--sm">{{ post.comment_count }} Comment{{ (post.comment_count != 0 and post.comment_count > 1) ? 's' : '' }}</h3>
+							<div class="Responses">
+								{% for cmt in post.get_comments() %}
+									{% include "partials/comment.twig" with {comment:cmt} %}
+								{% endfor %}
+							</div>
 						</div>
-					</div>
-				</section>
+						{% endif %}
+						<div class="Container Container--small">
+							<h3 class="size-h3 font-primary weight-light color-text paddingB2">Leave a Comment</h3>
+							<div class="Respond">
+								{{ fn('comment_form') }}
+							</div>
+						</div>
+					</section>
+				</div>
 			{% endif %}
 		</article>
 {% endblock %}
