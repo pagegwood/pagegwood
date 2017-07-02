@@ -450,11 +450,9 @@ pre {
 .ExpandedImage{
 	margin-left: -15px;
 	margin-right: -15px;
+	margin-bottom: 30px;
 	@media (min-width: 950px) {
 		margin-left: -100px;
 		margin-right: -100px;
-	}
-	p{
-		margin-bottom: 30px;
 	}
 }
