@@ -1,11 +1,11 @@
 import Instagram from '../ui/instagram';
-import Emoji from '../ui/emoji';
+//import Emoji from '../ui/emoji';
 import StickyHeader from '../ui/sticky_header';
 import Lightbox from '../ui/lightbox';
 
 export default {
   init() {
-    Emoji.addEmoji();
+    //Emoji.addEmoji();
     Instagram.build();
     StickyHeader.sticky();
     Lightbox.init();
