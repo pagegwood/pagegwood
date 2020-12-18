@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| Editor
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+//import our variables generated from tailwind config via NPM command
+@import "base/tailwind-config";
+@import 'base/variables';
+@import 'utility/mixin';
+@import 'base/wp-content';
+
+.wp-editor{
+  font-family: $fontFamily-primary;
+}
+
+@tailwind utilities;

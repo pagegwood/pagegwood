@@ -1,0 +1,55 @@
+/*
+|--------------------------------------------------------------------------
+| Component / Button
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+a {
+  transition: all 0.2s;
+  text-decoration: none;
+  color: theme("colors.primary");
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+  }
+}
+// ==========================================================================
+// Button Mixins (enables us to reference these styles
+// elsewhere within media queries)
+// ==========================================================================
+
+@mixin Button {
+  display: inline-block;
+  color: theme("colors.white");
+  font-size: 12px;
+  // font-weight: $fontWeight-bold;
+  letter-spacing: 2px;
+  background-color: #b8b299;
+  line-height: 1.67;
+  text-align: center;
+  // border: 2px solid theme("colors.primary");
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 10px 24px 10px 24px;
+  margin-top:40px !important;
+  opacity:.87;
+  font-weight: 600;;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity:1;
+  }
+}
+
+.Button {
+  @include Button();
+}

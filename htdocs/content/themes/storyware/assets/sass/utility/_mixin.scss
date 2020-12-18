@@ -1,0 +1,93 @@
+/*
+|--------------------------------------------------------------------------
+| Utility / Mixins
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+//
+// Simplify our Media Query Mixins using Custom Media Values above
+//
+
+@mixin xs-min {
+  @media (min-width: $screens-xs) {
+    @content;
+  }
+}
+
+@mixin xs-max {
+  @media (max-width: $screens-xs + 1) {
+    @content;
+  }
+}
+
+@mixin sm-min {
+  @media (min-width: $screens-sm) {
+    @content;
+  }
+}
+
+@mixin sm-max {
+  @media (max-width: $screens-sm + 1) {
+    @content;
+  }
+}
+
+@mixin md-min {
+  @media (min-width: $screens-md) {
+    @content;
+  }
+}
+
+@mixin md-max {
+  @media (max-width: $screens-md + 1) {
+    @content;
+  }
+}
+
+@mixin lg-min {
+  @media (min-width: $screens-lg) {
+    @content;
+  }
+}
+
+@mixin xl-min {
+  @media (min-width: $screens-xl) {
+    @content;
+  }
+}
+
+@mixin sr-only{
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}

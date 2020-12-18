@@ -1,0 +1,22 @@
+<div class="Comment {{comment.comment_type}}{{ (comment.comment_parent) ? '' : ' marginB3 marginB5--sm' }}" id="blog-comment-{{comment.ID}}">
+	<div class="Comment-header paddingB1">
+		<div class="Comment-icon">
+			<img src="{{ comment.avatar }}" class="image-circle" alt="{{comment.author.name}}">
+		</div>
+		<div class="Comment-meta">
+			<h5 class="Comment-author">{{comment.author.name}}</h5>
+			{{ comment.date }} {{ comment.time }}
+		</div>
+	</div>
+	<div class="Comment-content Content">{{comment.comment_content|wpautop}}</div>
+	{{ comment.reply_link }}
+	{% if comment.children %}
+		<div class="marginT3 marginT5--sm">
+	{% endif %}
+	{% for cmt in comment.children %}
+		{% include "partials/comment.twig" with {comment:cmt} %}
+	{% endfor %}
+	{% if comment.children %}
+		</div>
+	{% endif %}
+</div>

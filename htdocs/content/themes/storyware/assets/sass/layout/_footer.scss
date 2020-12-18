@@ -1,0 +1,33 @@
+/*
+|--------------------------------------------------------------------------
+| Layout / Footer
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+
+// Sticky Footer Properties
+html,
+body,
+.wrapper {
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-content {
+  flex: 1 0 auto;
+}
+
+.Footer {
+  flex-shrink: 0;
+}

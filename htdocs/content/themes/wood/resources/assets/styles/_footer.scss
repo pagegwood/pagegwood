@@ -1,0 +1,17 @@
+.Footer {
+  @include gradient();
+}
+
+.FooterMeta-divider{
+	display: none;
+	@include viewport--sm-min{
+		display: inline-block;
+	}
+}
+
+.FooterMeta-copyright{
+	display: block;
+	@include viewport--sm-min{
+		display: inline-block;
+	}
+}

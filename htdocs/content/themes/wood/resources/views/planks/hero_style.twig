@@ -1,0 +1,19 @@
+{% if plank.mobile_image %}
+@media all and (max-width: 768px){
+	#Plank{{loop.index}} .Hero-media {
+	  background: url({{ plank.mobile_image.src }});
+	}
+}
+{% endif %}
+
+{% if plank.desktop_image %}
+{% if plank.mobile_image %}
+@media all and (min-width: 769px){
+{% endif %}
+  #Plank{{loop.index}} .Hero-media {
+    background: url({{ plank.desktop_image.src }});
+  }
+{% if plank.desktop_image %}
+}
+{% endif %}
+{% endif %}

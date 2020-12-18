@@ -1,0 +1,20 @@
+{% extends "planks/plank-wrapper.twig" %}
+
+{% block content %}
+	<div class="Floating paddingY3 paddingY6--sm">
+    <div class="Container overflow-hidden">
+    	<div class="Grid Grid--withGutter Grid--gutter{{ plank.gutter_size }} {{ plank.breakpoint == 'sm' ? ' reverseColumns--smMax' : ''  }}{{ plank.breakpoint == 'md' ? ' reverseColumns--mdMax' : '' }}">
+    		<div class="Grid-cell u-{{ plank.breakpoint }}-size{{ plank.content_size }}">
+    			<div class="Content">
+    				{{ plank.content }}
+    			</div>
+    		</div>
+    		{% if plank.image %}
+    		<div class="Grid-cell u-{{ plank.breakpoint }}-size{{ plank.mediaSize() }} marginB3">
+    			<img src="{{ plank.image.src }}">
+    		</div>
+    		{% endif %}
+    	</div>
+    </div>
+	</div>
+{% endblock %}

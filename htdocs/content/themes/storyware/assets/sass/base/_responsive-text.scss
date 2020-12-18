@@ -1,0 +1,70 @@
+/*
+|--------------------------------------------------------------------------
+| Base / Responsive Text
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+
+@include md-max {
+  .text-h1 {
+    font-size: 32px;
+  }
+
+  .text-h2 {
+    font-size: 26px;
+  }
+
+  .text-h3{
+    font-size: 24px;
+  }
+
+  .text-h4 {
+    font-size: 22px;
+  }
+
+  .text-h5 {
+    font-size: 16px;
+  }
+
+  .text-h6 {
+    font-size: 14px;
+  }
+
+  .text-h7 {
+  }
+
+  .text-body {
+    font-size: 16px;
+  }
+
+  .ContentArea {
+    h1:not([class*="text-h"]) {
+      font-size: 32px;
+    }
+
+    h2:not([class*="text-h"]) {
+      font-size: 26px;
+    }
+
+    h3:not([class*="text-h"]) {
+      font-size: 24px;
+    }
+
+    h4:not([class*="text-h"]) {
+      font-size: 22px;
+    }
+
+    h5:not([class*="text-h"]) {
+      font-size: 16px;
+    }
+  }
+}
+
+

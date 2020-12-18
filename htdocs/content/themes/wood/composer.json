@@ -1,0 +1,24 @@
+{
+  "name": "wood",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "A WordPress theme for pagegwood.com.",
+  "homepage": "https://pagegwood.com",
+  "authors": [
+    {
+      "name": "Page Wood",
+      "email": "page@pagegwood.com",
+      "homepage": "http://pagegwood.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "http://pagegwood.com"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0"
+  }
+}

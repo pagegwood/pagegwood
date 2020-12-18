@@ -1,0 +1,62 @@
+/*
+|--------------------------------------------------------------------------
+| Base / Theme
+|--------------------------------------------------------------------------
+|
+| Notes: Only default selectors. No classes, ids, etc. allowed here.
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontFamily-primary;
+  font-weight: normal;
+  overflow-x: hidden;
+  background: theme("colors.white");
+  color: $textColor-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+}
+
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ */
+body:before {
+  display: none; /* Prevent from displaying. */
+  content: "mobile";
+  @include md-min {
+    content: "tablet_up";
+  }
+  @include lg-min {
+    content: "desktop";
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+//eliminate need for u-imageResponsive
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+

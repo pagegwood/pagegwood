@@ -1,0 +1,30 @@
+{% extends "layouts/base.twig" %}
+
+
+{% block header %}
+	{% if page.disable_header %}
+	{% else %}
+		{% include 'partials/page-header.twig' %}
+	{% endif %}
+{% endblock %}
+
+
+{% block styles %}
+
+{% for plank in page.planks %}
+	{% if plank.style %}
+		{% include plank.style %}
+	{% endif %}
+{% endfor %}
+
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			{% for plank in page.planks %}
+				{% include plank.view %}
+			{% endfor %}
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

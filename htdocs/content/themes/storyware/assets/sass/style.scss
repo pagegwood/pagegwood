@@ -1,0 +1,13 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "fonts";
+@import "admin";
+@import "editor";
+@import "login";
+@import "utility/index";
+@import "base/index";
+@import "component/index";
+@import "layout/index";

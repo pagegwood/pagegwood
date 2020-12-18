@@ -1,0 +1,87 @@
+{% extends "layouts/base.twig" %}
+
+
+{% block styles %}
+
+{% if page.mobile_image %}
+@media all and (max-width: 768px){
+	.Hero-media {
+	  background: url({{ page.mobile_image.src }});
+	}
+}
+{% endif %}
+
+{% if page.desktop_image %}
+{% if page.mobile_image %}
+@media all and (min-width: 769px){
+{% endif %}
+ 	.Hero-media {
+    background: url({{ page.desktop_image.src }});
+  }
+{% if page.desktop_image %}
+}
+{% endif %}
+{% endif %}
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+	{% if page.desktop_image %}
+	<div class="Hero Hero--interior">
+    <div class="Hero-media"></div>
+		<div class="Hero-content paddingY3 paddingY6--sm">
+			<div class="Container text-center">
+				{% if page.heading or archive == true %}
+				<span class="Hero-caption block size-h1 font-primary weight-medium color-white">{{ archive == true ? title : page.heading }}</span>
+				{% endif %}
+				{% if page.subheading %}
+					<div class="overflow-hidden">
+						<h1 class="Hero-subcaption size-h4 inline-block letterspacing-2 font-primary weight-semiBold color-white text-uppercase marginT2 marginT5--sm">{{ page.subheading }}</h1>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+
+	<div class="Posts paddingY3 paddingY5--sm">
+		<div class="Container">
+			{% for post in posts %}
+				{% if not loop.last %}
+				<div class="marginB5">
+				{% endif %}
+					{% include ['partials/tease-post.twig'] %}
+				{% if not loop.last %}
+				</div>
+				{% endif %}
+			{% endfor %}
+			{% if pagination.prev or pagination.next %}
+			<div class="Pagination paddingT5 size-reset text-center">
+		    <ul class="Pagination-pages">
+	        {% for page in pagination.pages %}
+            <li>
+              {% if page.link %}
+                  <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+              {% else %}
+                  <span class="{{page.class}}">{{page.title}}</span>
+              {% endif %}
+            </li>
+	        {% endfor %}
+		    </ul>
+		    {% if pagination.prev %}
+	        <a href="{{pagination.prev.link}}" class="Pagination-button Pagination-button--next Button Button--two marginT2">Newer</a>
+		    {% endif %}
+		    {% if pagination.next %}
+		      <a href="{{pagination.next.link}}" class="Pagination-button Pagination-button--prev Button Button--two marginT2">Older</a>
+		    {% endif %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

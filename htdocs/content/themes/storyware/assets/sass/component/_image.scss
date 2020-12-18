@@ -1,0 +1,25 @@
+/*
+|--------------------------------------------------------------------------
+| Component / Image
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+.Image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  transition:transform .25s ease-in-out;
+}
+
+.Image--square {
+  padding-bottom: calc(445 / 640 * 100%);
+}

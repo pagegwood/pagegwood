@@ -1,0 +1,26 @@
+/*
+|--------------------------------------------------------------------------
+| Layout / Block
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+
+
+.Block-anchor {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+  top: -115px;
+  @include lg-min {
+    top: -154px;
+  }
+}

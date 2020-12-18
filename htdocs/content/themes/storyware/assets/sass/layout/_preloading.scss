@@ -1,0 +1,21 @@
+/*
+|--------------------------------------------------------------------------
+| Layout / Preloader
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+/// initially hide these components while vue initializes
+filter-item,
+filter-trigger,
+sticky-menu-item,
+expander,
+content-panel img{
+  opacity: 0;
+}

@@ -79,7 +79,6 @@
     "wpackagist-plugin/rewrite-rules-inspector": "1.2.1",
     "wpackagist-plugin/wordpress-importer": "0.7",
     "wpackagist-plugin/wp-crontrol": "1.8.5",
-    //old site
     "wpackagist-plugin/akismet" : "4.0.2",
     "wpackagist-plugin/contact-form-7": "5.0",
     "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.7",

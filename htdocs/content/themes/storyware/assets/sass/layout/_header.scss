@@ -1,0 +1,96 @@
+/*
+|--------------------------------------------------------------------------
+| Layout / Header
+|--------------------------------------------------------------------------
+|
+| Notes:
+| -----
+|
+| Reminders:
+| -----
+|
+*/
+
+// Header / Header - Wrapper
+// ------------------------------------------------------------------------
+.Header,
+.Header-wrap {
+  transition: all 0.2s;
+  height: $mobile-header-height;
+  max-height: $mobile-header-height;
+  background-color: transparent;
+
+
+  @screen lg {
+    height: $desktop-header-height;
+    max-height: $desktop-header-height;
+  }
+}
+
+.Header {
+  flex: 1 0 auto;
+}
+
+.Header-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: 0;
+  opacity: 1;
+  transition: all 0.3s;
+  z-index: 1000;
+
+  .is-fixed-header.is-scrolling-down & {
+    transform: translate3d(0, -100%, 0);
+  }
+  .is-fixed-header.is-scrolling-up & {
+    background-color: theme("colors.white");
+  }
+}
+
+// Header - Logo
+// ------------------------------------------------------------------------
+.Header-logo,
+.Header-logo svg {
+  width: 90px;
+  height: 20px;
+
+  @screen lg {
+    width: 184px;
+    height: 40px;
+  }
+}
+
+
+// Header - Anchor
+// ------------------------------------------------------------------------
+.Header-anchor {
+  position: absolute;
+  top: $mobile-header-height;
+
+  @screen lg {
+    top: $desktop-header-height;
+  }
+}
+
+// Header - Skiplink
+// ------------------------------------------------------------------------
+.Header-skipLink {
+  background: #0050B8;
+  color: theme("colors.white");
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: all 0.2s;
+  font-size: 14px;
+  font-family: theme('fontFamily.secondary');
+  opacity: 0;
+
+  &:focus {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

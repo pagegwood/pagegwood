@@ -1,0 +1,2231 @@
+[
+    {
+        "key": "group_58908e64d2d72",
+        "title": "Blog Archive Header",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_589773903d710",
+                "label": "Heading",
+                "name": "wood_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_589773aa3d711",
+                "label": "Subheading",
+                "name": "wood_subheading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_589773b93d712",
+                "label": "Desktop Image",
+                "name": "wood_desktop_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_589773d73d713",
+                "label": "Mobile Image",
+                "name": "wood_mobile_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "posts_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_588e2edb16797",
+        "title": "Gallery Images",
+        "fields": [
+            {
+                "library": "all",
+                "min": "",
+                "max": "",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "insert": "append",
+                "key": "field_588e2edcb84be",
+                "label": "Gallery",
+                "name": "wood_gallery",
+                "type": "gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_gallery"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_587d224a2aa13",
+        "title": "Plank : Columns",
+        "fields": [
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_5840bc6615941",
+                "label": "Content",
+                "name": "plank_content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "small": "Small",
+                    "default": "Default",
+                    "full": "Full"
+                },
+                "default_value": [
+                    "default"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_5840bc6615942",
+                "label": "Container Size",
+                "name": "plank_container_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "sub_fields": [
+                    {
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "default_value": "",
+                        "delay": 0,
+                        "key": "field_5840bd0e15944",
+                        "label": "Content",
+                        "name": "plank_column_content",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "one": "Blue",
+                            "two": "Aqua",
+                            "three": "Dark Green",
+                            "four": "Lighter Green",
+                            "five": "Lightest Green",
+                            "six": "Text",
+                            "seven: Light Gray": "seven: Light Gray",
+                            "default": "White"
+                        },
+                        "default_value": [
+                            "default"
+                        ],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
+                        "key": "field_5840bd3f15945",
+                        "label": "Background Color",
+                        "name": "plank_column_background_color",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "1of4": "1\/4",
+                            "1of3": "1\/3",
+                            "1of2": "1\/2",
+                            "1of1": "1\/1",
+                            "2of3": "2\/3",
+                            "3of4": "3\/4"
+                        },
+                        "default_value": [
+                            "1of4"
+                        ],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
+                        "key": "field_5840bdd215946",
+                        "label": "Size",
+                        "name": "plank_column_size",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "collapsed": "",
+                "key": "field_5840bcf315943",
+                "label": "Columns",
+                "name": "plank_columns",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d20f5383dd",
+        "title": "Plank : Content",
+        "fields": [
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_5840bc2e1593f",
+                "label": "Content",
+                "name": "plank_content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "small": "Small",
+                    "default": "Default",
+                    "full": "Full"
+                },
+                "default_value": [
+                    "default"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_5840bbd41593e",
+                "label": "Container Size",
+                "name": "plank_container_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_589787fe8b00f",
+                "label": "Remove Bottom Padding",
+                "name": "plank_remove_bottom_padding",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1ebab290f",
+        "title": "Plank : CTA",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b99357512",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9a457513",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9ec57516",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_587d11fd5a111",
+                "label": "Background Color",
+                "name": "plank_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_588529f970628",
+        "title": "Plank : Floating Content",
+        "fields": [
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_588529f971f56",
+                "label": "Content",
+                "name": "plank_content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_58852a051e359",
+                "label": "Image",
+                "name": "plank_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "1of2": "1\/2",
+                    "1of3": "1\/3",
+                    "1of4": "1\/4",
+                    "2of3": "2\/3",
+                    "3of4": "3\/4"
+                },
+                "default_value": [
+                    "2of3"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_58852ca719808",
+                "label": "Content Size",
+                "name": "plank_content_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "sm": "Small",
+                    "md": "Medium",
+                    "lg": "Large"
+                },
+                "default_value": [
+                    "md"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_588530a323526",
+                "label": "Breakpoint",
+                "name": "plank_breakpoint",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "Default": "Default",
+                    "Medium": "Medium",
+                    "Large": "Large"
+                },
+                "default_value": [
+                    "Default"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_588530cb23527",
+                "label": "Gutter Size",
+                "name": "plank_gutter_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_588e303f078be",
+        "title": "Plank : Gallery",
+        "fields": [
+            {
+                "post_type": [
+                    "wood_gallery"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "id",
+                "ui": 1,
+                "key": "field_588e30430514f",
+                "label": "Gallery",
+                "name": "plank_gallery_id",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1eae4b842",
+        "title": "Plank : Hero",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_583ce9ef75ebe",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_584ea4dc66e0b"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_584ea60ce6a2e",
+                "label": "Images",
+                "name": "images",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "field_584ea566b4666"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_584ea63de6a2f",
+                "label": "Fixed Background Image",
+                "name": "fixed_background_image",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_58572195113cd",
+                "label": "Has Logo",
+                "name": "plank_has_logo",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_585721b3113ce",
+                "label": "Has Menu",
+                "name": "plank_has_menu",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1e99cf0d9",
+        "title": "Plank : Instagram",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_583cea2775ec0",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9b657514",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840ba0e57517",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_58572d30d612e",
+                "label": "Background Color",
+                "name": "plank_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d20f6a975b",
+        "title": "Plank : Interior Hero",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bb6d15936",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bb7915939",
+                "label": "Subheading",
+                "name": "plank_subheading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_584ea4dc66e0b"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_588520c95a1c9",
+                "label": "Images",
+                "name": "plank_images",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1ec33abcc",
+        "title": "Plank : Posts",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b8a95750a",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": 3,
+                "key": "field_5840b96457510",
+                "label": "Caption",
+                "name": "plank_caption",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840b8bc5750b",
+                "label": "Limit by Tag",
+                "name": "plank_limit_by_tag",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "post_tag",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840b9345750f",
+                "label": "Tag",
+                "name": "plank_tag",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840b8ca5750c",
+                "label": "Limit by Category",
+                "name": "plank_limit_by_category",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "category",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840b8fb5750e",
+                "label": "Category",
+                "name": "plank_category",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "step": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b8e55750d",
+                "label": "Max Total",
+                "name": "plank_max_total",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840b9e157515",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840ba1957518",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_587d1e06c45cf",
+        "title": "Plank : Projects",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad91592a",
+                "label": "Heading",
+                "name": "plank_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "clone": [
+                    "group_58572c973f7d2"
+                ],
+                "prefix_label": 0,
+                "prefix_name": 0,
+                "display": "seamless",
+                "layout": "block",
+                "key": "field_587d1e094803c",
+                "label": "Background Color",
+                "name": "wood_background_color",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "new_lines": "wpautop",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": 3,
+                "key": "field_5840bad91592b",
+                "label": "Caption",
+                "name": "plank_caption",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "post_type": [
+                    "wood_project"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 1,
+                "return_format": "object",
+                "ui": 1,
+                "key": "field_587d247c613b9",
+                "label": "Projects",
+                "name": "plank_projects_array",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5840bad91592c",
+                "label": "Limit by Tag",
+                "name": "plank_limit_by_tag",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "taxonomy": "wood_project_tag",
+                "field_type": "select",
+                "multiple": 0,
+                "allow_null": 0,
+                "return_format": "id",
+                "add_term": 0,
+                "load_terms": 0,
+                "save_terms": 0,
+                "key": "field_5840bad91592d",
+                "label": "Tag",
+                "name": "plank_tag",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5840bad91592c",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "step": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915930",
+                "label": "Max Total",
+                "name": "plank_max_total",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915931",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_5840bad915932",
+                "label": "Button Caption",
+                "name": "plank_button_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_58572c973f7d2",
+        "title": "Plank Field : Background Color",
+        "fields": [
+            {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "one": "Blue",
+                    "two": "Aqua",
+                    "three": "Green",
+                    "four": "Lighter Green",
+                    "five": "Lightest Green",
+                    "six": "Text",
+                    "seven": "Light Gray",
+                    "white": "White"
+                },
+                "default_value": [
+                    "white"
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
+                "key": "field_58572ca1df079",
+                "label": "Plank Background Color",
+                "name": "plank_background_color",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_584ea5b298d7b",
+        "title": "Plank Field Group : Call to Action Button",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_584ea5ba708e5",
+                "label": "Button Label",
+                "name": "plank_button_label",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_584ea5ca708e6",
+                "label": "Button URL",
+                "name": "plank_button_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    },
+    {
+        "key": "group_584ea4dc66e0b",
+        "title": "Plank Field Group : Flexible Images",
+        "fields": [
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_584ea4f8b0199",
+                "label": "Desktop Image",
+                "name": "plank_desktop_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_584ea50db019a",
+                "label": "Mobile Image",
+                "name": "plank_mobile_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": "Desktop and mobile images"
+    },
+    {
+        "key": "group_585729f57b68a",
+        "title": "Plank Page Options",
+        "fields": [
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_585729fc8edbb",
+                "label": "Disable Header",
+                "name": "disable_header",
+                "type": "true_false",
+                "instructions": "You may want to disable the standard page header if using a hero, for example.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": 0,
+                "message": "",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "key": "field_5885254f414b9",
+                "label": "Remove Border from Header",
+                "name": "remove_header_border",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-planks.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_583ce8846e6e5",
+        "title": "Planks",
+        "fields": [
+            {
+                "layouts": [
+                    {
+                        "key": "5840bc6615940",
+                        "name": "plank_columns",
+                        "label": "Columns",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d224a2aa13"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d2274c07ae",
+                                "label": "Columns",
+                                "name": "plank_columns",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "5840bbcb1593a",
+                        "name": "plank_content",
+                        "label": "Content",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d20f5383dd"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d22a23e6f6",
+                                "label": "Content",
+                                "name": "plank_content",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "5840b99357511",
+                        "name": "plank_cta",
+                        "label": "Call to Action",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d1ebab290f"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d1f7252ad2",
+                                "label": "Call to Action",
+                                "name": "plank_call_to_action",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "58852a40121fb",
+                        "name": "plank_floating_content",
+                        "label": "Floating Content",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_588529f970628"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_58852a40121fc",
+                                "label": "Floating Content",
+                                "name": "plank_floating_content",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "588e309a7f776",
+                        "name": "plank_gallery",
+                        "label": "Gallery",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_588e303f078be"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_588e309a7f777",
+                                "label": "Gallery",
+                                "name": "plank_gallery",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "583ce8a4a1871",
+                        "name": "plank_hero",
+                        "label": "Hero",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d1eae4b842"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d1f3130614",
+                                "label": "Hero",
+                                "name": "wood_plank_hero",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "5840bb6d15935",
+                        "name": "plank_interior_hero",
+                        "label": "Interior Hero",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d20f6a975b"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d22cbb8d63",
+                                "label": "Interior Hero",
+                                "name": "plank_interior_hero",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "583cea2775ebf",
+                        "name": "plank_instagram",
+                        "label": "Instagram",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d1e99cf0d9"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d1faded358",
+                                "label": "Instagram",
+                                "name": "plank_instagram",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "5840b8a957509",
+                        "name": "plank_posts",
+                        "label": "Posts",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d1ec33abcc"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d20ad95412",
+                                "label": "Posts",
+                                "name": "plank_posts",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "5840bad915929",
+                        "name": "plank_projects",
+                        "label": "Projects",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "clone": [
+                                    "group_587d1e06c45cf"
+                                ],
+                                "prefix_label": 0,
+                                "prefix_name": 0,
+                                "display": "seamless",
+                                "layout": "block",
+                                "key": "field_587d202162a13",
+                                "label": "Projects",
+                                "name": "plank_projects",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                }
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                ],
+                "min": "",
+                "max": "",
+                "button_label": "Add Plank",
+                "key": "field_583ce88ad21bc",
+                "label": "Planks",
+                "name": "wood_planks",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-planks.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_587d18ad8d3b2",
+        "title": "Project Details",
+        "fields": [
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_587d18d2cc83c",
+                "label": "Project Launch Date",
+                "name": "wood_project_launch_date",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "key": "field_587d18e4cc83d",
+                "label": "Project URL",
+                "name": "wood_project_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_project"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_587d17a37aa72",
+        "title": "Project Images",
+        "fields": [
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d17b105aab",
+                "label": "Preview Image",
+                "name": "wood_preview_image_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d17d605aac",
+                "label": "Logo Image",
+                "name": "wood_logo_image_id",
+                "type": "image",
+                "instructions": "The project logo is presently displayed above the preview image.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d180905aad",
+                "label": "Featured Image - Desktop",
+                "name": "wood_featured_image_desktop_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_587d184205aae",
+                "label": "Featured Image - Mobile",
+                "name": "wood_featured_image_mobile_id",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wood_project"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

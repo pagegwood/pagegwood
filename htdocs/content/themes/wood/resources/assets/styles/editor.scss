@@ -1,0 +1,9 @@
+@import "variables";
+@import "base";
+@import "mixins";
+@import "atomic";
+@import "wp-content";
+
+body#tinymce {
+  margin: 12px !important;
+}
