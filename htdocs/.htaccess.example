@@ -1,0 +1,50 @@
+# BEGIN Custom
+<Files ~ ".htaccess|wp-config\.php">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "xmlrpc.php">
+Order Allow,Deny
+Allow from wordpress.com
+Allow from localhost
+Allow from 127.0.0.1
+Deny from all
+</Files>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+# add trailing slash
+RewriteCond %{REQUEST_URI} !(/$|\.)
+RewriteCond %{REQUEST_URI} !^/wp-json
+RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
+# prevent access to system scripts
+RewriteRule ^cms/wp-admin/includes/ - [F,L]
+RewriteRule !^cms/wp-includes/ - [S=3]
+RewriteRule ^cms/wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^cms/wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^cms/wp-includes/theme-compat/ - [F,L]
+# rewrite comment spam
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} cms/wp-comments-post\.php
+RewriteCond %{HTTP_REFERER} !.*%{HTTP_HOST}.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule (.*) http://%{REMOTE_ADDR}/ [R=301,L]
+# rewrite trackback spam
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} cms/wp-trackback\.php
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule (.*) http://%{REMOTE_ADDR}/ [R=301,L]
+# custom redirects
+RewriteCond %{REQUEST_URI} !/v2
+RewriteRule wp/(.*) cms/$1 [R=301,L]
+</IfModule>
+# END Custom
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>

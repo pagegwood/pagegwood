@@ -1,0 +1,74 @@
+### Miscellaneous
+.DS_Store
+Thumbs.db
+
+### Vagrant
+/.vagrant
+
+### Composer
+/vendor/
+
+### IDE
+/.idea
+
+### PHPCS
+cs_fixer*
+.php_cs.cache
+
+### NodeJS
+node_modules/
+
+### WordPress
+/htdocs/cms/
+/htdocs/content/uploads/
+/htdocs/content/upgrade/
+/htdocs/content/plugins/*
+!/htodcs/content/plugins/.gitkeep
+
+### Environment Credentials
+.env
+.env.production
+.env.staging
+
+### Homestead
+Homestead.yaml
+Vagrantfile
+after.sh
+aliases
+
+### Apache
+/htdocs/.htaccess
+/htdocs/.htaccess.*
+!/htdocs/.htaccess.example
+
+### WP-Rocket
+/htdocs/content/cache/*
+!/htdocs/content/cache/.gitkeep
+!/htdocs/content/cache/wp-rocket/
+/htdocs/content/cache/wp-rocket/*
+!/htdocs/content/cache/wp-rocket/.gitkeep
+
+/htdocs/content/advanced-cache.php
+/htdocs/content/wp-rocket-config/*
+!/htdocs/content/wp-rocket-config/.gitkeep
+/htdocs/content/plugins/wp-rocket/cache.json
+
+
+## All Import Pro
+!/htdocs/content/plugins/wp-all-import-pro
+!/htdocs/content/plugins/wpai-acf-add-on
+
+## Yoast SEO Premium
+!/htdocs/content/plugins/wordpress-seo-premium
+
+
+### Storage folder items
+/storage/images/*
+!/storage/images/.gitkeep
+
+### Editor
+.vscode
+
+### GDPR
+
+!/htdocs/content/plugins/ct-ultimate-gdpr

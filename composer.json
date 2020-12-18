@@ -1,0 +1,115 @@
+{
+  "name": "storyware/pagegwood",
+  "description": "The Themosis framework. A WordPress framework.",
+  "keywords": ["themosis", "framework", "wordpress"],
+  "license": "GPL-2.0-or-later",
+  "support": {
+    "issues": "https://github.com/themosis/framework/issues",
+    "source": "https://github.com/themosis/framework"
+  },
+  "authors": [
+    {
+      "name": "Julien Lambé",
+      "email": "julien@themosis.com",
+      "homepage": "https://www.themosis.com/"
+    }
+  ],
+  "type": "project",
+  "repositories":[
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tabrisrp/wp-background-processing"
+    },
+    {
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "gravityforms/gravityforms",
+        "version": "2.4.17",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%GRAVITY_FORMS_KEY}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "gotoandplay/gravityforms-composer-installer": "^2.0"
+        }
+      }
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.9.3",
+    "gravityforms/gravityforms": "*",
+    "johnpbloch/wordpress-core": "5.6.0",
+    "johnpbloch/wordpress-core-installer": "^1.0",
+    "mmirus/acf-flexible-content-title": "1.0",
+    "nesbot/carbon": "^2.31",
+    "nothingworks/blade-svg": "^0.3.4",
+    "storyware/wp-fluent": "1.0.2",
+    "themosis/framework": "2.0.7",
+    "wp-media/wp-rocket": "3.7.5",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "3.0",
+    "wpackagist-plugin/acf-extended": "0.8.7.4",
+    "wpackagist-plugin/acf-gravityforms-add-on": "1.2.1",
+    "wpackagist-plugin/acf-repeater-flexible-content-collapser": "1.2.4",
+    "wpackagist-plugin/classic-editor": "1.6",
+    "wpackagist-plugin/debug-bar": "1.1.2",
+    "wpackagist-plugin/duplicate-post": "3.2.6",
+    "wpackagist-plugin/query-monitor": "3.6.5",
+    "wpackagist-plugin/safe-redirect-manager":"1.10.0",
+    "wpackagist-plugin/rewrite-rules-inspector": "1.2.1",
+    "wpackagist-plugin/wordpress-importer": "0.7",
+    "wpackagist-plugin/wp-crontrol": "1.8.5",
+    //old site
+    "wpackagist-plugin/akismet" : "4.0.2",
+    "wpackagist-plugin/contact-form-7": "5.0",
+    "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.7",
+    "wpackagist-plugin/host-analyticsjs-local": "1.44",
+    "wpackagist-plugin/hotjar-connecticator" : "1.1.1"
+  },
+  "require-dev": {
+    "laravel/homestead": "10.3.1",
+    "phpunit/phpunit": "8.1.3",
+    "symfony/var-dumper": "4.2.7"
+  },
+  "extra":{
+    "installer-paths": {
+      "htdocs/content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "htdocs/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "htdocs/content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": {
+      "johnpbloch/wordpress-core": "htdocs/cms"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"rename('.env.sample', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php console vendor:publish --tag=themosis --force",
+      "@php console key:generate --ansi"
+    ]
+  }
+}
