@@ -55,7 +55,7 @@ aliases
 
 
 
-!/htdocs/content/plugins/sendgrid
+!/htdocs/content/plugins/sendgrid-email-delivery-simplified
 
 
 ### Storage folder items
