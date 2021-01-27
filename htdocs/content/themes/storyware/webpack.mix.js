@@ -1,7 +1,5 @@
 let mix = require('laravel-mix');
 
-var tailwindcss = require('tailwindcss');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -22,19 +20,16 @@ mix.setPublicPath('dist');
 
 mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
   .extract([
-    'vue'
   ])
   .webpackConfig({
     externals: {
       "jquery": "jQuery"
     }
   })
-  .sass('assets/sass/admin.scss', 'dist/css')
   .sass('assets/sass/style.scss', 'dist/css')
   .sass('assets/sass/editor.scss', 'dist/css')
   .sass('assets/sass/login.scss', 'dist/css')
   .options({
     processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.config.js'),
-    require('autoprefixer')],
+    postCss: [require('autoprefixer')],
   });

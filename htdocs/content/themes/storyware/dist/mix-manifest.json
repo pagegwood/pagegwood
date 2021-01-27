@@ -1,7 +1,6 @@
 {
     "/js/manifest.js": "/js/manifest.js",
     "/js/theme.min.js": "/js/theme.min.js",
-    "/css/admin.css": "/css/admin.css",
     "/css/style.css": "/css/style.css",
     "/css/editor.css": "/css/editor.css",
     "/css/login.css": "/css/login.css",

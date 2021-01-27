@@ -1,0 +1,48 @@
+.Button{
+	padding: 10px 30px;
+	border: 2px solid;
+	font-weight: $weight--bold;
+	font-size: 14px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.2s;
+	background: transparent;
+	cursor: pointer;
+	text-align: center;
+}
+
+.Button--giant{
+	padding: 30px 55px;
+	font-size: 24px;
+	border-width: 4px;
+	@include viewport--sm-min{
+		padding: 30px 80px;
+	}
+}
+
+// ==========================================================================
+// Color/Styles
+// ==========================================================================
+
+
+
+@mixin Button-style($name, $color)
+{
+	.Button--#{$name}{
+		color: $color;
+		border-color: $color;
+		&:hover,
+		&:active,
+		&:focus{
+			color: $color--white;
+			background: $color;
+		}
+	}
+}
+
+
+@include Button-style(three, $color--three);
+@include Button-style(two, $color--two);
+
+

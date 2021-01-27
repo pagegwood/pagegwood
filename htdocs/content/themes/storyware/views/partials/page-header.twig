@@ -2,11 +2,16 @@
 	<div class="Header-wrap">
 	{% block header %}
 		<div class="Header-container Container">
-			<a class="Branding Branding--header" href="{{site.url}}" title="{{site.name}}" rel="home">
-				<img src="{{ 'images/page-g-wood.svg' | asset_path }}" alt="{{site.name}}">
+			<a class="Branding Branding--header" href="/" title="{{ fn('get_bloginfo', 'name' )}}" rel="home">
+				<img src="{{ fn('get_template_directory_uri') }}/assets/svg/page-g-wood.svg" alt="{{ fn('get_bloginfo', 'name' ) }}">
 			</a>
 			<nav id="nav-main" class="Nav Nav--main marginT1 marginT0--sm" role="navigation">
-				{% include "partials/menu.twig" with {'menu': menu.get_items} %}
+				{{ fn('wp_nav_menu' , {
+          'container' : false,
+          'menu_class' : 'menu',
+          'theme_location' : 'main'
+          })
+        }}
 			</nav><!-- #nav -->
 		</div>
 	{% endblock %}

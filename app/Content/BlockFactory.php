@@ -11,23 +11,48 @@ class BlockFactory
         return $class;
     }
 
-    public function basicContent($properties)
+    public function plankContent($properties)
     {
-        return static::make('App\Content\Blocks\BasicContent', $properties);
+        return static::make('App\Content\Blocks\PlankContent', $properties);
     }
 
-    public function code($properties)
+    public function plankCta($properties)
     {
-        return static::make('App\Content\Blocks\Code', $properties);
+        return static::make('App\Content\Blocks\PlankCta', $properties);
     }
 
-    public function hero($properties)
+    public function plankFloatingContent($properties)
     {
-        return static::make('App\Content\Blocks\Hero', $properties);
+        return static::make('App\Content\Blocks\PlankFloatingContent', $properties);
     }
 
-    public function posts($properties)
+    public function plankGallery($properties)
     {
-        return static::make('App\Content\Blocks\Posts', $properties);
+        return static::make('App\Content\Blocks\PlankGallery', $properties);
+    }
+
+    public function plankHero($properties)
+    {
+        return static::make('App\Content\Blocks\PlankHero', $properties);
+    }
+
+    public function plankInstagram($properties)
+    {
+        return static::make('App\Content\Blocks\PlankInstagram', $properties);
+    }
+
+    public function plankInteriorHero($properties)
+    {
+        return static::make('App\Content\Blocks\PlankInteriorHero', $properties);
+    }
+
+    public function plankPosts($properties)
+    {
+        return static::make('App\Content\Blocks\PlankPosts', $properties);
+    }
+
+    public function plankProjects($properties)
+    {
+        return static::make('App\Content\Blocks\plankProjects', $properties);
     }
 }

@@ -1,24 +1,9 @@
-/*
-|--------------------------------------------------------------------------
-| Editor
-|--------------------------------------------------------------------------
-|
-| Notes:
-| -----
-|
-| Reminders:
-| -----
-|
-*/
+@import "variables";
+@import "base";
+@import "mixins";
+@import "atomic";
+@import "wp-content";
 
-//import our variables generated from tailwind config via NPM command
-@import "base/tailwind-config";
-@import 'base/variables';
-@import 'utility/mixin';
-@import 'base/wp-content';
-
-.wp-editor{
-  font-family: $fontFamily-primary;
+body#tinymce {
+  margin: 12px !important;
 }
-
-@tailwind utilities;

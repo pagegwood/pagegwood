@@ -23,15 +23,14 @@ class AssetServiceProvider extends ServiceProvider
         /** @var ThemeManager $theme */
         $theme = $this->app->make('wp.theme');
 
-        Asset::add('typekit_fonts', '//use.typekit.net/zwt7bzy.css', [], '1.0')->to('front')->to('admin');
+        //Asset::add('google_fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300i|Raleway:400,400i,500,600', [], '1.0')->to('front');
 
-        Asset::add('sw_fonts', 'css/fonts.css', ['typekit_fonts'], '1.0')->to('front')->to('admin');
-        Asset::add('theme_styles', 'css/style.css', ['sw_fonts'], $theme->getHeader('version'))->to('front');
+        Asset::add('theme_styles', 'css/style.css', ['google_fonts'], $theme->getHeader('version'))->to('front');
+
         Asset::add('manifest_js', 'js/manifest.js', ['jquery'], $theme->getHeader('version'))->to('front');
         Asset::add('vendor_js', 'js/vendor.js', ['manifest_js'], $theme->getHeader('version'))->to('front');
         Asset::add('theme_js', 'js/theme.min.js', ['vendor_js'], $theme->getHeader('version'))->to('front');
 
-        Asset::add('admin_styles', 'css/admin.css', [], $theme->getHeader('version'))->to('admin');
         Asset::add('login_styles', 'css/login.css', [], $theme->getHeader('version'))->to('login');
     }
 }

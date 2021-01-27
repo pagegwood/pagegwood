@@ -4,7 +4,7 @@ namespace App\Content\Blocks;
 
 use App\Content\Blocks\Traits\FlexibleImages;
 
-class PlankContent extends BlockBuilder
+class PlankInteriorHero extends BlockBuilder
 {
     use FlexibleImages;
 

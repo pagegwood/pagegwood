@@ -1,0 +1,776 @@
+
+// ==========================================================================
+// Display
+// ==========================================================================
+
+.sr-only{
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute !important;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+.inline-block{
+	display: inline-block;
+}
+
+.display-none{
+	display: none;
+}
+
+.block{
+	display: block;
+}
+
+.reverseColumns--mdMax{
+	@include viewport--md-max{
+		flex-direction: column-reverse;
+	}
+}
+
+.reverseColumns--smMax{
+	@include viewport--sm-max{
+		flex-direction: column-reverse;
+	}
+}
+
+.inline-block--sm{
+	@include viewport--sm-min{
+		display: inline-block;
+	}
+}
+
+.overflow-hidden{
+	overflow: hidden;
+}
+
+
+// ==========================================================================
+// Color
+// ==========================================================================
+
+//blue
+.color-one{
+	color: $color--one;
+}
+
+//aqua
+.color-two{
+	color: $color--two;
+}
+
+//dark green
+.color-three{
+	color: $color--three;
+}
+
+//lighter green
+.color-four{
+	color: $color--four;
+}
+
+//lightest green
+.color-five{
+	color: $color--five;
+}
+
+//text
+.color-six{
+	color: $color--six;
+}
+
+//light gray
+.color-seven{
+	color: $color--seven;
+}
+
+.color-white{
+	color: #fff;
+}
+
+.color-text{
+	color: $color--text;
+}
+
+
+// ==========================================================================
+// Fill
+// ==========================================================================
+
+//blue
+.background-one{
+	background: $color--one;
+}
+
+//aqua
+.background-two{
+	background: $color--two;
+}
+
+//dark green
+.background-three{
+	color: $color--three;
+}
+
+//lighter green
+.background-four{
+	background: $color--four;
+}
+
+//lightest green
+.background-five{
+	background: $color--five;
+}
+
+//text
+.background-six{
+	background: $color--six;
+}
+
+//light gray
+.background-seven{
+	background: $color--seven;
+}
+
+.background-white{
+	background: #fff;
+}
+
+// ==========================================================================
+// Font Family
+// ==========================================================================
+
+.font-primary{
+	font-family: $font--primary;
+}
+
+.font-secondary{
+	font-family: $font--secondary;
+}
+
+// ==========================================================================
+// Font Size
+// ==========================================================================
+
+.size-h3,
+.size-h4,
+.size-h5,
+.size-h6{
+	line-height: 1.5;
+}
+
+.size-hero,
+.size-h1,
+.size-h2{
+	line-height: 1.2;
+}
+
+
+.size-hero{
+	font-size: 38px;
+	font-size: calc( 38px + (48 - 38) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h1{
+	font-size: 31px;
+	font-size: calc( 31px + (48 - 36) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h2{
+	font-size: 32px;
+	font-size: calc( 28px + (32 - 30) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h3{
+	font-size: 26px;
+	font-size: calc( 26px + (28 - 26) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h4{
+	font-size: 20px;
+	font-size: calc( 20px + (24 - 20) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h5{
+	font-size: 16px;
+	font-size: calc( 14px + (16 - 14) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-h6{
+	font-size: 14px;
+	font-size: calc( 12px + (14 - 12) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-p{
+	font-size: 16px;
+	font-size: calc( 16px + (19 - 16) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.size-reset{
+	font-size: 0;
+}
+
+// ==========================================================================
+// Font Weight
+// ==========================================================================
+
+.weight-light{
+	font-weight: $weight--light;
+}
+
+.weight-normal{
+	font-weight: $weight--normal;
+}
+
+.weight-medium{
+	font-weight: $weight--medium;
+}
+
+.weight-semiBold{
+	font-weight: $weight--semiBold;
+}
+
+.weight-bold{
+	font-weight: $weight--bold;
+}
+
+.weight-extraBold{
+	font-weight: $weight--extraBold;
+}
+
+.weight-black{
+	font-weight: $weight--black;
+}
+
+
+// ==========================================================================
+// Letter Spacing
+// ==========================================================================
+
+.letterspacing-1{
+	letter-spacing: 1px;
+}
+
+.letterspacing-2{
+	letter-spacing: 2px;
+}
+
+// ==========================================================================
+// Line Height
+// ==========================================================================
+
+
+@mixin lineHeight($i) {
+	$period: '.';
+	.lineheight-#{$i}{
+	  line-height: #{1}#{$period}#{$i};
+	}
+}
+
+@mixin line-height-classes($total) {
+  @for $i from 0 through $total {
+    @include lineHeight($i);
+  }
+}
+
+@include line-height-classes(9);
+
+
+// ==========================================================================
+// Margin
+// ==========================================================================
+
+
+//
+// Margin Bottom
+// ==========================================================================
+
+@mixin marginB($i) {
+	.marginB#{$i}{
+	  margin-bottom: $spacer * $i !important;
+	}
+}
+
+@mixin marginB--sm($i) {
+	.marginB#{$i}--sm{
+		@include viewport--sm-min{
+		  margin-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin marginB--md($i) {
+	.marginB#{$i}--md{
+		@include viewport--md-min{
+		  margin-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin marginB-classes($total) {
+  @for $i from 0 through $total {
+    @include marginB($i);
+  }
+  @for $i from 0 through $total {
+    @include marginB--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include marginB--md($i);
+  }
+}
+
+@include marginB-classes(10);
+
+//
+// Margin Top
+// ==========================================================================
+
+@mixin marginT($i) {
+	.marginT#{$i}{
+	  margin-top: $spacer * $i !important;
+	}
+}
+
+@mixin marginT--sm($i) {
+	.marginT#{$i}--sm{
+		@include viewport--sm-min{
+		  margin-top: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin marginT--md($i) {
+	.marginT#{$i}--md{
+		@include viewport--md-min{
+		  margin-top: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin marginT-classes($total) {
+  @for $i from 0 through $total {
+    @include marginT($i);
+  }
+  @for $i from 0 through $total {
+    @include marginT--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include marginT--md($i);
+  }
+}
+
+@include marginT-classes(10);
+
+
+
+// ==========================================================================
+// Padding
+// ==========================================================================
+
+
+//
+// Horziontal Padding
+// ==========================================================================
+
+
+@mixin paddingX($i) {
+	.paddingX#{$i}{
+	  padding-left: $spacer * $i !important;
+		padding-right: $spacer * $i !important;
+	}
+}
+
+@mixin paddingX--sm($i) {
+
+	.paddingX#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-left: $spacer * $i !important;
+			padding-right: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingX--md($i) {
+	.paddingX#{$i}--md{
+		@include viewport--md-min{
+		  padding-left: $spacer * $i !important;
+			padding-right: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingX-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingX($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingX--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingX--md($i);
+  }
+}
+
+@include paddingX-classes(5);
+
+//
+// Vertical Padding
+// ==========================================================================
+
+@mixin paddingY($i) {
+	.paddingY#{$i}{
+	  padding-top: $spacer * $i !important;
+		padding-bottom: $spacer * $i !important;
+	}
+	.paddingY#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+	.paddingY#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingY--sm($i) {
+	.paddingY#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingY--md($i) {
+	.paddingY#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i !important;
+			padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingY-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingY($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingY--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingY--md($i);
+  }
+}
+
+@include paddingY-classes(9);
+
+//
+// Bottom Padding
+// ==========================================================================
+
+@mixin paddingB($i) {
+	.paddingB#{$i}{
+	  padding-bottom: $spacer * $i !important;
+	}
+}
+
+@mixin paddingB--sm($i) {
+	.paddingB#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingB--md($i) {
+	.paddingB#{$i}--md{
+		@include viewport--md-min{
+		  padding-bottom: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingB-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingB($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingB--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingB--md($i);
+  }
+}
+
+@include paddingB-classes(5);
+
+
+
+//
+// Top Padding
+// ==========================================================================
+
+
+@mixin paddingT($i) {
+	.paddingT#{$i}{
+	  padding-top: $spacer * $i !important;
+	}
+}
+
+@mixin paddingT--sm($i) {
+	.paddingT#{$i}--sm{
+		@include viewport--sm-min{
+		  padding-top: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingT--md($i) {
+	.paddingT#{$i}--md{
+		@include viewport--md-min{
+		  padding-top: $spacer * $i !important;
+		}
+	}
+}
+
+@mixin paddingT-classes($total) {
+  @for $i from 0 through $total {
+    @include paddingT($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingT--sm($i);
+  }
+  @for $i from 0 through $total {
+    @include paddingT--md($i);
+  }
+}
+
+@include paddingT-classes(5);
+
+
+
+// ==========================================================================
+// Borders
+// ==========================================================================
+
+.border-bottom{
+	border-bottom: 1px solid $color--border;
+}
+
+.heading-border{
+	border-bottom: 1px solid $color--border;
+	padding-bottom: 5px;
+}
+
+// ==========================================================================
+// Link
+// ==========================================================================
+
+.link{
+	transition: color 0.2s;
+	&:hover,
+	&:active,
+	&:focus{
+		cursor: pointer;
+	}
+
+	i{
+		font-size: 120%;
+		position: relative;
+		top: 3px;
+		transition: all 0.2s;
+	}
+}
+
+/**
+ * TODO
+ *
+ * => Make this a mixin
+ */
+
+//blue
+.link-color-one{
+	color: $color--one;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--four;
+		i{
+			color: $color--four;
+		}
+	}
+	i{
+		color: $color--one;
+	}
+}
+
+//aqua
+.link-color-two{
+	color: $color--two;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--two;
+	}
+}
+
+//dark green
+.link-color-three{
+	color: $color--three;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--three;
+	}
+}
+
+//lighter green
+.link-color-four{
+	color: $color--four;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--four;
+	}
+}
+
+//lightest green
+.link-color-five{
+	color: $color--five;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--five;
+	}
+}
+
+//text
+.link-color-six{
+	color: $color--six;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--three;
+		i{
+			color: $color--three;
+		}
+	}
+	i{
+		color: $color--six;
+	}
+}
+
+//light gray
+.link-color-seven{
+	color: $color--seven;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--six;
+		i{
+			color: $color--six;
+		}
+	}
+	i{
+		color: $color--seven;
+	}
+}
+
+//light gray
+.link-color-white{
+	color: #fff;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $color--text;
+		i{
+			color: $color--text;
+		}
+	}
+	i{
+		color: #fff;
+	}
+}
+
+// ==========================================================================
+// Text Align
+// ==========================================================================
+
+.text-center{
+	text-align: center;
+}
+
+.text-center--sm{
+	@include viewport--sm-min{
+		text-align: center;
+	}
+}
+
+.text-center--md{
+	@include viewport--md-min{
+		text-align: center;
+	}
+}
+
+.text-right{
+	text-align: right;
+}
+
+// ==========================================================================
+// Font Style
+// ==========================================================================
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+.text-italic{
+	font-style: italic;
+}
+
+// ==========================================================================
+// Images
+// ==========================================================================
+
+.image-circle{
+	height: auto;
+	border-radius: 100%;
+}
+
+

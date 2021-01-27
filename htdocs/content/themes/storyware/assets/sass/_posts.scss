@@ -1,0 +1,66 @@
+.Post-status{
+	transition: color 0.2s;
+	margin-left: 20px;
+}
+
+.Post-link:visited{
+	.Post-status{
+		color: #fff;
+	}
+}
+
+.Post-tags{
+	margin-left: -5px;
+	> li{
+		margin-right: 15px;
+		&:last-of-type{
+			margin: 0;
+		}
+	}
+	a{
+		display: inline-block;
+		padding: 5px;
+	}
+}
+
+// ==========================================================================
+// Comment Display
+// ==========================================================================
+
+.Comment-icon,
+.Comment-meta {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.Comment-icon{
+	padding-right: 20px;
+	img{
+		max-width: 60px;
+	}
+}
+
+.Comment-meta{
+	max-width: 75%;
+}
+
+.Comment{
+	padding: 15px;
+	margin: 0 -15px;
+	@include viewport--sm-min{
+		padding: 30px;
+		margin: 0 -30px;
+	}
+	&:nth-child(even){
+		background: $color--seven;
+	}
+	.Comment{
+		margin-left: 20px;
+	}
+}
+
+.comment-reply-link{
+	@extend .link !optional;
+	@extend .link-color-two;
+}
+
