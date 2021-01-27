@@ -54,12 +54,8 @@ aliases
 /htdocs/content/plugins/wp-rocket/cache.json
 
 
-## All Import Pro
-!/htdocs/content/plugins/wp-all-import-pro
-!/htdocs/content/plugins/wpai-acf-add-on
 
-## Yoast SEO Premium
-!/htdocs/content/plugins/wordpress-seo-premium
+!/htdocs/content/plugins/sendgrid
 
 
 ### Storage folder items

@@ -106,23 +106,6 @@ define('APP_TD', env('APP_TD', 'themosis'));
 define('JETPACK_DEV_DEBUG', config('app.debug'));
 
 /*----------------------------------------------------*/
-// WP-Rocket Settings
-/*----------------------------------------------------*/
-
-define('WP_ROCKET_KEY', env('WP_ROCKET_KEY', ''));
-
-define('WP_ROCKET_EMAIL', env('WP_ROCKET_EMAIL', ''));
-
-define('CUSTOM_CACHE_PATH', env('CUSTOM_CACHE_PATH', ''));
-
-//define a custom cache path due to our atomic deployments
-if (defined('CUSTOM_CACHE_PATH')) {
-    if (CUSTOM_CACHE_PATH){
-        define( 'WP_ROCKET_CACHE_ROOT_PATH', CUSTOM_CACHE_PATH);
-    }
-}
-
-/*----------------------------------------------------*/
 // Post Revisions
 /*----------------------------------------------------*/
 

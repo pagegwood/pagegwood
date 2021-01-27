@@ -13,7 +13,7 @@ use Illuminate\Support\Collection;
 
 use WP_Query;
 
-class Project extends BaseType
+class Gallery extends BaseType
 {
 
     public $post_type = 'wood_gallery';
@@ -60,10 +60,14 @@ class Project extends BaseType
         $images = get_field('wood_gallery', $this->ID);
 
         if (is_array($images)) {
-          foreach ($images as &$image) {
 
-            $image = new Image::query()->find((int)$image['id']);
+            foreach ($images as &$image) {
+
+                $image = Image::query()->find((int)$image['id']);
+
+            }
         }
+
         return Collection::make($images);
     }
 }
