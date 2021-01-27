@@ -19,7 +19,7 @@ class Site extends BaseOption
         if (function_exists('acf_add_options_sub_page')) {
             acf_add_options_sub_page([
                 'capability' => 'manage_options',
-                'menu_slug' => 'sw_site_settings',
+                'menu_slug' => 'wood_site_settings',
                 'page_title' => 'Site Options',
                 'parent_slug' => 'options-general.php',
             ]);

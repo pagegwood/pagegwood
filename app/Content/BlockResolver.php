@@ -10,7 +10,7 @@ class BlockResolver
 
     public $blockTypeKey = 'acf_fc_layout';
 
-    public $blockTypePrefix = 'sw_block_';
+    public $blockTypePrefix = 'wood_block_';
 
     public function __construct(BlockFactory $blockFactory)
     {

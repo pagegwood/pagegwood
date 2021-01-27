@@ -8,6 +8,4 @@
  */
 return [
     'main' => __('Main', THEME_TD),
-    'mobile' => __('Mobile', THEME_TD),
-    'footer' => __('Footer', THEME_TD),
 ];

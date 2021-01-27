@@ -4,5 +4,5 @@ namespace App\Entity;
 
 class RepeaterField extends \WPFluent\Support\Fluent
 {
-    protected $fieldPrefix = 'sw_repeater_';
+    protected $fieldPrefix = 'wood_repeater_';
 }

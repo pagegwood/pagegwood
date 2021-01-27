@@ -12,7 +12,7 @@ class RepeaterField extends \WPFluent\Support\Fluent
     use FeaturedImage,
         Image;
 
-    protected $fieldPrefix = 'sw_field_repeater_';
+    protected $fieldPrefix = 'wood_field_repeater_';
 
 
     public function getItemsAttribute()

@@ -8,7 +8,7 @@ trait FlexibleImages
 {
     public function getDesktopImageAttribute()
     {
-        $id = get_field('sw_desktop_image_id', $this->ID);
+        $id = get_field('wood_desktop_image_id', $this->ID);
 
         if (is_numeric($id)) {
             return Image::query()->find((int) $id);
@@ -31,7 +31,7 @@ trait FlexibleImages
     public function getMobileImageAttribute()
     {
 
-        $id = get_field('sw_mobile_image_id', $this->ID);
+        $id = get_field('wood_mobile_image_id', $this->ID);
 
         if (is_numeric($id)) {
             return Image::query()->find((int) $id);

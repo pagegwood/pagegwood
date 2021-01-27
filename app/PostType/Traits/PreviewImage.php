@@ -8,7 +8,7 @@ trait PreviewImage
 {
     public function getPreviewImageAttribute()
     {
-        $id = get_field('sw_preview_image_id', $this->ID);
+        $id = get_field('wood_preview_image_id', $this->ID);
 
         if (!empty($id)) {
             return Image::query()->find((int)$id);

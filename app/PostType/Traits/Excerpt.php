@@ -6,7 +6,7 @@ trait Excerpt
 {
     public function getExcerptAttribute()
     {
-        $text = get_field('sw_excerpt', $this->ID);
+        $text = get_field('wood_excerpt', $this->ID);
 
         if (!empty($text)) {
             return $text;

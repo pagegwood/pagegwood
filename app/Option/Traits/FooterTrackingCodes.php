@@ -9,7 +9,7 @@ trait FooterTrackingCodes
 {
     public function getFooterTrackingCodesAttribute()
     {
-        $codes = get_field('sw_site_tracking_codes', $this->ID);
+        $codes = get_field('wood_site_tracking_codes', $this->ID);
 
         if (is_array($codes)) {
             foreach ($codes as &$code) {

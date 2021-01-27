@@ -7,7 +7,7 @@ trait SocialProperties
     public function getSocialPropertiesAttribute()
     {
 
-        $array = get_field('sw_social_properties', $this->ID);
+        $array = get_field('wood_social_properties', $this->ID);
 
         if (!empty($array)) {
             return $array;

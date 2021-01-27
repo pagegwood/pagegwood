@@ -9,7 +9,7 @@ trait ContentBlocks
 {
     public function getBlocksAttribute()
     {
-        $blocks = get_field('sw_blocks', $this->ID);
+        $blocks = get_field('wood_planks', $this->ID);
 
         if (is_array($blocks)) {
             $blockResolver = BlockResolver::make();

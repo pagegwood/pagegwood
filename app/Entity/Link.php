@@ -6,5 +6,5 @@ use WPFluent\Support\Fluent;
 
 class Link extends Fluent
 {
-    protected $fieldPrefix = 'sw_link_';
+    protected $fieldPrefix = 'wood_link_';
 }

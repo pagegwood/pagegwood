@@ -8,20 +8,17 @@ class BlockBuilder extends Fluent
 {
     public $view;
 
-    protected $fieldPrefix = 'sw_field_';
+    protected $fieldPrefix = 'plank_';
 
     public function getCssClassAttribute()
     {
-        return substr($this->view, strrpos($this->view, '.') + 1);
-    }
+        $plank = $this->acf_fc_layout;
 
-    public function getPaddingClassAttribute()
-    {
+        if (!is_null($plank)) {
 
-        $string = 'Block--topPadding' . $this->top_padding;
+            $plank = str_replace('plank_', '', $plank);
 
-        $string .= ' Block--bottomPadding' . $this->bottom_padding;
-
-        return $string;
+            return $plank;
+        }
     }
 }

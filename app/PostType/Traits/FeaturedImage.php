@@ -8,7 +8,7 @@ trait FeaturedImage
 {
     public function getFeaturedImageAttribute()
     {
-        $id = get_field('sw_featured_image_id', $this->ID);
+        $id = get_field('wood_featured_image_id', $this->ID);
 
         if (!empty($id)) {
             return Image::query()->find((int)$id);

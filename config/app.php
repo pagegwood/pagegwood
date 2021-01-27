@@ -215,12 +215,14 @@ return [
         'Attachment' => WPFluent\PostType\Attachment::class,
 
         'Site' => App\Option\Site::class,
+        'Gallery' => App\PostType\Gallery::class,
         'Page' => App\PostType\Page::class,
         'Post' => App\PostType\Post::class,
-        'Posts' => App\PostType\PostsPage::class,
+        'PostsPage' => App\PostType\PostsPage::class,
+        'Project' => App\PostType\Project::class,
 
-        'SearchResult' => App\PostType\SearchResult::class,
         'PostCategory' => App\Taxonomy\PostCategory::class,
+        'ProjectTag' => App\Taxonomy\ProjectTag::class,
     ],
 
     /*

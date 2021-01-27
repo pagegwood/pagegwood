@@ -4,15 +4,21 @@ namespace App\PostType;
 
 use WPFluent\PostType\Base as BaseType;
 use WPFluent\PostType\Traits\Excerpt;
+use WPFluent\PostType\Image;
 
 use Themosis\Support\Facades\Action;
 use Themosis\Support\Facades\Filter;
 use Themosis\Support\Facades\PostType;
 
+use App\PostType\Traits\PreviewImage;
+use App\PostType\Traits\FeaturedImage;
+
 use WP_Query;
 
 class Project extends BaseType
 {
+    use PreviewImage,
+        FeaturedImage;
 
     public $post_type = 'wood_project';
 
@@ -38,6 +44,7 @@ class Project extends BaseType
                 'slug' => 'projects',
             ],
             'show_in_nav_menus' => true,
+            'taxonomies' => ['wood_project_tag']
         ])->set();
     }
 
@@ -53,79 +60,53 @@ class Project extends BaseType
 
     public static function removeMetaBox()
     {
-        remove_meta_box('tagsdiv-wood_project_type', static::getPostType(), 'side');
-        remove_meta_box('tagsdiv-wood_project_category', static::getPostType(), 'side');
-        remove_meta_box('tagsdiv-wood_project_location', static::getPostType(), 'side');
-        remove_meta_box('tagsdiv-wood_project_year', static::getPostType(), 'side');
+        //remove_meta_box('tagsdiv-wood_project_type', static::getPostType(), 'side');
+    }
+
+    public function getDesktopFeaturedImageAttribute()
+    {
+        $id = get_field('wood_featured_image_desktop_id', $this->ID);
+
+        if (is_int($id)) {
+            return Image::query()->find((int)$id);
+        }
+    }
+
+    public function getMobileFeaturedImageAttribute()
+    {
+        $id = get_field('wood_featured_image_mobile_id', $this->ID);
+
+        if (is_int($id)) {
+            return Image::query()->find((int)$id);
+        }
     }
 
 
-    public function getTagsAttribute()
-  {
-    if (!$this->tags) {
+    public function getLogoImageAttribute()
+    {
+        $id = get_field('wood_logo_image_id', $this->ID);
 
-      $tags = $this->get_terms('wood_project_tag');
+        if (is_int($id)) {
+            return Image::query()->find((int)$id);
+        }
+    }
 
-      if (is_array($tags) && count($tags)) {
-          $this->tags = $tags;
+
+    public function getWebsiteUrlAttribute()
+    {
+        $text = get_field('wood_project_url', $this->ID);
+
+        if (!empty($text)) {
+            return $text;
+        }
+    }
+
+    public function getLaunchDateAttribute()
+    {
+        $text = get_field('wood_project_launch_date', $this->ID);
+
+        if (!empty($text)) {
+          return $text;
       }
-    }
-    return $this->tags;
-  }
-
-  public function getPreviewImageAttribute()
-  {
-    $id = get_field('wood_preview_image_id', $this->ID);
-
-    if (is_int($id)) {
-        return new TimberImage($id);
-    }
-  }
-
-  public function getDesktopFeaturedImageAttribute()
-  {
-    $id = get_field('wood_featured_image_desktop_id', $this->ID);
-
-    if (is_int($id)) {
-        return new TimberImage($id);
-    }
-  }
-
-  public function getMobileFeaturedImageAttribute()
-  {
-    $id = get_field('wood_featured_image_mobile_id', $this->ID);
-
-    if (is_int($id)) {
-        return new TimberImage($id);
-    }
-  }
-
-
-  public function getLogoImageAttribute()
-  {
-    $id = get_field('wood_logo_image_id', $this->ID);
-
-    if (is_int($id)) {
-        return new TimberImage($id);
-    }
-  }
-
-
-  public function getWebsiteUrlAttribute()
-  {
-    $text = get_field('wood_project_url', $this->ID);
-
-    if (!empty($text)) {
-        return $text;
-    }
-  }
-
-  public function getLaunchDateAttribute()
-  {
-    $text = get_field('wood_project_launch_date', $this->ID);
-
-    if (!empty($text)) {
-      return $text;
-    }
   }
 }
