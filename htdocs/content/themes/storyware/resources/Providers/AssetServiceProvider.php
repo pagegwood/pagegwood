@@ -23,7 +23,7 @@ class AssetServiceProvider extends ServiceProvider
         /** @var ThemeManager $theme */
         $theme = $this->app->make('wp.theme');
 
-        //Asset::add('google_fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300i|Raleway:400,400i,500,600', [], '1.0')->to('front');
+        Asset::add('google_fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300i|Raleway:400,400i,500,600', [], '1.0')->setType('style')->to('front');
 
         Asset::add('theme_styles', 'css/style.css', ['google_fonts'], $theme->getHeader('version'))->to('front');
 

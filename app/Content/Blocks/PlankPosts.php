@@ -8,5 +8,5 @@ class PlankPosts extends BlockBuilder
 {
     use CatTagPosts;
 
-    public $view = 'planks/posts.twig';
+    public $view = 'blocks.posts';
 }

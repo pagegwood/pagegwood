@@ -312,11 +312,13 @@ return $settings;
 
         // make sure we don't override other custom <code>content_css</code> files
         $content_css = $theme->getUrl('dist/css/editor.css?=' . $version);
+
         if (isset($mce_init['content_css'])) {
             $content_css_new =  $mce_init['content_css'] . ',' . $content_css;
+
+            $mce_init['content_css'] = $content_css_new;
         }
 
-        $mce_init['content_css'] = $content_css_new;
 
         return $mce_init;
     });

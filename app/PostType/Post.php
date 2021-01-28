@@ -53,7 +53,7 @@ class Post extends BasePost
 
     public function getDisplayDateAttribute()
     {
-        return date('F j, Y',  strtotime($this->post_date));
+        return date('F d, Y',  strtotime($this->post_date));
     }
 
     public static function removePostTypeSupport()

@@ -8,7 +8,7 @@ use App\PostType\Project;
 
 class PlankProjects extends BlockBuilder
 {
-    public $view = 'planks/projects.twig';
+    public $view = 'blocks.projects';
 
     public $count = 4;
 
@@ -30,42 +30,21 @@ class PlankProjects extends BlockBuilder
           //limit by tag
             $tag = (int)$this->tag;
 
-            $args = array(
-                'tag__in' => $tag,
-                'posts_per_page' => $this->count
-            );
-
-            return Project::query($args);
+            return Project::query()->tag($tag)->limit((int)$this->count)->get();
         }
 
         elseif(!empty($this->projects_array)){
 
             $ids = array_pluck($this->projects_array, 'ID');
 
-            $args = array(
-                'post__in' =>  $ids,
-                'posts_per_page' => $this->count
-            );
+            $posts = Project::query()->order('post__in')->findAll($ids);
 
-            $this->posts = Project::query($args);
-
-            $this->posts = collect($this->posts);
-
-            $this->posts = $this->posts->sort(function ($a, $b) use($ids) {
-
-                return array_search($a->ID, $ids) - array_search($b->ID, $ids);
-            });
-
-            return $this->posts;
+            return $posts;
         }
 
         else{
-            /// get all
-            $args = array(
-                'posts_per_page' => $this->count
-            );
 
-            return Project::query($args);
+            return Project::query()->limit($this->count)->get();
         }
     }
 

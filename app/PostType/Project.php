@@ -5,6 +5,7 @@ namespace App\PostType;
 use WPFluent\PostType\Base as BaseType;
 use WPFluent\PostType\Traits\Excerpt;
 use WPFluent\PostType\Image;
+use WPFluent\PostType\Traits\Permalink;
 
 use Themosis\Support\Facades\Action;
 use Themosis\Support\Facades\Filter;
@@ -17,7 +18,8 @@ use WP_Query;
 
 class Project extends BaseType
 {
-    use PreviewImage,
+    use Permalink,
+        PreviewImage,
         FeaturedImage;
 
     public $post_type = 'wood_project';

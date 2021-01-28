@@ -8,7 +8,6 @@ class PlankInteriorHero extends BlockBuilder
 {
     use FlexibleImages;
 
-    public $view = 'planks/interior-hero.twig';
+    public $view = 'blocks.interior-hero';
 
-    public $style = 'planks/interior-hero_style.twig';
 }

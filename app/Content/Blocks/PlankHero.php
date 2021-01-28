@@ -8,7 +8,5 @@ class PlankHero extends BlockBuilder
 {
     use FlexibleImages;
 
-    public $view = 'planks/hero.twig';
-
-    public $style = 'planks/hero_style.twig';
+    public $view = 'blocks.hero';
 }

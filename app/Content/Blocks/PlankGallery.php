@@ -6,7 +6,7 @@ use App\PostType\Gallery;
 
 class PlankGallery extends BlockBuilder
 {
-    public $view = 'planks/gallery.twig';
+    public $view = 'blocks.gallery';
 
     public function getGalleryAttribute()
     {

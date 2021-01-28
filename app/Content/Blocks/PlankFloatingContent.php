@@ -7,7 +7,7 @@ use WPFluent\PostType\Image;
 class PlankFloatingContent extends BlockBuilder
 {
 
-    public $view = 'planks/floating-content.twig';
+    public $view = 'blocks.floating-content';
 
     public function getImageAttribute()
     {
