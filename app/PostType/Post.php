@@ -9,6 +9,7 @@ use WPFluent\PostType\Post as BasePost;
 use WPFluent\PostType\Traits\Content;
 use WPFluent\PostType\Traits\Excerpt;
 use WPFluent\PostType\Traits\Categories;
+use WPFluent\PostType\Traits\Tags;
 
 use App\PostType\Traits\FeaturedImage;
 use App\PostType\Traits\PreviewImage;
@@ -19,7 +20,8 @@ class Post extends BasePost
         Excerpt,
         Categories,
         FeaturedImage,
-        PreviewImage;
+        PreviewImage,
+        Tags;
 
     public static function registerPostHooks($class)
     {
