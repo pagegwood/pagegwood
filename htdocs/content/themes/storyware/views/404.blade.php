@@ -1,6 +1,6 @@
-{% extends "layouts/base.twig" %}
+@extends('layouts.master')
 
-{% block content %}
+@section('default')
 	<article class="404 paddingY3 paddingY9--sm">
 		<div class="Container Container--small text-center">
 			<section class="Post-content">
@@ -11,4 +11,4 @@
 			</section>
 		</div>
 	</article>
-{% endblock %}
+@endsection

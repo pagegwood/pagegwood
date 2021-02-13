@@ -22,6 +22,14 @@ Route::any('page', function ($post) {
 });
 
 
+Route::get('singular', ['wood_project', function ($post, $query) {
+
+    $post = Project::make($post);
+
+    return View::make('single-project', compact('post'));
+}]);
+
+
 Route::any('single', function ($post) {
 
     $post = Post::make($post);

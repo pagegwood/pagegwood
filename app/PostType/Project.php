@@ -13,6 +13,7 @@ use Themosis\Support\Facades\PostType;
 
 use App\PostType\Traits\PreviewImage;
 use App\PostType\Traits\FeaturedImage;
+use App\PostType\Traits\ProjectTags;
 
 use WP_Query;
 
@@ -20,6 +21,7 @@ class Project extends BaseType
 {
     use Permalink,
         PreviewImage,
+        ProjectTags,
         FeaturedImage;
 
     public $post_type = 'wood_project';
@@ -72,6 +74,17 @@ class Project extends BaseType
         if (is_int($id)) {
             return Image::query()->find((int)$id);
         }
+    }
+
+
+    public function hasDesktopFeaturedImage()
+    {
+        if (!empty($this->desktop_featured_image)) return true;
+    }
+
+    public function hasMobileFeaturedImage()
+    {
+        if (!empty($this->mobile_featured_image)) return true;
     }
 
     public function getMobileFeaturedImageAttribute()
