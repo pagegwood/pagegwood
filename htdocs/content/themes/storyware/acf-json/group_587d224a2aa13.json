@@ -1,0 +1,175 @@
+{
+    "key": "group_587d224a2aa13",
+    "title": "Plank : Columns",
+    "fields": [
+        {
+            "key": "field_5840bc6615941",
+            "label": "Content",
+            "name": "plank_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_5840bc6615942",
+            "label": "Container Size",
+            "name": "plank_container_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "small": "Small",
+                "default": "Default",
+                "full": "Full"
+            },
+            "default_value": [
+                "default"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5840bcf315943",
+            "label": "Columns",
+            "name": "plank_columns",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_5840bd0e15944",
+                    "label": "Content",
+                    "name": "plank_column_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "default_value": "",
+                    "delay": 0
+                },
+                {
+                    "key": "field_5840bd3f15945",
+                    "label": "Background Color",
+                    "name": "plank_column_background_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "choices": {
+                        "one": "Blue",
+                        "two": "Aqua",
+                        "three": "Dark Green",
+                        "four": "Lighter Green",
+                        "five": "Lightest Green",
+                        "six": "Text",
+                        "seven: Light Gray": "seven: Light Gray",
+                        "default": "White"
+                    },
+                    "default_value": [
+                        "default"
+                    ],
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5840bdd215946",
+                    "label": "Size",
+                    "name": "plank_column_size",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "choices": {
+                        "1of4": "1\/4",
+                        "1of3": "1\/3",
+                        "1of2": "1\/2",
+                        "1of1": "1\/1",
+                        "2of3": "2\/3",
+                        "3of4": "3\/4"
+                    },
+                    "default_value": [
+                        "1of4"
+                    ],
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1613254586
+}

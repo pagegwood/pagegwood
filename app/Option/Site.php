@@ -6,13 +6,11 @@ use WPFluent\Option\Base as BaseOption;
 
 use App\Option\Traits\FooterTrackingCodes;
 use App\Option\Traits\HeaderTrackingCodes;
-use App\Option\Traits\SocialProperties;
 
 class Site extends BaseOption
 {
     use FooterTrackingCodes,
-        HeaderTrackingCodes,
-        SocialProperties;
+        HeaderTrackingCodes;
 
     public static function registerSettings()
     {

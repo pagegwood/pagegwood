@@ -6,5 +6,5 @@ use WPFluent\Support\Fluent;
 
 class HeaderTrackingCode extends Fluent
 {
-    protected $fieldPrefix = 'wood_site_header_tracking_code_';
+    protected $fieldPrefix = 'sw_site_header_tracking_code_';
 }

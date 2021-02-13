@@ -1,0 +1,57 @@
+{
+    "key": "group_58572c973f7d2",
+    "title": "Plank Field : Background Color",
+    "fields": [
+        {
+            "key": "field_58572ca1df079",
+            "label": "Plank Background Color",
+            "name": "plank_background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "one": "Blue",
+                "two": "Aqua",
+                "three": "Green",
+                "four": "Lighter Green",
+                "five": "Lightest Green",
+                "six": "Text",
+                "seven": "Light Gray",
+                "white": "White"
+            },
+            "default_value": [
+                "white"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1613254616
+}

@@ -9,7 +9,7 @@ trait HeaderTrackingCodes
 {
     public function getHeaderTrackingCodesAttribute()
     {
-        $codes = get_field('wood_site_header_tracking_codes', $this->ID);
+        $codes = get_field('sw_site_header_tracking_codes', $this->ID);
 
         if (is_array($codes)) {
             foreach ($codes as &$code) {
