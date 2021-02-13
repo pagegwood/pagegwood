@@ -37,20 +37,8 @@ add_shortcode('sw_media_embed', function ($attributes, $content) {
 });
 
 
-add_shortcode('sw_gallery', function ($attributes) {
+add_shortcode('wood_expanded_image', function($atts, $content = null){
 
-    $postId = get_the_ID();
-
-    $postType = get_post_type();
-
-    if ($postType == 'sw_exhibition') {
-
-        $post = Exhibition::query()->find($postId);
-    }
-
-    if (isset($post) && $post->hasGalleryImages())
-    {
-
-        return View::make('partials.post-gallery', compact('post'));
-    }
+    return '<div class="ExpandedImage">' . $content . '</div>';
 });
+

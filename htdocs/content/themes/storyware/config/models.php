@@ -9,6 +9,7 @@ return [
     'roles' => [],
 
     'users' => [
+        App\User\User::class,
     ],
 
     'taxonomies' => [

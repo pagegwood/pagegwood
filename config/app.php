@@ -206,13 +206,15 @@ return [
         'TaxonomyField' => Themosis\Support\Facades\TaxonomyField::class,
         'Twig' => Themosis\Support\Facades\Twig::class,
         'URL' => Illuminate\Support\Facades\URL::class,
-        'User' => Themosis\Support\Facades\User::class,
+        //'User' => Themosis\Support\Facades\User::class,
         'UserField' => Themosis\Support\Facades\UserField::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
         // app specific
         'Attachment' => WPFluent\PostType\Attachment::class,
+
+        'User' => App\User\User::class,
 
         'Site' => App\Option\Site::class,
         'Gallery' => App\PostType\Gallery::class,

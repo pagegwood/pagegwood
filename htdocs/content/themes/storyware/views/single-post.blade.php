@@ -6,7 +6,7 @@
 @if(has_post_thumbnail( $post->ID ))
 @media all and (max-width: 768px){
     .Hero-media {
-      background: url({!! wp_get_attachment_image_url($image->ID) !!});
+      background: url({!! wp_get_attachment_image_url($post->ID) !!});
     }
 }
 @endif
@@ -32,7 +32,7 @@
   <div class="Container Container--small">
     <section class="Post-content">
       <div class="Content paddingB5">
-        {!! $post->content !!}
+        {!! $post->post_content !!}
       </div>
       @if($post->hasTags())
       <ul class="List List--horizontal Post-tags marginB3 marginB5--sm">
@@ -51,7 +51,7 @@
         <span class="size-h5 block font-primary weight-semiBold color-text marginB2 text-uppercase letterspacing-2 marginB1">Share this Post</span>
         <ul class="Share List List--horizontal List--icons">
           <li class="Share-item">
-            <a class="Share-link link link-color-two u-displayBlock" href="https://twitter.com/share?url={{ $post->link|url_encode(true) }}&amp;text={{ 'Check this out: ' ~ $post->post_title|url_encode(true) }}&amp;via=PageGWood" target="_blank">
+            <a class="Share-link link link-color-two u-displayBlock" href="https://twitter.com/share?url={{ urlencode($post->url) }}&amp;text={{ urlencode('Check this out: ' . $post->post_title ) }}&amp;via=PageGWood" target="_blank">
               <i class="icon icon-twitter"> </i>
             </a>
           </li>
@@ -61,17 +61,17 @@
             </a>
           </li>
           <li class="Share-item">
-            <a class="Share-link link link-color-two u-displayBlock" href="mailto:?subject={{ $post->post_title|url_encode(true) }}&amp;body={{ urlencode('You should check out' . $post->post_title . ' by Page Wood at ') }}{{ urlencode($post->url) }}">
+            <a class="Share-link link link-color-two u-displayBlock" href="mailto:?subject={{ urlencode($post->post_title) }}&amp;body={{ urlencode('You should check out' . $post->post_title . ' by Page Wood at ') }}{{ urlencode($post->url) }}">
               <i class="icon icon-envelope-o"> </i>
             </a>
           </li>
           <li class="Share-item">
-            <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $post->link|url_encode(true) }}&amp;href={{ $post->link|url_encode(true) }}&amp;title={{ $post->post_title|url_encode(true) }}&amp;summary={{ $post->exceprt|url_encode(true) }}&amp;source={{ 'Page G Wood, Web Developer & UX Designer'|url_encode(true) }}">
+            <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ urlencode($post->url) }}&amp;href={{ urlencode($post->url) }}&amp;title={{ urlencode($post->post_title) }}&amp;summary={{ urlencode($post->post_excerpt) }}&amp;source={{ urlencode('Page G Wood, Web Developer & UX Designer') }}">
               <i class="icon-linkedin"> </i>
             </a>
           </li>
           <li class="Share-item">
-            <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://plus.google.com/share?url={{ $post->link|url_encode(true) }}">
+            <a class="Share-link link link-color-two u-displayBlock" target="_blank" href="https://plus.google.com/share?url={{ urlencode($post->url) }}">
               <i class="icon-google-plus"> </i>
             </a>
           </li>
@@ -79,31 +79,39 @@
       </section>
     </div>
   </div>
-  {% if $post->comment_status != 'closed' %}
+  @if($post->comment_status != 'closed')
     <div class="paddingT3 paddingT5--sm">
       <section class="Comments">
-        {% if $post->comment_count > 0 %}
-          <div class="paddingY3 paddingY5--sm">
+        @if($post->comment_count > 0)
+        <div class="paddingY3 paddingY5--sm">
           <hr>
         </div>
         <div class="Container Container--small">
-          <h3 class="size-h3 font-primary weight-light color-text marginB3 marginB5--sm">{{ $post->comment_count }} Comment{{ ($post->comment_count != 0 and $post->comment_count > 1) ? 's' : '' }}</h3>
-          <div class="Responses">
-            {% for cmt in $post->get_comments() %}
-              {% include "partials/comment.twig" with {comment:cmt} %}
-            {% endfor %}
-          </div>
+          <h3 class="size-h3 font-primary weight-light color-text marginB3 marginB5--sm">
+            {{ $post->comment_count }} Comment{{ ($post->comment_count != 0 and $post->comment_count > 1) ? 's' : '' }}
+          </h3>
+          <ol class="Responses">
+            {!!
+              wp_list_comments([
+                'page' => $post->ID,
+                'style'      => '',
+                'short_ping' => true,
+                'avatar_size'=> 0,
+                'callback' => 'sw_comments'
+              ])
+            !!}
+          </ol>
         </div>
-        {% endif %}
+        @endif
         <div class="Container Container--small">
           <h3 class="size-h3 font-primary weight-light color-text paddingB2">Leave a Comment</h3>
           <div class="Respond">
-            {{ fn('comment_form') }}
+            {!! comment_form() !!}
           </div>
         </div>
       </section>
     </div>
-  {% endif %}
+  @endif
 </article>
 
 @overwrite

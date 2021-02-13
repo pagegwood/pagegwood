@@ -11,6 +11,8 @@ use WPFluent\PostType\Traits\Excerpt;
 use WPFluent\PostType\Traits\Categories;
 use WPFluent\PostType\Traits\Tags;
 
+use App\User\User;
+
 use App\PostType\Traits\FeaturedImage;
 use App\PostType\Traits\PreviewImage;
 
@@ -30,6 +32,11 @@ class Post extends BasePost
         Filter::add('get_the_archive_title', [$class, 'cleanArchiveTitle']);
 
         Filter::add('post_format_rewrite_rules', [$class, 'purgeDefaultRewriteRules']);
+    }
+
+    public function getAuthorAttribute()
+    {
+        return User::query()->find($this->post_author);
     }
 
     public function getCacheableAccessors()
@@ -65,6 +72,13 @@ class Post extends BasePost
         remove_post_type_support('post', 'post-formats');
         remove_post_type_support('post', 'thumbnail');
         remove_post_type_support('post', 'trackbacks');
+    }
+
+    public function getCommentsAttribute()
+    {
+        return get_comments([
+            'post_id' => $this->ID
+        ]);
     }
 
 
