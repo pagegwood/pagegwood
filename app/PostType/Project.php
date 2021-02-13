@@ -106,6 +106,11 @@ class Project extends BaseType
         }
     }
 
+    public function hasLogoImage()
+    {
+        if (!empty($this->logo_image)) return true;
+    }
+
 
     public function getWebsiteUrlAttribute()
     {

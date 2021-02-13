@@ -30,6 +30,20 @@ Route::get('singular', ['wood_project', function ($post, $query) {
 }]);
 
 
+Route::any('tax', ['wood_project_tag', function ($posts = null, $query = null) {
+
+    if (!empty($query)) {
+        $posts = Project::hydrate($query->posts);
+    }
+
+    $tag = $query->get('wood_project_tag');
+
+    $tag = ProjectTag::query()->findBySlug($tag);
+
+    return View::make('taxonomy-project-tag', compact('posts', 'tag'));
+}]);
+
+
 Route::any('single', function ($post) {
 
     $post = Post::make($post);
