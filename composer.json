@@ -32,7 +32,7 @@
       "type": "package",
       "package": {
         "name": "gravityforms/gravityforms",
-        "version": "2.4.17",
+        "version": "2.4.22",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -57,9 +57,9 @@
   },
   "require": {
     "php": ">=7.1.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "5.9.4",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.9.5",
     "gravityforms/gravityforms": "*",
-    "johnpbloch/wordpress-core": "5.6.0",
+    "johnpbloch/wordpress-core": "5.6.1",
     "johnpbloch/wordpress-core-installer": "^1.0",
     "mmirus/acf-flexible-content-title": "1.0",
     "nesbot/carbon": "^2.31",
@@ -73,13 +73,13 @@
     "wpackagist-plugin/breeze":"1.1.9",
     "wpackagist-plugin/classic-editor": "1.6",
     "wpackagist-plugin/debug-bar": "1.1.2",
-    "wpackagist-plugin/duplicate-post": "4.0.2",
+    "wpackagist-plugin/duplicate-post": "4.1.1",
     "wpackagist-plugin/query-monitor": "3.6.7",
     "wpackagist-plugin/safe-redirect-manager":"1.10.0",
     "wpackagist-plugin/rewrite-rules-inspector": "1.2.1",
     "wpackagist-plugin/wordpress-importer": "0.7",
-    "wpackagist-plugin/wordpress-seo": "15.7",
-    "wpackagist-plugin/wp-crontrol": "1.9.0",
+    "wpackagist-plugin/wordpress-seo": "15.8",
+    "wpackagist-plugin/wp-crontrol": "1.9.1",
     "wpackagist-plugin/akismet" : "4.1.8",
     "wpackagist-plugin/contact-form-7": "5.3.2"
   },
