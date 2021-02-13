@@ -5,8 +5,7 @@
 <div class="Gallery clearfix js-Lightbox">
   @foreach($block->gallery->images as $image)
     <div class="Gallery-item">
-      <a href="{{ $image->url }}" title="{{ $image->post_title }}">
-        <img src="{!! wp_get_attachment_image_url($image->ID, 'medium') !!}">
+      <a href="{{ $image->url }}" title="{{ $image->post_title }}" style="background-image:url({!! wp_get_attachment_image_url($image->ID, 'medium') !!}); background-size:cover; background-position:center center; padding-bottom:100%; display:inline-block;">
       </a>
     </div>
   @endforeach
