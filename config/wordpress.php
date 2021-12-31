@@ -19,14 +19,14 @@
 | @link https://api.wordpress.org/secret-key/1.1/salt/
 |
 */
-define('AUTH_KEY',         'ts>3ioY;-$*J|S!VyJ)~d(f,M77&.@b|pq/E|1P3$A=)|-E[4,+Fx<8+Q2|/.MU>');
-define('SECURE_AUTH_KEY',  'u4!v*}_UWK;[RJ.3y}-e(5h:gQm|qK]]`8k=[p%pz(k_Y{$t{|Q&F/253Bc%]Wd^');
-define('LOGGED_IN_KEY',    '_ejzzYrYjg5#/?4J%bLPHh-c{NCTq`!Nl&Mwd$.PMeBoSc)ZJ[Vw&~}=?4Gd)xRe');
-define('NONCE_KEY',        '!TvJR%j?YY!2f<mg3H,q$cx+n8_$biKu_uzRg7Uh$m-HY%ZmC5LJ?8DA-pd}/%qk');
-define('AUTH_SALT',        ' A._e#S4q!TzwuL~Z&u|1w@o>q|Wz<b:L9kl=oQs+2-L~qR+ECkEw|}t_|+%#i2a');
-define('SECURE_AUTH_SALT', 'iU*XG(zc+9|qdUYno3aF%A[R-fH`M!%$wkl9/*7FX@n12qEhw+eyUIL^J~IB.=jh');
-define('LOGGED_IN_SALT',   'W,IQ!C$Oi+Pjf]wp}1YqpD|)|CP+)2+6|`D}u}TlNP+YPEjfBGx*QouPMc!-b1&r');
-define('NONCE_SALT',       'XX3>`!a!<?k/*Z*2Nv&S@Z J/oU>(|Hxrc>v[WDLA1-*`@n+fy)br#qP+W@zG:2<');
+define('AUTH_KEY',         '<{[+ahR|6Lvny;;8pBzv^@ge;mI{S|l@)V2uuy@D6<2!=km(uo`!+-}KU^6jdnn4');
+define('SECURE_AUTH_KEY',  ':~Y++VjnsR^?k*0|;d5K,^o[HnCLX>p9[`x3Rd}TmU.6aeUpNoB~hd7(O|{#5_ d');
+define('LOGGED_IN_KEY',    '^8ZFGlU-jjYuF-w6d+OV[K%{Io.jfQPt}CU=HR}o0dmzrt{8+j{lzZ,5_?DO8@tr');
+define('NONCE_KEY',        'QRV@NQ6~SaY.+4Paf+7|q:p_G34FWHgrP-B^^<PBvDGitJPdC6lQ9+1cj-<QL8_9');
+define('AUTH_SALT',        '0*ecbZ$7pV1q6(T-QhGaF%%>5wvO?~yq 7rUX]j$W-{7k|~W5$FI_9y+4}x[0c(/');
+define('SECURE_AUTH_SALT', 'sCf?NS,^=6OwQL]ywDBpoe3V?G`C4Dacx~`c$DhH{NmT>ifh(Rg=*AJVGnJ%NON)');
+define('LOGGED_IN_SALT',   'Z//1yV>Qh;{d;}C)kYIk@tY-yOJ+fSg({k6u;Bd2Bar,]|>J9#]]!}^<e3!X=&kr');
+define('NONCE_SALT',       'KXL|4mYix$06r7/SiDW)%jJ4%6?t0{^7!k)BD=-sxBxqRA.|%4z|dV`*W0cC?f-P');
 
 /*
 |--------------------------------------------------------------------------
@@ -80,16 +80,22 @@ define('DISABLE_WP_CRON', 'true');
 | WordPress file editor
 |--------------------------------------------------------------------------
 */
-
-define('DISALLOW_FILE_MODS', !config('app.debug'));
-
+define('DISALLOW_FILE_EDIT', true);
 
 /*
 |--------------------------------------------------------------------------
 | WordPress default theme
 |--------------------------------------------------------------------------
 */
-define('WP_DEFAULT_THEME', 'storyware');
+define('WP_DEFAULT_THEME', 'recre');
+
+/*
+|--------------------------------------------------------------------------
+| Allow WordPress file edits (and update notification)
+|--------------------------------------------------------------------------
+*/
+
+define('DISALLOW_FILE_MODS', !config('app.debug'));
 
 /*
 |--------------------------------------------------------------------------
@@ -105,9 +111,31 @@ define('APP_TD', env('APP_TD', 'themosis'));
 */
 define('JETPACK_DEV_DEBUG', config('app.debug'));
 
+
 /*----------------------------------------------------*/
-// Post Revisions
+// Google Maps API Key (ACF,Geocoding)
 /*----------------------------------------------------*/
+define('GOOGLE_CLIENT_SIDE_API_KEY', env('GOOGLE_CLIENT_SIDE_API_KEY', ''));
+
+define('GOOGLE_SERVER_SIDE_API_KEY', env('GOOGLE_SERVER_SIDE_API_KEY', ''));
+
+
+/*----------------------------------------------------*/
+// Offload S3
+/*----------------------------------------------------*/
+
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'aws',
+    'access-key-id' => env('AWS_ACCESS_KEY_ID', ''),
+    'secret-access-key' => env('AWS_ACCESS_KEY_SECRET', ''),
+) ) );
+
+/*----------------------------------------------------*/
+// Offload SES
+/*----------------------------------------------------*/
+
+define( 'WPOSES_AWS_ACCESS_KEY_ID',     env('AWS_ACCESS_KEY_ID', ''));
+define( 'WPOSES_AWS_SECRET_ACCESS_KEY', env('AWS_ACCESS_KEY_SECRET', ''));
 
 /*----------------------------------------------------*/
 // WP-Rocket Settings
@@ -126,6 +154,11 @@ if (defined('CUSTOM_CACHE_PATH')) {
     }
 }
 
+/*----------------------------------------------------*/
+// Post Revisions
+/*----------------------------------------------------*/
+
 define('WP_POST_REVISIONS', 3);
 
 
+define('UPLOADS', 'content/uploads' );
